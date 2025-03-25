@@ -1,0 +1,43 @@
+.titulo {
+    font-family: 'Sen', sans-serif;
+    text-align: center;
+}
+
+.flex-container {
+    display: flex;
+}
+
+.flex-container__caja {
+    height: 120px;
+    width: 120px;
+    background-color: #0f0;
+    margin: 5px;
+}
+
+.container-1{
+    
+}
+
+.container-2 {
+    
+}
+
+.container-3 {
+    
+}
+
+.container-4 {
+    
+}
+
+.container-5 {
+    
+}
+
+.container-6 {
+    
+}
+
+.container-7 {
+    
+}

@@ -1,0 +1,41 @@
+/*Se usa para alinear los elementos a lo largo del eje principal (main axis) en un contenedor display flex*/
+
+.titulo {
+    font-family: 'Sen', sans-serif;
+    text-align: center;
+}
+
+.flex-container {
+    display: flex;
+}
+
+.flex-container__caja {
+    width: 120px;
+    height: 120px;
+    background-color: #f00;
+    margin: 5px;
+}
+
+.container-1 {
+    justify-content: flex-start; /*justify-content: flex-start - justificar contenido: inicio flexible | Alinea los elementos al inicio del eje principal*/
+}
+
+.container-2 {
+    justify-content: flex-end; /*justify-content: flex-end - jusitificar contenido: extremo flexible | Alinea los elementos al final del eje principal*/
+}
+
+.container-3 {
+    justify-content: center; /*justify-content: center - justificar contenido: centrar | Centra los elementos en el eje principal*/
+}
+
+.container-4 {
+    justify-content: space-between; /*justify-content: space-between - justificar contenido: espacio entre | Espacia los elementos con el maximo espacio posible entre ellos*/
+}
+
+.container-5 {
+    justify-content: space-around; /*justify-content: space-around - espacio-alrededor| Agrega espacios iguales alrededor de cada elemento */
+}
+
+.container-6 {
+    justify-content: space-evenly; /*justify-content: space-evenly - uniformemente | Distribuye los elementos con espacios iguales entre ellos y los bordes*/
+}

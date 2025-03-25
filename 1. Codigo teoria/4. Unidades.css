@@ -1,0 +1,20 @@
+* {
+    padding: 0px; /*relleno -> Espacio dentro del borde de un elemento*/
+    margin: 0px; /*margen -> Epacio fuera del borde, separando el elemento de otros*/
+}
+
+.contact-form {
+    font-size: 25px;  /*Tamaño de fuente -> Define el tamaño de la fuente de un elemento*/
+    background-color: black; /*color de fondo -> Define el color de fondo de un elemento*/
+    width: 50vw; /*ancho -> Define el ancho de un elemento - viewport = Ventana grafica - vw relativo al ancho de la pantalla*/ 
+    height: 50vh; /*altura -> Define la altura de un elemento - vh relativo a la altura de la pantalla */
+}
+/*Unidades
+Medidas fijas
+px -> pixeles - cm -> centimetros - mm -> milimetros - vw -> viewport width - vh viewport heigh 
+% relativo  al contenedor padre
+Medidas relativas
+em -> 16 pixeles*/
+.contact-form__h2 {
+    font-size: 1em; /* 1em = 25px se hereda de la primera caja*/
+}

@@ -1,0 +1,29 @@
+/*flexbox (Flexible Box Layout) es un modelo de diseño en CSS que facilita la distribucion y alineacion de elementos dentro de un contenedor, inclluso sus tamaños dinamicos
+En flexbox, hay dos ejes principales que determinan como se distrivuyen los elementos dentro del cntenedor flexible 
+1. main axis (eje principal) izquierda a derecha -> Es el eje donde los elementos se alinean y se distribuyen segun la propiede flex direction
+2. cross axis (eje cruzado) arriba y abajo -> Es perpendicular al main axis*/
+
+.titulo {
+    font-family: 'Sen', sans-serif;
+    font-weight: 100;
+    text-align: center;
+    color: #f00;
+}
+
+.flex-container {
+    display: flex; /*Activa flexbox en el contenedor*/
+}
+
+.flex-text {
+    background-color: #00f;    
+    color: #fff;
+    padding: 10px;
+    margin: 10px;
+}
+
+.flex-item {
+    background-color: #00f;
+    height: 200px;
+    width: 200px;
+    margin: 5px;
+}

@@ -1,0 +1,69 @@
+/*La especificidad es un sistema de reglas que los navegadores usan para determinar que estilos se aplicaran a un elemento
+
+Jerarquia en CSS
+
+    Primer nivel de jerarquia 
+-!important 
+    Segundo nivel
+- estilos en linea de jerarquia
+    Tercer nivel 
+- identifiadores
+    Cuarto nivel de jerarquia
+- clases - pseudo-clases - atributos
+    Quinto nivel de jerarquia
+- elementos 
+- pseudo-elementos*/
+
+/*Por cascada -> Cuando se selecciona dos elmentos de la misma jerarquia dos pseudo-elementos, elementos, atributos, pseutod-clases, clases,
+identificadores, estilos en linea e important. El ultimo es el que queda o el mas importante es el ultimo*/
+
+h1 {
+    color: black;
+}
+
+h1 {
+    color: red;
+}
+
+/*Por elementos y pseudo elementoss -> Elementos = h1, h2... 
+Pseudo elementos - sintaxis - selector::pseudo-elemento { propiedad: valor; }:
+::after - ::before - ::first-letter -::first-line - ::backdrop - ::selection - ::placeholder - ::marker - ::spelling-error - ::grammar-error*/
+
+h2 {
+    color: grey !important;
+}
+
+h2::after {
+    color: #ff040f;
+    content: " - Exiting";
+}
+
+/*Por clases, pseudo clases y atributos
+Pseudo clases selector:pseudo clase { propiedad: valor}
+:hover - :fullscreen - :modal - :picture-in-picture ...*/
+
+.class-edited-1 {
+    color: #046eff;
+}
+
+.class-edited-2 {
+    color: #ff040f;
+}
+/*Pseudo clase*/
+h3:hover {
+    color: #26ff04;
+}
+/*Atributo*/
+[fourth='atribute'] {
+    color: aliceblue;
+}
+
+/*Por identificador*/
+#identifier {
+    color: #04e8ff;
+}
+
+/*Por estilos en linea*/
+b {
+    color: bisque !important;
+}

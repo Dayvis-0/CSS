@@ -1,0 +1,31 @@
+.titulo {
+    text-align: center;
+    font-family: 'Lobster', cursive;
+    background: red;
+    position: fixed; /*fixed - fijado -> Se posiciona con respecto a la ventana del navegador y permanece en la misma posicion inclluso al hacer un scroll*/
+    font-size: 40px;
+    font-weight: 100;
+    top: 0;
+}
+
+.texto, .cont__titulo1 {
+    font-family: 'Lobster', cursive;
+    font-size: 50px;
+    font-weight: 200;
+}
+
+body {
+    padding-top: 40px;
+}
+
+.cont__titulo1 {
+    background: red;
+    position: sticky; /*sticky -> Se comporta como relative hasta que se desplaza mas alla de un cierto umbral (p.ej. al hacer scroll), luego se comporta como fixed*/
+    display: inline-block;
+    top: 0;
+    text-align: center;
+}
+
+.cont {
+    text-align: center;
+}

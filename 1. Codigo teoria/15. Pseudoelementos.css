@@ -1,0 +1,72 @@
+/*Pseudo elemento -> Es una palabra clave que permite utilizar un parte especifica de un elmento sin modificar el HTML.*/
+
+.titulo, .texto {
+    font-family: 'Lobster', cursive;
+    font-weight: 100;
+    font-size: 20px;
+}
+
+.titulo {
+    text-align: center;
+    font-size: 50px;
+}
+
+.texto {
+    padding: 20px;
+}
+
+/*firt-line - primera linea -> Permite modificar solo la primera linea de un bloque de texto, solo se usa en elementos de bloque no en os de linea y solo propiedades de tecxto*/
+.texto::first-line { 
+    color: blue;
+    font-size: 2em;
+}
+
+.texto::selection {
+    background-color: black;
+    color: white;
+}
+
+/*first-letter - primera letra -> Para aplicar estilos a la primera linea de un bloque de texto*/
+.texto::first-letter {
+    font-size: 2em;
+    color: red;
+}
+
+.cont {
+    margin: 100px auto;
+    padding:100px;
+    display: block;
+    background-color: #555;
+    width: 50%;
+}
+
+.cont__inp {
+    padding: 6px;
+    width: 100%;
+}
+
+.cont__inp::placeholder { /*placeholder - Marcador de posicion -> Aplicar estilos al texto de marcador de posicion */
+    color: red;
+}
+
+.cont__inp::selection { /*selection - seleccion -> Aplicar estilos a la parte del texto que el usuario selecciona*/
+    background-color: black;
+    color: white;
+}
+
+.negri {
+    color: gray;  
+    text-align: center;
+    display: block;
+    font-size: 50px;  
+}
+
+.negri::before { /*before - antes -> Permite agregar contenido antes de un elemento sin modifical HTML*/
+    content: 'Hola ';
+    color: red;
+}
+
+.negri::after { /*after - despues -> Permite agregar contenido despues de un elemento sin modifical HTML*/
+    content: ' estas';
+    color: red;
+}

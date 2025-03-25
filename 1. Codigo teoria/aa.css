@@ -1,0 +1,29 @@
+
+/*                        POSITION FIXED                      */
+
+body {
+    padding-top: 100px;
+}
+
+/*fixed - fijado -> Se posiciona con respecto a la ventana del navegador y permanece ne la misma posicion inclluso al hacer un scroll*/
+/*Ancho y alto ajustado al contenido*/
+/*
+.caja-fixed {
+    background: red;
+    font-size: 35px;
+    position: fixed; 
+    top: 0;
+    width: auto; 
+    height: auto;
+}
+*/
+/*                  POSITION STICKY                 */
+
+.caja-sticky {
+    background: red;
+    position: sticky; /*sticky -> Se comporta como relative hasta que se desplaza mas alla de un cierto umbral (p.ej. al hacer scroll), luego se comporta como fixed*/
+    top: 0;
+    font-size: 2;
+    width: auto;
+    height: auto;
+}

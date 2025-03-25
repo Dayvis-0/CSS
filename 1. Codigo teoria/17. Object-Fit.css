@@ -1,0 +1,53 @@
+/*objet-fit - ajuste de objeto -> Define como un elemento img o video debe ajustarse dentro de su contenedor, manteniendo su relacion de aspecto*/
+.titulo, .sub-titulo {
+    font-family: 'Sen', sans-serif;
+    text-align: center;
+}
+
+.caja {
+    margin: 20px;
+    width: 300px;
+    height: 400px;
+    margin: auto;
+}
+
+.caja__imagen { 
+    height: 100%;
+    width: 100%;
+    border: 4px solid red;
+}
+
+.imagen-1 {
+    object-fit: contain; /*objet-fit: contain - objeto apto para contener-> Ajusta la imagen dentro del contenedor sin recortarla, manteniendo la proporcion. Puede dejar espacios vacios*/
+}
+
+.caja-1 {
+    width: 500px;
+    height: 380px;
+}
+
+.imagen-2 {
+    object-fit: cover; /*objet-fit: cover - cubierta de ajuste de objeto -> Cubre todo el contenedor, manteniendo la proporcion. Puede dejar espacios vacios*/ 
+}
+
+.caja-2, .caja-6 {
+    width: 420px;
+    height: 280px;
+}
+
+.imagen-3 {
+    object-fit: none; /*object-fit: none - objeto no encaja ninguno -> No ajusta la imagen, muestra su tamaño original*/
+}
+
+.caja-3 {
+    width: 500px;
+    height: 475px;
+}
+
+.imagen-4 {
+    object-fit: scale-down; /*object-fit: scale-down - objeto se ajusta a escala reducida -> Toma el mejor tamaño posible entre none y contain*/
+}
+
+.imagen-5 {
+    object-fit: fill; /*objet-fit: fill - objeto encajar relleno ->(Por defecto) La imagen se estira para llenar el contenedor, sin mantener la proporcion*/
+}

@@ -1,0 +1,45 @@
+/*object-position - posicion del objeto -> Permite controlar la posicion de una imagen o video dentro de su contenedor cuando usamos object-fit*/
+
+.titulo, .subtitu {
+    font-family: 'Sen', sans-serif;
+    text-align: center;
+}
+
+.caja {
+    margin: 30px;
+    width: 400px;
+    height: 320px;
+    margin: auto;
+}
+
+.caja__imagen {
+    height: 100%;
+    width: 100%;
+    border: 4px solid red;
+    object-fit: cover;
+}
+
+.caja-otra {
+    width: 200px;
+    height: 100px;
+}
+
+.imagen-2 {
+    object-position: left;
+}
+
+.imagen-3 {
+    object-position: right;
+}
+
+.imagen-4 {
+    object-position: top;
+}
+
+.imagen-5 {
+    object-position: bottom;
+}
+
+.imagen-6 {
+    object-position: 1em;
+}

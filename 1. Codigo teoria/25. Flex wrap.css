@@ -1,0 +1,40 @@
+.titulo {
+    font-family: 'Sen', sans-serif;
+    text-align: center;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: center;
+}
+
+.flex-container__caja {
+    height: 120px;
+    width: 120px;
+    background-color: #f00;
+    margin: 5px;
+}
+
+.caja-0 {
+    background-color: #00f;
+}
+
+.caja-1 {
+    background-color: #0f0;
+}
+
+.container-1 {
+    flex-wrap: nowrap; /*flex-wrap: nowrap - envoltura flexible: no envoltura | Los elementos se mantienen en una sola linea y se comprimen si es necesario*/
+}
+
+.container-2 {
+    flex-wrap: wrap; /*flex-wrap: wrap - envoltura flexible: envoltura | Los elementos se envuelven en varias lineas si no caben en el contenedor*/
+}
+
+.container-3 {
+    flex-wrap: wrap-reverse; /*flex-wrap: wrap-revevrse - envoltura flexible: envolctura inversa | Igual a wrap, pero  la direccion de las lineas se invierte*/
+}
+
+.container-4 {
+    flex-flow: column wrap;
+}

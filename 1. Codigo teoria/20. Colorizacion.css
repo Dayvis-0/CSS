@@ -1,0 +1,103 @@
+/*Colores primarios -> Rojo, verde y azul
+La colorizacion en CSS se rrefiere a como aplicamos colores a los elementos de una ppagina web*/
+
+.titulo, .subtitu {
+    font-family: 'Sen', sans-serif;
+    text-align: center;
+}
+
+.caja {
+    margin: auto;
+    height: 300px;
+    width: 200px;
+}   
+.color-1 {
+    background: rgb(255, 0, 0);
+    border: 5px solid black;
+}
+
+.color-2 {
+    background: rgb(0, 255, 0);
+    border: 5px solid black;
+}
+
+.color-3 {
+    background: rgb(0, 0, 255);
+    border: 5px solid black;
+
+}
+
+.color-4 {
+    background: rgba(255, 0, 0, .2);
+    border: 5px solid orange;
+}
+
+.color-5 {
+    background: rgba(0, 255, 0, .2);
+    border: 5px solid orange;
+}
+
+.color-6 {
+    background: rgba(0, 0, 255, .2);
+    border: 5px solid orange;
+}
+
+.color-7 {
+    background: #f00;
+    border: 5px solid yellow;
+}
+
+.color-8 {
+    background: #0f0;
+    border: 5px solid yellow;
+}
+
+.color-9 {
+    background: #00f;
+    border: 5px solid yellow;
+}
+
+.color-10 {
+    background: #f00f;
+    border: 5px solid pink;
+}
+
+.color-11 {
+    background: #0f0f;
+    border: 5px solid pink;
+}
+
+.color-12 {
+    background: #00ff;
+    border: 5px solid pink;
+}
+
+.color-13 {
+    background: #ff0000;
+    border: 5px solid gray;
+}
+
+.color-14 {
+    background: #00ff00;
+    border: 5px solid gray;
+}
+
+.color-15 {
+    background: #0000ff;
+    border: 5px solid gray;
+}
+
+.color-16 {
+    background: #ff0000ff;
+    border: 5px solid slateblue;
+}
+
+.color-17 {
+    background: #00ff00ff;
+    border: 5px solid slateblue;
+}
+
+.color-18 {
+    background: #0000ffff;
+    border: 5px solid slateblue;
+}

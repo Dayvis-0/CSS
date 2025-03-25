@@ -1,0 +1,40 @@
+/*El alaign item en flexbox controla la alineacion de los elementos en el eje cruzado (main cross)*/
+
+.titulo {
+    font-family: 'Sen', sans-serif;
+    text-align: center;
+    font-weight: 100;
+}
+
+.flex-container {
+    display: flex;
+    height: 100vh;
+    justify-content: space-evenly;
+}
+
+.flex-container__caja {
+    width: 120px;
+    background-color: #f00;
+    text-align: center;
+    margin: 5px;
+}
+
+.container-1 {
+    align-items: stretch; /*align-items: stretch - elementos flexibles: estirar | Los elementos se estiran para ocupar el alto del contenedor*/
+}
+
+.container-2 {
+    align-items: flex-start; /*align-items: flex-start - elementos flexibles: inicio flexible | Alinea los elementos al inicio del eje cruzado*/
+}
+
+.container-3 {
+    align-items: flex-end; /*align-items: fle-end - elementos flexibles: final flexible | Alinea los elementos al final de el eje cruzado*/
+}
+
+.container-4 {
+    align-items: center; /*align-items: center - elementos flexibles - centro | Centra los elementos en ele eje cruzado*/
+}
+
+.container-5 {
+    align-items: baseline; /*align-items: baseline - elementos felxibles - linea base | Alinea los elementos segun la linea base de texto*/
+}

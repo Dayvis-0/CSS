@@ -1,0 +1,83 @@
+.caja, .titulo,.link {
+    font-family: 'Sen', sans-serif;
+    font-weight: 100;
+    font-size: 30px;
+}
+
+.titulo {
+    text-align: center;
+}
+
+.caja-1 {
+    width: 200px;
+    height: 200px;
+    background: slateblue;
+    border: 5px solid red;
+    transition: all 1s; /*transition - transicion -> Permite animar cambios de propiedades CSS de manera suave y gradual en lugar de aplicarse instantaneamente*/
+}
+
+.caja:hover { /*hover - flotar -> Aplica estilos cuando el usuario pasa el cursor sobre un elemento*/
+    background: darkslateblue;
+    border-color: blue;
+    height: 300px;
+    width: 300px;
+}
+
+.cont {
+    display: flex;
+    justify-content: center; /*justify-contennt - justificar contenido -> Se usa en Flexbox y Grid para alinear elementos horizontalmente dentro de un contenedor*/
+}
+
+.cont__boton {
+    left: 50%;
+    padding: 20px;
+    background-color: darkslateblue;
+}
+
+.cont__boton:hover {
+    padding: 20px;
+    background: slateblue;
+}
+
+.enlace {
+    margin: 30px;
+    display: block;
+}
+
+.enlace:link { /*link - enlace -> Aplicar estilo a un enlace que no ha sido visitado*/
+    color: red;
+}
+
+.enlace:visited {
+    color: green; /*visited - visitado -> Aplicar estilo a enlaces que ya han sido utilizados   */
+}
+
+.caja-2 {
+    height: 250px;
+    width: 250px;
+    background-color: orange;
+    margin: 25px;
+}
+
+.caja-2:active { /*active - activo -> Se aplica estilos a un elemento cuando esta siendo presionado por el usuario*/
+    background-color: green;
+}   
+
+.inp {
+    margin: 25px;
+    background: lightgray;
+    transition: all 1s;
+}
+
+.inp:focus { /*focus - enfocar -> Se aplica estilo a un elemento cuando recibe el foco (es decir, cuando el usuario lo selecciona)*/
+    background: white;
+    padding: 20px;
+}
+
+.caja-3 {
+    margin: 25px;
+}
+
+.caja-3 b:lang(en) { /*lang - idioma -> Permite aplicar estilos a los elementos segun el idioma que se haya definido con el atributo lang en HTML*/
+    background: red;
+}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<!--La metoodologia BEM es la nomenclatura mas famosa y mas comodade todo desarrollo web front end
+BEM CSS - es una metodologia de nomenclatura para definir las clases en los nodos HTML 
+Es deci, una manera de nombrar las clases de los nodos de tu HTML, para posteriormente editarlos en CSS de una manera facil, sencilla y clara
+BEM son tres siglas:
+- B de bloque - E de elemento - M de modificador
+Sintaxis
+Cuando la clase se refiera solo al bloque, sera:
+<bloque>
+Cuando se refiera a un elemento dentro de un bloque, sera:
+<bloque>__<elemento>
+En los casos de referirse a un modificador; ejemplo: seleccionado, deshabilitado, activo, etc, sera:
+<bloque>__<elemento>--<modificador>-->
+<html>
+
+    <head>
+        <title>Metodologia BEM</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="3. Metodologia BEM.css">
+    </head>
+
+    <body>
+        <div class="form">
+            <input class="form__input" type="text">
+            <input class="form__input" type="text">
+            <input class="form__input input--password" type="password">
+        </div>
+        <div class="form-second">
+            <input class="form-second__input" type="text">
+            <input class="form-second__input" type="text">
+            <input class="form-second__input" type="text">
+        </div>
+    </body>
+
+</html>

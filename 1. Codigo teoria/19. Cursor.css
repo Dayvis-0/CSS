@@ -1,0 +1,44 @@
+.titulo, .subtitu {
+    font-family: 'Sen', sans-serif;
+    text-align: center;
+}
+
+.caja {
+    margin: auto;
+    width: 100px;
+    height: 100px;
+    background-color: pink;
+    border: 6px solid red;
+}
+
+.caja-1 {
+    cursor: default; /*default - por defecto -> El de flecha*/
+}
+
+.caja-2 {
+    cursor: pointer; /*pointer - puntero -> La de mano*/
+}
+
+.caja-3 {
+    cursor: text; /*text texto -> El de texto*/
+}
+
+.caja-4 {
+    cursor: move; /*move - mover -> Para mover elementos*/
+}
+
+.caja-5 {
+    cursor: not-allowed; /*not-aallowed - no permitido -> Cusor de prohibido*/
+}
+
+.caja-6 {
+    cursor: help; /*help - ayuda -> El icono de ayuda*/
+}
+
+.caja-7 {
+    cursor: wait; /*wait - esperar -> Reloj de espera*/
+}
+
+.caja-8 {
+    cursor: crosshair; /*crosshair - punto de mira -> La de cruz*/
+}

@@ -1,0 +1,33 @@
+/*Box model - modelo de caja -> Es la manera en que los elementos HTML se encuentran y ocupan espacio en la pagina. Cada
+elemento se representa como una caja rectangular compuesta por content, padding, border y margin*/
+
+* {
+    font-family: "Lobster", cursive;
+    font-weight: 100;
+    font-size: 30px;
+}
+
+.h2 {
+    background-color: lightblue; /* Color del contenido*/
+    display: inline-block;
+    padding: 20px;
+    background: linear-gradient(lightblue, lightblue) padding-box,
+                linear-gradient(red, blue);
+    background-clip: content-box;
+    border: 5px solid black;
+    margin: 20px;
+    outline: 5px solid red; /*outline - contorno | autline: _grosor _estilo _color-> Dibuja un contorno alrededor de un elemento, pero sin afectar su tamaño ni el box model */
+}
+
+.h22 {
+    background-color: red;
+    display: inline-block;
+    padding: 100px;
+    box-sizing: border-box;
+    text-align: center;
+    margin: 20px 10px;
+    border-radius: 2em;
+    box-shadow: 100px 100px 10px 10px black, 100px 100px 10px 10px black; /*box-shadow - sombra de caja - box-shadow: _desp.X _despY desenfoque expansion color -> Agrega sombras a los elementos con coma se intensifica*/
+    text-shadow: 2px 2px 7px #fff, 2px 2px 7px #fff; /*text-shadow -sombra de texto - text-shadow: _desp.X _desp.Y desenfoque coor -> Permite agregar sombra al texto con coma se intensifica*/
+    transform: rotate(-45deg); /*transform - transormar - transform: tipo_dee_tranformacion(valor) -> Permite modificar la apariencia de un elemento aplicando translaciones, rotaciones, escalados, inclinaciones y more*/
+}

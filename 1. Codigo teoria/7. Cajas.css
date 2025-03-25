@@ -1,0 +1,45 @@
+* {
+    font-family: "Lobster", cursive;
+    font-weight: 100;
+    font-size: 30px;
+}
+/*Elementos en bloque -> Ocupan el espacio de todo el bloque osea toda la linea -> se puede modificar el ancho y la altura del elemento
+no se puede modificar el ancho  y la altura del elemento
+Elementoos en linea -> Ocupan solo el espacio del elemento*/
+.h12 {
+    display: inline; /* display - mostrar -> Define como se comporta un elemento en la pagina - con inline hace que un elemento se comporte como uno een linea*/
+    height: 400px; /*no se puede modificar el ancho  y la altura del elemento*/
+    width: 400;
+}
+
+.h22 {
+    background-color: blue;
+    display: inline-block;
+    padding: 100px;
+    box-sizing: border-box;
+    text-align: center; /* text-align - alinear texto -> Controla la alineacion horizontal del texto dentro de un elemento - center -> se centtra horizontalmente*/
+    margin: 20px 10px; /*Se puede modificar los lados como en el padding*/
+    border-radius: 50%; /* border-radius - radio del borde -> Redondea las esquinas de ese borde*/
+    border: 10px solid #a22; /*border - borde -> Define el borde de un elemento | border: _tamaño _estilo _color*/
+}
+
+p {
+    height: 60px; /*Se puede modificar el ancho y la altura*/
+    width: 50px;
+}
+
+h3 {
+    background-color: #a22;
+    display: inline-block;
+    padding-bottom: 20px; /* padding - relleno -> Aumenta el espacio interno del elemento | padding-bottom - relleno inferior -> Aumenta el espacio de abajo*/
+    padding-top: 20px; /* padding-top - relleno superior -> Aumenta el espacio de arriba*/
+    padding-left: 30px; /* padding-left - izquierda -> Aumenta el espacio de la izquierda*/
+    padding-right: 30px; /* padding-right - derecha -> Aumenta el espacio de la derecha*/
+}
+
+b {
+    background-color: red;
+    padding: 10px 50px; /* solo -> todo el relleno del mismo tamaño | con uno (top), con dos (right), con tres (bottom), con cuatro (left) y si falta se complemeta con su reciproco */
+    width: 100px;
+    height: 100px;
+}
