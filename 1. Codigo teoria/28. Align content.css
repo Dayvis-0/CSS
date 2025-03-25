@@ -5,6 +5,7 @@
 
 .flex-container {
     display: flex;
+    height: 100vh;
 }
 
 .flex-container__caja {
@@ -14,30 +15,51 @@
     margin: 5px;
 }
 
-.container-1{
-    
+.caja-ini {
+    background: #f00;
+    color: #fff;
+}
+
+.caja-fina {
+    background: #00f;
+    color: #fff;
+}
+/*align content: - alinear contenido | Alinear varias lineas de elementos dentro de un contendor*/
+.container-1 {
+    align-content: stretch; /*align content: stretch - alinear contenido: estirar | Estira las filas para ocupar todo el espacio disponible*/
+    flex-wrap: wrap;
 }
 
 .container-2 {
-    
+    align-content: flex-start; /*align content: flex-start - alinear contenido: inicio flexible | Alinea las lineas al inicio del eje transversal*/
+    flex-wrap: wrap;
 }
 
 .container-3 {
-    
+    align-content: flex-end; /*align content: felx-end - alinear contenido: final flexible | Alinea las lineas al final dell eje transversal*/
+    flex-wrap: wrap;
 }
 
 .container-4 {
-    
+    align-content: center; /*align content: center - alinear contenido: centrar | Centra las filas en el eje transversal*/
+    flex-wrap: wrap;
 }
 
 .container-5 {
-    
+    align-content: space-between; /*align content: sapace between  - alinear contenido: espacio entre | Distribuye las filas con el maximo espacio entre ellas*/
+    flex-wrap: wrap;
 }
 
 .container-6 {
-    
+    align-content: space-around; /*align content: space-around - alinear contenido: espacio alrededor| Distribuye las filas con espacio igual alrededor*/
+    flex-wrap: wrap;
 }
 
 .container-7 {
-    
+    align-content: space-evenly; /*align content: evenly - alinear contenido: espaciar uniformemente| Distribuye las filas con espacio uniforme entre ellas*/
+    flex-wrap: wrap;
+}
+.container-8 {
+    align-content: baseline; /*align content: baseline - alinear contenido: linea baseline | Alinear elementos segun la linea base del contenido dentro de un contenedor*/
+    flex-wrap: wrap-reverse;
 }
