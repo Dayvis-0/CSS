@@ -1,0 +1,57 @@
+.titulo {
+    font-family: 'Sens', sans-serif;
+    text-align: center;
+}
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    height: 100vh;
+    background-color: aqua;
+}
+
+.flex-container__caja {
+    height: 120px;
+    width: 120px;
+    background-color: #F00;
+}
+
+.caja-1 {
+    margin: 100px; /*margin - margen | Aplica margen en los 4 lados*/
+}
+
+.caja-2 {
+    margin-top: 100px; /*margin-top - margen arriba | Agrega margen arriba*/
+}
+
+.caja-3 {
+    margin-right: 50px; /*margin-right - margen derecha | Agrega margen a la derecha*/
+}
+
+.caja-4 {
+    margin-bottom: 50px; /*margin-bottom - marggen abajo | Agrega margen abajo*/
+}
+
+.caja-5 {
+    margin-left: 100px; /*margin-left - margen izquierda | Agrega margen a la izquierda*/
+}
+
+.caja-6 {
+    margin: auto; /*margin: auto - margen automatico | Centra completamente en el contenedor flexible */
+}
+
+.caja-7 {
+    margin-left: auto; /*margin-left: auto - margen izquierdo automatico | Empuja el elemento a la derecha*/
+}
+
+.caja-8 {
+    margin-right: auto; /*margin-right: auto - margen derecho automatico | Empuja el elemento a la izquierda*/
+}
+
+.caja-9 {
+    margin-top: auto; /*margin-top: auto - margen arriba automatico | Mueve el elemento hacia abajo*/
+}
+
+.caja-10 {
+    margin-bottom: auto; /*margin-bottom: auto - margen abato automatico | Mueve el elemento hacia arriba*/
+}

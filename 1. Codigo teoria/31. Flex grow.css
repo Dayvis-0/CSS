@@ -1,0 +1,49 @@
+.titulo {
+    font-family: 'Sens', sans-serif;
+    text-align: center;
+}
+
+.flex-container {
+    display: flex;
+    height: 100vh;
+    background-color: turquoise;
+}
+
+.flex-container__caja {
+    background-color: #0f0;
+    height: 120px;
+    min-width: 120px;
+    margin: 5px;
+}
+
+.caja-1 {
+    flex-grow: 0; /*flex-grow - crecimiento flexible: 0 | No crece mas alla de su tamaño inicial*/
+}
+
+.caja-1-0 {
+    flex-grow: 1; 
+}
+
+.caja-2 {
+    flex-grow: 1; /*flex-grow - crecimiento flexible: 1 | Ocupa el espacio disponibe equitativamente*/
+}
+
+.caja-2-0 {
+    flex-grow: 0; 
+}
+
+.caja-3 {
+    flex-grow: 2; /*flex-grow - crecimiento flexible:  2 | Ocupa el doble que los elementos con flex-grow: 1*/
+}
+
+.caja-3-0 {
+    flex-grow: 1; 
+}
+
+.caja-4 {
+    flex-grow: 3; /*flex-grow - crecimiento flexible:  3 | Ocupa el triple de espcio comparado con flex-grow: 1*/
+}
+
+.caja-4-0 {
+    flex-grow: 1; 
+}
