@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+        <title>Flex</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="normalize.css">
+        <link rel="stylesheet" href="34. Flex.css">
+        <link href="https://fonts.googleapis.com/css2?family=Sen&siplay=swap" rel="stylesheet">
+    </head>
+
+    <body>
+        <h1 class="titulo">Flex: 1 | equivalente a flex: 1 1 0</h1>
+        <div class="flex-container">
+            <div class="flex-container__caja caja-1"></div>
+            <div class="flex-container__caja caja-1"></div>
+            <div class="flex-container__caja caja-1 caja-1-0 caja-flex"></div>
+        </div>
+        <h1 class="titulo">Flex: 2 | equivalente a flex: 2 1 0</h1>
+        <div class="flex-container">
+            <div class="flex-container__caja caja-2"></div>
+            <div class="flex-container__caja caja-2"></div>
+            <div class="flex-container__caja caja-2 caja-2-0 caja-flex"></div>
+        </div>
+        <h1 class="titulo">Flex: 1 2 | equivalente a flex: 1 2 auto</h1>
+        <div class="flex-container">
+            <div class="flex-container__caja caja-3"></div>
+            <div class="flex-container__caja caja-3"></div>
+            <div class="flex-container__caja caja-3 caja-3-0 caja-flex"></div>
+        </div>
+        <h1 class="titulo">Flex: none | equivalente a flex: 0 0 auto</h1>
+        <div class="flex-container">
+            <div class="flex-container__caja caja-3"></div>
+            <div class="flex-container__caja caja-3"></div>
+            <div class="flex-container__caja caja-3 caja-4-0 caja-flex"></div>
+        </div>
+    </body>
+
+</html>

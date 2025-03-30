@@ -1,0 +1,50 @@
+.titulo {
+    font-family: 'Sens', sans-serif;
+    text-align: center;
+}
+
+.flex-container {
+    display: flex;
+    height: 100vh;
+    background-color: #5f5;
+}
+
+.flex-container__caja {
+    height: 220px;   
+    width: 220px;
+    background-color: #09f;
+    margin: 5px;
+}
+
+.caja-flex {
+    background-color: #f05;
+}
+
+/*flex - doblar | Es una propiedad abreviada que combina flex-grow, flex-shrink y flex-basis en una sola linea*/
+.caja-1 {
+    flex: 1; /*flex: 1 - doblar  | Crece igual que otros con flex: 1, se encoge y tiene flex-basis: 0*/
+}
+
+.caja-2 {
+    flex: 1;
+}
+
+.caja-2-0 {
+    flex: 2; /*flex: 2 - doblar | Ocupa el doble de espacio que flex: 1*/
+}
+
+.caja-3 {
+    flex: 1 1;
+}
+
+.caja-3-0 {
+    flex: 1 2 100px; /*flex: 1 2 - doblar | Se encoge el doble que flex: 1; , usa flex-basis: auto*/
+}
+
+.caja-4 {
+    flex: 1;
+}
+
+.caja-4-0 {
+    flex: none; /*flex: none- doblar | No crece ni se encoge, mantiene su tamaño*/
+}

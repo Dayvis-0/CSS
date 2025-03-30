@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Número mayor</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    />
+  </head>
+
+  <body>
+    <header class="jumbotron bg-dark">
+      <h1 class="display-4 text-light">Número mayor</h1>
+      <p class="text-light">Obtener el número mayor de un conjunto de datos</p>
+    </header>
+
+    <main class="container">
+      <section class="work-space">
+        <form onsubmit="event.preventDefault();">
+          <p>Números: [10, 3, 7, 8, 88, 23, 69, 101, 16, 64, 90, 47]</p>
+          <button class="btn btn-primary" onclick="getBiggerNumber()">
+            Obtener
+          </button>
+        </form>
+        <textarea
+          id="result"
+          class="form-control mt-3"
+          name="result"
+          rows="1"
+          cols="1"
+          readonly
+        >
+        </textarea>
+      </section>
+    </main>
+
+    <script src="numero-mayor.js"></script>
+  </body>
+</html>

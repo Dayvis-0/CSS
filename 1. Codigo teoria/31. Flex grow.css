@@ -16,6 +16,7 @@
     margin: 5px;
 }
 
+/* flex-grow - creciemiento flexible | Determina cuanto crecera un elemento en relacion con los demas dentro de un contenedor display: flex*/
 .caja-1 {
     flex-grow: 0; /*flex-grow - crecimiento flexible: 0 | No crece mas alla de su tamaño inicial*/
 }

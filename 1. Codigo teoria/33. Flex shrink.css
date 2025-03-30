@@ -1,0 +1,47 @@
+.titulo {
+    font-family: 'Sens', sans-serif;
+    text-align: center;
+}
+
+.flex-container {
+    display: flex;
+    height: 100vh;
+    background-color: #0ff;
+}
+
+.flex-container__caja {
+    height: 220px;
+    width: 220px;
+    background-color: #f60;
+    margin: 5px;
+}
+
+/*flex-shrink - contraccion flexible | Controla cuanto se reducira un elemento si el contenedor es demasiado pequeño para ecomodar todos los elementos*/
+
+.caja-1 {
+    flex-shrink: 1;
+}
+
+.caja-1-0 {
+    flex-shrink: 0; /*flex-shrink - contraccion flexible | No se encoge, mantiene su tamaño incial*/
+}
+
+.caja-2-0 {
+    flex-shrink: 1; /*flex-shrink - contraccion flexible | Se encoge proporcionalmente si no hay suficiente espacio*/
+}
+
+.caja-3 {
+    flex-shrink: 1;
+}
+
+.caja-3-0 {
+    flex-shrink: 2; /*flex-shrink - contraccion flexible | Se encoge el doble que los elementos con flex-shrink 1*/
+}
+
+.caja-4 {
+    flex-shrink: 1;
+}
+
+.caja-4-0 {
+    flex-shrink: 3; /*flex-shrink - contraccion flexible | Se encoge el triple que los elementos con flex-shrink 1*/
+}

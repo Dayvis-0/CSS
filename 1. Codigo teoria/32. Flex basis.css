@@ -1,0 +1,38 @@
+.titulo {
+    font-family: 'Sens', sans-serif;
+    text-align: center;
+}
+
+.flex-container {
+    display: flex;
+    height: 100vh;    
+    background-color: bisque;
+}
+
+.flex-container__caja {
+    height: 220px;
+    width: 220px;
+    background-color: #ff0;
+    margin: 5px;
+}
+
+/*flex-basis - base flexible | Define el tamaño inicial de un elemento antes de aplicar flex-grow  o flex-shrink*/
+.caja-1 {
+    flex-basis: auto; /*flex-basis - base flexible | Usa el tamaño del contenido o el definifo en width*/
+    background-color: #3ff;
+}
+
+.caja-2 {
+    flex-basis: 300px; /*flex-basis - base flexible | Cada elemento inicia con 100ox de ancho*/
+    background-color: #3ff;
+}
+
+.caja-3 {
+    flex-basis: 50%; /*flex-basis - base flexible | Cada elemento ocupa el 50% del contenedor*/
+    background-color: #3ff;
+}
+
+.caja-4 {
+    flex-basis: 0; /*flex-basis - base flexible | El tamaño base es 0, solo crecera con flex-grow*/
+    background-color: #3ff;
+}
