@@ -1,0 +1,50 @@
+.titulo {
+    font-family: 'Sens', sans-serif;
+    text-align: center;
+}
+
+.flex-container {
+    display: flex;
+    height: 300px;
+    background-color: #9ff;
+}
+
+.flex-container__caja {
+    height: 220px;
+    width: 220px;
+    background-color: #0F0;
+    margin: auto;
+}   
+
+.caja-red {
+    background-color: #f00;
+}
+
+.caja-blue {
+    background-color: #00f;
+}
+
+/*order - orden | Define el orden visual de los elementos dentro de un contenedor flexbox, sin cambiar su posicion en el codigo HTMl*/
+.caja-order-1 {
+    order: 0; /*order - orden | Valor preterminado, el elemento aparece en su orden original*/    
+}
+
+.caja-0 {
+    order: 0;
+}
+
+.caja-order-2 {
+    order: 1; /*order - orden | Aparece despues de los elementos con orden cero */    
+}
+
+.caja-order-3 {
+    order: -1; /*order - orden | Aparecera antes de los elementos con orden 0*/    
+}
+
+.caja-order-4-1 {
+    order: 1;
+}
+
+.caja-order-4-2 {
+    order: 2; /*order - orden | Se mueve mas alla de los elementos con orden: 1*/    
+}
