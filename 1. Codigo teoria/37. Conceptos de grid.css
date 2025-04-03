@@ -1,0 +1,36 @@
+/*Grid - cuadricula | Es un sistema de maquetacion web que permite organizar los elementos de una pagina en filas y columnas.
+Se trata de un sistema dibimensional que puede utilzar para crear diseños complejos*/
+
+.titulo {
+    font-family: 'Sens', sans-serif;
+    text-align: center;
+}
+
+/*grid-container - contenedor de cuadricula | Elemento padre con display:grid; que define la cuadricula*/
+.grid-container {
+    display: grid;
+    height: 100vh;
+    background-color: #fe0;
+}
+
+/*grid-item - elemento de cuadricula | Elemento hijo dentro de grid container que ocupa una celda o varias*/
+.container-1 {
+    grid-template-columns: ;
+    grid-template-rows: ;
+}
+
+/*grid-cell - celda de cuadricula | Una sola celda dentro de la cuadricula*/
+.container-2 {
+}
+
+/*grid-track - pista de cuadricula | Filas y columnas que forman la estructura de grid*/
+.container-3 {
+}
+
+/*grid-area - area de cuadricula | Espacion formado ppor varias celdas que un grid item puede ocupar*/
+.container-4 {
+}
+
+/*grid-line - linea de cuadricula | Lineas horizontales y verticales que separan las filas y columnas*/
+.container-5 {
+}

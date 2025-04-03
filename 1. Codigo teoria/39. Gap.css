@@ -1,0 +1,33 @@
+.titulo {
+    font-family: 'Sens', sans-serif;
+    text-align: center;
+}
+
+body {
+    background: radial-gradient(circle, #fff, #bbb);
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 200px);
+    background: #fff;
+}
+
+.grid-container__item {
+    border: 2px solid #000;
+    background-color: #999;
+}
+
+/*gap -  espacio | Define el espacio entre filas y columnas de un contenedor CSS grid*/
+.container-1 {
+    gap: 10px; /*gap - espacio | Define el espacio entre filas y columnas en CSS grid y flexbox*/  
+}
+
+.container-2 {
+    row-gap: 10px; /*roww-gap - espacio entre filas | Define el espacio entre filas en un grid*/
+}
+
+.container-3 {
+    column-gap: 10px; /*gap - espacion entre columnas | Defien el espcacio entre columnas en un grid*/
+}

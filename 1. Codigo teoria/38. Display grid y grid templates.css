@@ -1,0 +1,14 @@
+body {
+    background: radial-gradient(circle, #fff, #bbb);
+    padding: 15px;
+}
+
+.grid-container {
+    display: grid; /*display-grid - cuadricula de ciisualizacion | Convierte un contenedor en una cuadricula flexible con filas y columnas*/
+    grid-template-rows: 200px 200px 200px; /*grid-template-rows - plantilla de cuadricula fila | Define la altura de las filas de grid*/
+    grid-template-columns: 200px 200px 1fr; /*grid-template- columna de plantilla de cuadricula | Define el ancho de las columnas del grid*/
+}
+
+.grid-container__item {
+    border: 2px solid #000;
+}
