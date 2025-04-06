@@ -1,0 +1,33 @@
+body {
+    background: radial-gradient(circle, #fff, #bbb);
+    padding: 15px;
+}
+
+.titulo {
+    font-family: 'Sens', sans-serif;
+    text-align: center;
+}
+
+.grid-container {
+    display: grid;
+    border: 3px solid #000;
+}
+
+.grid-container__item {
+    border: 2px solid #000;
+}
+
+.container-1  {
+    grid-auto-rows: 100px;
+}
+
+.container-2 {
+    grid-auto-columns: 100px;
+}
+
+.container-3 {
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    grid-auto-rows: 100px 100px 100px;
+    grid-auto-flow: row;
+}
