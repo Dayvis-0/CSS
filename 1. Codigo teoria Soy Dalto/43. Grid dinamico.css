@@ -1,0 +1,43 @@
+body {
+    background: radial-gradient(circle, #fff, #bbb);
+    padding: 15px;
+}
+
+.titulo {
+    font-family: 'Sens', sans-serif;
+    text-align: center;
+}
+
+.grid-container {
+    display: grid;
+    border: 3px solid #000;
+}   
+
+.grid-container__item {
+    border: 3px solid #000;
+}
+
+.container-1 {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 150px);
+}
+
+.container-2 {
+    grid-template-columns: repeat(3, min-content);
+    grid-template-rows: repeat(3, 150px);
+}
+
+.container-3 {
+    grid-template-columns: repeat(3, max-content);
+    grid-template-rows: repeat(3, 150px);
+}
+
+.container-4 {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 150px);
+}
+
+.container-5 {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 150px);
+}
