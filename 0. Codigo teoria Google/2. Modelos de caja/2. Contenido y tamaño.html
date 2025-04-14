@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <title>Contenido y tamaño</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="normalize.css">
+        <link rel="stylesheet" href="2. Contenido y tamaño.cs">
+    </head>
+    <body>
+        <main>
+            <div class="wrapper">
+                <article class="flow">
+                    <h1>Extrinsic sizing vs intrinsic sizing</h1>
+                    <figure class="callout">
+                        <p class="texto">
+                            Toggle intring sizing on and off  to see how you can gain more control with 
+                            <strong>extrinsic sizing</strong>and let the content with <strong>intrinsic sizing</strong>
+                        </p>
+                        <p class="texto">To see teh efect</p>
+                    </figure>
+                    <label class="toggle" for="intrinsic-switch">
+                        <span class="toggle__label">Turn</span>
+                        <input type="checkbox" role="switch" class="toggle__element" id="intrinsic-switch" />
+                        <di class="toggle__decor" aria-hidden="true">
+                            <div class="toggle__thumb"></div>
+                        </div>
+                    </label>
+                    <div class="box-layout">
+                        <div class="dimension-label" aria-live="polite" aria-label="current box width">
+                            <span data-element="width-label"></span>
+                        </div>
+                        <div></div>
+                        <figure class="box-demo box" data-element="parent-box">
+                            <img src="../imagenes/image.png" alt="A purple Petunia flower in close focus">
+                            <figcaption contenteditable>
+                                You can edit this text
+                            </figcaption>
+                        </figure>
+                            <div class="dimension-label" aria-live="polite" aria-label="Current box height" data-orientation="vertical">
+                                <span data-element="height-label"></span>
+                            </div>
+                    </div>
+                </article>
+            </div>
+        </main>        
+    </body>
+</html>
