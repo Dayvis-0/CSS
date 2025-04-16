@@ -1,20 +1,19 @@
-.texto {
-    font-family: 'Sens', sans-serif;
+.awesome {
+    text-transform: uppercase;
+    font-size: 5rem;
+    font-weight: 700;
+    line-height: 1;
+    border: 5px solid;
+    padding: 2rem;
+
+    /*The important extrinsic width*/
+    width: 320px;
 }
 
-.box-demo {
-    width: 400px;
-    height: 400px;
+.awesome[data-sizing="intrinsic"] {
+    width: min-content;
 }
 
-.box-demo[data-sizing="intrinsic"] {
-    width: max-content;
-    height: max-content;
-}
-
-.box-layout {
-    display: grid;
-    width: max-content;
-    gap: 0.5rem;
-    grid-template-columns: 1fr min-content;
+.awesome {
+    --flow-space: 2rem;
 }
