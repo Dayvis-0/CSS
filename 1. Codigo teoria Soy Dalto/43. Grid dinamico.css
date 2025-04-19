@@ -23,21 +23,27 @@ body {
 }
 
 .container-2 {
-    grid-template-columns: repeat(3, min-content);
+    grid-template-columns: repeat(3, min-content); /*min-content - contenido minimo | Representa el minimo tamaño intrinseco del contenido*/
     grid-template-rows: repeat(3, 150px);
 }
 
 .container-3 {
-    grid-template-columns: repeat(3, max-content);
+    grid-template-columns: repeat(3, max-content); /*max-content - contenido maximo | Representa el maximo tamaño intrinseco del contenido*/
     grid-template-rows: repeat(3, 150px);
 }
 
 .container-4 {
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 150px);
+    grid-template-columns: repeat(3, minmax(100px, 1fr)); /*minmax - maximo y minimo | Define un rango de tamaño mayor o igual a min y menor o igual a max*/
+    grid-template-rows: repeat(3, 100px);
 }
 
 .container-5 {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); /*auto-fill - autocompletar | Crear una cuadricula flexible que se adapta automaticamente al contenido*/
+    grid-template-rows: repeat(3, 150px);
+}
+
+.container-6 {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /*auto-fit - ajuste automatico | Permite al navegador ajustar el tamaño de las columnas o filas para 
+    que se ajuste al contenido*/
     grid-template-rows: repeat(3, 150px);
 }
