@@ -1,0 +1,68 @@
+body {
+    background: radial-gradient(circle, #fff, #bbb);
+    padding: 20px;
+}
+
+.titulo {
+    font-family: 'Sens', sans-serif;
+    text-align: center;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 200px);
+    grid-template-rows: repeat(2, 150px);
+    border: 5px solid #000;
+}
+
+.grid-container__item {
+    border: 3px solid #000;
+    font-size: 30px ;
+}
+
+.container-align {
+    height: 500px;
+}
+
+.container-dos {
+    padding: 20px;
+}
+
+.container-1 {
+    justify-content: center;
+}
+
+.container-2 {
+    justify-content: start;
+}
+
+.container-3 {
+    justify-content: end;
+}
+
+.container-4 {
+    align-content: center;
+}
+
+.container-5 {
+    align-content: start;
+}
+
+.container-6 {
+    align-content: end;
+}
+
+.container-7 {
+    align-items: center;
+    justify-content: center;
+}
+
+.container-8 {
+    align-items: start;
+    justify-content: center;
+}
+
+.container-9 {
+    align-items: end;
+    justify-content: center;
+}

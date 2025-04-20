@@ -1,0 +1,74 @@
+body {
+    background: radial-gradient(circle, #fff, #bbb);
+    padding: 20px;
+}
+
+.texto {
+    font-family: 'Sens', sans-serif;
+    text-align: center;
+}
+
+.grid-container {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 200px);
+    display: grid;
+    border: 5px solid #000;
+}
+
+.grid-container__item {
+    border: 3px solid  #000;
+    font-size: 30px;
+    padding: 50px;
+}
+
+.container-1 {
+    justify-items: stretch;
+}
+
+.container-2 {
+    justify-items: center;
+}
+
+.container-3 {
+    justify-items: start;
+}
+
+.container-4 {
+    justify-items: end;
+}
+
+.container-5 {
+    align-items: stretch;
+}
+
+.container-6 {
+    align-items: center;
+}
+
+.container-7 {
+    align-items: start;
+}
+
+.container-8 {
+    align-items: end;
+}
+
+.container-9 {
+    align-items: stretch;
+    justify-items: center;
+}
+
+.container-10 {
+    align-items: center;
+    justify-items: center;
+}
+
+.container-11 {
+    align-items: start;
+    justify-items: center;
+}
+
+.container-12 {
+    align-items: end;
+    justify-items: center;
+}
