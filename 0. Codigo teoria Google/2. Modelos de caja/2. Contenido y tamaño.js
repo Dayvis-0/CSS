@@ -1,10 +1,9 @@
-const awesome = document.querySelector('[data-element="awesome"]');
+const aewsome = document.querySelector('[data-element="awesome"]');
 const intrinsicSwitch = document.querySelector("#intrinsic-switch");
 
-// Set sizing attribute based on switch
-intrinsicSwitch.addEventListener("change", () => {
-  awesome.setAttribute(
+intrinsicSwitch.addEventListener("change", () =>  {
+  aewsome.setAttribute(
     "data-sizing",
-    intrinsicSwitch.checked ? "intrinsic" : "extrinsic"
+    intrinsicSwitch.checked ? "intrinsic" : "extrinsic" 
   );
 });
