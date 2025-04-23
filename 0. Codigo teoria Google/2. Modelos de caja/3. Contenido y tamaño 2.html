@@ -7,6 +7,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel='stylesheet' href='https://codepen.io/web-dot-dev/pen/abpoXGZ.css'>
+        <link rel="stylesheet" href="3. Contenido y tamaño 2.css">
     </head>
 
     <body>
@@ -28,16 +29,24 @@
                     </label>
                     <div class="box-layout">
                         <div class="dimension-label" aria-live="polite" aria-label="Current box width">
-                            <span data-element="with-labeñ"></span>
+                            <span data-element="width-label"></span>
                         </div>
                         <div></div>
-                        <figure class="">
-
+                        <figure class="box-demo box" data-element="parent-box">
+                            <img src="https://assets.codepen.io/5928893/learn-css-michael-shevtsov-CiFaYIvZyyA-unsplash.jpg" alt="A purple Pertunia flower in close focus">
+                            <figcaption contenteditable>
+                                You can edit this text to see how it changes the layout of our box,
+                                depending on intrinsic an extrinsic sizing. 
+                            </figcaption>
                         </figure>
+                        <div class="dimension-label" aria-live="polite" aria-label="Current box height" data-orientation="vertical">
+                            <span data-element="height-label"></span>
+                        </div>
                     </div>
                 </article>
             </div>
         </main>
+        <script src="3. Contenido y tamaño 2.js"></script>
     </body>
 
 </html>
