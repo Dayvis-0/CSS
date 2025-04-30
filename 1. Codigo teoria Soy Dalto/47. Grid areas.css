@@ -1,0 +1,40 @@
+body {
+    background: radial-gradient(circle, #fff, #bbb);
+}
+
+/**/
+.grid-container {
+    display: grid;
+    background: #444;
+    margin: 10px;
+    border: solid 5px;
+    grid-template-areas: 
+    "header header header "
+    "aside main main "
+    "aside main main "
+    "aside main main "
+    "aside main main "
+    "aside main main "
+    "footer footer footer ";
+    height: 100vh;
+}
+
+.item-header {
+    background: #fbb;
+    grid-area: header;
+}
+
+.item-main {
+    background: #bfb;
+    grid-area: main;
+}
+
+.item-aside {
+    background: #bbf;
+    grid-area: aside;
+}
+
+.item-footer {
+    background: #ddd;
+    grid-area: footer;
+}

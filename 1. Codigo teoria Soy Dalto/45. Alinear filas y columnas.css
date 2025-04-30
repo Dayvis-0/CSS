@@ -57,6 +57,17 @@ body {
     justify-content: center;
 }
 
+.item-dife:first-child{
+    background: #f00;
+    order: 3;
+}
+
+/*:nth-child() coincide con uno o mas elementos en funcion de su posicion entre un grupo de hermanos*/
+.item-dife:nth-child(3) {
+    background: #0f0;
+    order: 2;
+}
+
 .container-8 {
     align-items: start;
     justify-content: center;
