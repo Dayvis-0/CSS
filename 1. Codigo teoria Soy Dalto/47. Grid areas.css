@@ -16,9 +16,13 @@ body {
     "aside main main "
     "aside main main "
     "footer footer footer ";
-    height: 100vh;
+    grid-template-rows: repeat(auto-fill, 1fr);
+    height: 92vh;
 }
 
+.grid-item {
+    padding: 20px;
+}
 .item-header {
     background: #fbb;
     grid-area: header;

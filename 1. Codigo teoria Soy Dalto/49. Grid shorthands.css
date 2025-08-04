@@ -1,0 +1,36 @@
+/*grid-template es una propiedad abreviada para definir grid columns, grid rows y grid areas*/
+
+:root {
+    color-scheme: light dark;
+}
+
+.grid-container {
+    background: #444;
+    display: grid;
+    grid-template: repeat(auto-fill, 1fr);
+    border: 5px solid #000;
+    grid-template:
+        "a a a" 40px
+        "b c c" 40px
+        "b c c" 40px / 1fr 1fr 1fr;
+}
+
+.grid-item {
+    border: 3px solid #000;
+    background: lightgray;
+}
+
+.item-a {
+    grid-area: a;
+    background: #45f;
+}
+
+.item-b {
+    grid-area: b;
+    background: #95f;
+}
+
+.item-c {
+    grid-area: c;
+    background: #0f0;
+}

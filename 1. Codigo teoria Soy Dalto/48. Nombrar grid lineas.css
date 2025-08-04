@@ -1,0 +1,34 @@
+:root {
+    color-scheme: light dark;
+}
+
+.grid-container {
+    background: #444;
+    display: grid;
+    grid-template-rows: 
+        [f-line]
+        300px
+        [s-line]
+        300px
+        [t-line]
+        300px
+        [f-line];
+    grid-template-columns:
+        [linea-derecha] 
+        300px
+        300px
+        300px
+        [fin-del-main];
+    border: 5px solid #000;
+}
+
+.grid-item {
+    border: 3px solid #000;
+    background: lightgray;
+}
+
+.grid-item:first-child {
+    background: #f00;
+    grid-row: f-line / t-line;
+    grid-column: linea-derecha / fin-del-main;
+}
