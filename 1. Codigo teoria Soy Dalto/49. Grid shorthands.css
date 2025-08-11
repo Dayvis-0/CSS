@@ -2,22 +2,38 @@
 
 :root {
     color-scheme: light dark;
+    padding: 50px;
+}
+
+.title {
+    text-align: center;
+}
+
+.text {
+    font-size: 50px;
+    color: #000;
 }
 
 .grid-container {
     background: #444;
     display: grid;
-    grid-template: repeat(auto-fill, 1fr);
     border: 5px solid #000;
-    grid-template:
+    /*grid-template:
         "a a a" 40px
         "b c c" 40px
-        "b c c" 40px / 1fr 1fr 1fr;
+        "b c c" 40px / 1fr 1fr 1fr;*/
+    grid-template: 
+        "a a a" 300px
+        "b c c" 300px
+        "b c c" 300px / 1fr 1fr 1fr;
 }
 
-.grid-item {
+.item {
     border: 3px solid #000;
     background: lightgray;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .item-a {
