@@ -1,5 +1,5 @@
-/*La especificidad es un sistema de reglas que los navegadores usan para determinar que estilos se aplicaran a un elemento
-
+/*La especificidad es un sistema de reglas que los navegadores usan para determinar que estilos se
+aplicaran a un elemento.
 Jerarquia en CSS
 
     Primer nivel de jerarquia 
@@ -14,9 +14,9 @@ Jerarquia en CSS
 - elementos 
 - pseudo-elementos*/
 
-/*Por cascada -> Cuando se selecciona dos elmentos de la misma jerarquia dos pseudo-elementos, elementos, atributos, pseutod-clases, clases,
-identificadores, estilos en linea e important. El ultimo es el que queda o el mas importante es el ultimo*/
-
+/*Por cascada -> Cuando se selecciona dos elmentos de la misma jerarquia dos pseudo-elementos, 
+elementos, atributos, pseutod-clases, clases, identificadores, estilos en linea e important. 
+El ultimo es el que queda o el mas importante es el ultimo*/
 h1 {
     color: black;
 }

@@ -1,5 +1,5 @@
-/* overflow - desbordamiento | overflo: valor |-> Controla como se comporta el contenido de un elemento cuando es mas grande que su contenedor*/
-
+/* overflow - desbordamiento | overflo: valor |-> Controla como se comporta el contenido de un elemento 
+cuando es mas grande que su contenedor*/
 .titulo, .cont__texto {
     font-family: 'Lobster', cursive;
     font-weight: 100;
@@ -11,7 +11,8 @@
     color: red;
 }
 
-/* overflow visible - desbordamiento visible -> Ess el valor por defeto. El contenido que excede el contenedor se muestra fuera de el*/
+/* overflow visible - desbordamiento visible -> Ess el valor por defeto. El contenido que excede el 
+contenedor se muestra fuera de el*/
 .cont {
     margin: auto;
     width: 300px;
@@ -20,12 +21,14 @@
     background: grey;
 }
 
-/* overflow hidden - desbordameinto oculto -> Oculta cualquier contenido que se desborde del contenedor sin mostrar barras de desplazamiento*/
+/* overflow hidden - desbordameinto oculto -> Oculta cualquier contenido que se desborde del contenedor 
+sin mostrar barras de desplazamiento*/
 .cont-hidden {
     overflow: hidden;
 }
 
-/* overflo scroll - desplazamiento de desbordamiento -> Fuerza barras de desplazamiento en el contenedor, incluso si no son necesarias*/
+/* overflo scroll - desplazamiento de desbordamiento -> Fuerza barras de desplazamiento en el contenedor, 
+incluso si no son necesarias*/
 .cont-scroll {
     overflow: scroll;
 }

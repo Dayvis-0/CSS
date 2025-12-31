@@ -1,8 +1,7 @@
-/*Responsive Design es una tecnica en desarrollo web que permite que una pagina se adapte a cualquier dispositivo, ajustando su diseño automaticamente
-Mobile Firt es una estrategia dentro del responsive design que priopriza el diseño para moviles primero, y luego se expande en pantallas mas grandes
-
+/*Responsive Design es una tecnica en desarrollo web que permite que una pagina se adapte a cualquier
+dispositivo, ajustando su diseño automaticamente. Mobile Firt es una estrategia dentro del responsive 
+design que priopriza el diseño para moviles primero, y luego se expande en pantallas mas grandes
 Ejemplo no responsivo:*/
-
 .titulo, .subtitu {
     font-family: 'Sen', sans-serif;
 }

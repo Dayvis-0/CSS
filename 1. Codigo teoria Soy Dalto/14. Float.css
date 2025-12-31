@@ -1,5 +1,5 @@
-/*float - flotar -> Permite posicionar elementos a la izquierda o  derecha de su contenedor, permitiendo que otro fluyan alrededor de ellos*/ 
-
+/*float - flotar -> Permite posicionar elementos a la izquierda o  derecha de su contenedor, permitiendo 
+que otro fluyan alrededor de ellos*/ 
 .titulo {
     font-family: 'Lobster', cursive;
     text-align: center;
@@ -21,13 +21,15 @@
     height: 100px;
 }
 
-/*float left - flotar a la izquierda -> Posiciona el elemento a la izquierda, permitiendo que otros elementos fluyan a su derecha*/
+/*float left - flotar a la izquierda -> Posiciona el elemento a la izquierda, permitiendo que otros
+elementos fluyan a su derecha*/
 .imagen-left {
     float: left;
 }
 
 
-/*float right - flotar a la derecha -> Posiciona el elemento a la derecha, permitiendo que otros elementos fluyan a su izquierda*/
+/*float right - flotar a la derecha -> Posiciona el elemento a la derecha, permitiendo que otros 
+elementos fluyan a su izquierda*/
 .imagen-right {
     float: right;
 }

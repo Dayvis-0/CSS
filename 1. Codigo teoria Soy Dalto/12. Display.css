@@ -1,7 +1,7 @@
 /* display - mostrar -> Define como se debe mostrar un elemento en la pagina */
 
-/* display block - bloque de previsualizacion - Predefinifo -> Hace que el elemento ocupe todo el ancho disponible, siempre inicia en un nueva linea y se puede
- modificar el alto(height) y el ancho(width) */
+/* display block - bloque de previsualizacion - Predefinifo -> Hace que el elemento ocupe todo el 
+ancho disponible, siempre inicia en un nueva linea y se puede modificar el alto(height) y el ancho(width) */
 .block__caja, .inline__caja, .inline-block__caja, .flex__caja {
     width: 50px;
     height: 50px;
@@ -10,14 +10,15 @@
     margin: 20px;
 }
 
-/* display inline - mostrar en linea -> El elemento no inicia en una nueva linea, sino que sigue el flujo normal del texto, solo ocupa el ancho de su contenido(no se puede
-modifica (no puede modificar width ni height) y no respeta margenes verticales -*/
+/* display inline - mostrar en linea -> El elemento no inicia en una nueva linea, sino que sigue el 
+flujo normal del texto, solo ocupa el ancho de su contenido(no se puede modifica (no puede modificar 
+width ni height) y no respeta margenes verticales -*/
 .inline__caja {
     display: inline;
 }
 
-/* displa inline block - bloque de visualizacion en linea -> Se comporta como un inline (no inicia en una nueva linea), pero permite modificar width y height, permite
-aplicar margenes y paddings verticales y mu*/
+/* displa inline block - bloque de visualizacion en linea -> Se comporta como un inline (no inicia en
+una nueva linea), pero permite modificar width y height, permite aplicar margenes y paddings verticales y mu*/
 .inline-block__caja {
     display: inline-block;
 }
@@ -27,8 +28,8 @@ aplicar margenes y paddings verticales y mu*/
     text-align: center;
 }
 
-/* display-flex - pantalla flexible -> Es una propiedad de CSS que activa Flexbox, un modelo de diseño que permite alinear y distribuir elementos dentro de un contenedor de manera eficiente*/
-
+/* display-flex - pantalla flexible -> Es una propiedad de CSS que activa Flexbox, un modelo de diseño
+que permite alinear y distribuir elementos dentro de un contenedor de manera eficiente*/
 .flex {
     display: flex;
     justify-content: center; /* Alinea los elementos en el eje horizontal */

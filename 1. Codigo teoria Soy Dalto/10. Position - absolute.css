@@ -1,6 +1,6 @@
 /*                          POSITION ABSOLUTE
-El posicion absolute, cuando un elemento se posiciona como absoluto no reserva su elemento que ocupa en el flujo, su elemento, el punto de referencia
-sera el viewport o el conetenedo   */
+El posicion absolute, cuando un elemento se posiciona como absoluto no reserva su elemento que ocupa
+en el flujo, su elemento, el punto de referencia sera el viewport o el conetenedo   */
 
 .cont {
     position: relative;

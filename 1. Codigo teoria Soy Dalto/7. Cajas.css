@@ -3,8 +3,8 @@
     font-weight: 100;
     font-size: 30px;
 }
-/*Elementos en bloque -> Ocupan el espacio de todo el bloque osea toda la linea -> se puede modificar el ancho y la altura del elemento
-no se puede modificar el ancho  y la altura del elemento
+/*Elementos en bloque -> Ocupan el espacio de todo el bloque osea toda la linea -> se puede modificar el 
+ancho y la altura del elemento no se puede modificar el ancho  y la altura del elemento
 Elementoos en linea -> Ocupan solo el espacio del elemento*/
 .h12 {
     display: inline; /* display - mostrar -> Define como se comporta un elemento en la pagina - con inline hace que un elemento se comporte como uno een linea*/

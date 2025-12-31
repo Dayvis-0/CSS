@@ -1,5 +1,5 @@
-/*Box model - modelo de caja -> Es la manera en que los elementos HTML se encuentran y ocupan espacio en la pagina. Cada
-elemento se representa como una caja rectangular compuesta por content, padding, border y margin*/
+/*Box model - modelo de caja -> Es la manera en que los elementos HTML se encuentran y ocupan espacio en la
+pagina. Cada elemento se representa como una caja rectangular compuesta por content, padding, border y margin*/
 
 * {
     font-family: "Lobster", cursive;

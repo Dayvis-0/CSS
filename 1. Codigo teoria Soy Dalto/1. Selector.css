@@ -1,7 +1,7 @@
 /*selector{
     propiedad: valor;
 }
-Es un patron de elementos que indica al navegador que elementos HTML sse beben seleccionar para aplicarles estilo     */
+Es un patron de elementos que indica al navegador que elementos HTML sse beben seleccionar para aplicarles estilo*/
 
 /*Universal - * {} -> Todos los elementos del mismo color  
 * {
@@ -23,13 +23,15 @@ h1 {
     color: #7DFF33;
 }
 
-/* Por atributo - [nombre=""]{} - selecciona por atributo, el atributo puede ser cualquiera osea que puede tener cualquier nombre y valor */ 
+/* Por atributo - [nombre=""]{} - selecciona por atributo, el atributo puede ser cualquiera osea que puede
+tener cualquier nombre y valor */ 
 [nose='atribu']{
     color: #33FFEC;
 }
 
-/* Por descendiente - contenedor lo_que_hay_adentro_del_contenedor {} - seleccion de descendiente con el contenedor primero y lo que hay dentro 
-el contenedor puede ser tambien una clase y lo hay dentro tambien se pude ver que hay dentro */
+/* Por descendiente - contenedor lo_que_hay_adentro_del_contenedor {} - seleccion de descendiente con el 
+contenedor primero y lo que hay dentro el contenedor puede ser tambien una clase y lo hay dentro tambien 
+se pude ver que hay dentro */
 p b{
     color: #3342FF;
 }

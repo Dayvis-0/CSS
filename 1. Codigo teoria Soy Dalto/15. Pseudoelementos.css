@@ -1,5 +1,5 @@
-/*Pseudo elemento -> Es una palabra clave que permite utilizar un parte especifica de un elmento sin modificar el HTML.*/
-
+/*Pseudo elemento -> Es una palabra clave que permite utilizar un parte especifica de un elmento 
+sin modificar el HTML.*/
 .titulo, .texto {
     font-family: 'Lobster', cursive;
     font-weight: 100;
@@ -15,7 +15,8 @@
     padding: 20px;
 }
 
-/*firt-line - primera linea -> Permite modificar solo la primera linea de un bloque de texto, solo se usa en elementos de bloque no en os de linea y solo propiedades de tecxto*/
+/*firt-line - primera linea -> Permite modificar solo la primera linea de un bloque de texto, solo 
+se usa en elementos de bloque no en os de linea y solo propiedades de tecxto*/
 .texto::first-line { 
     color: blue;
     font-size: 2em;
