@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Inline CSS</title>
+        <link rel="stylesheet" href="1. Inline CSS.css">
+        <style>
+            :root {
+                color-scheme: light dark;
+                padding: 100px;
+            }
+
+            p {
+                color: #ffffff;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Inline CSS</h1>
+        <p>
+            We can style an HTML file/page in three ways: external styling, internal styling, and 
+            inline styling. For now we will focus on online style.
+        </p>
+        <!--Usamos style, seguido del signo igual(=), y luego una comilla donde todos los valores de 
+        style se almacenarán usando pares de propiedad-valor CSS estándar "property: value;"-->
+        <p>
+            We use <code>style</code>, followed by the equality sign (=), and then a quote where all 
+            of the style values will be stored using the standard CSS property-value pairs - 
+            <code>"property: value;"</code>.
+        </p>
+        <p>
+            It's worth noting that the <code>style</code> attribute is typically used in the opening 
+            HTML tag because that's the part of the HTML element that can contain text, data, an 
+            mage, or nothing at all
+        </p>
+        <h2 style="color: red; font-size: 40px;">Hello world</h2>
+        <h2>When to use inline styles</h2>
+        <p>
+            Using inline styles is not considered best practice, though, because it results in a lot 
+            of repetition – because the styles cannot be reused elsewhere.
+        </p>
+        <p>
+            But there are times when inline styles are the best (or only) option, such as when styling 
+            HTML e-mail, CMS content like WordPress, Drupal, and so on. You can also use them when 
+            styling dynamic content, which is HTML-created or changed by JavaScript.
+        </p>
+        <p style="color: red;">Paragraph one is red.</p>
+        <p style="color: red;">Paragraph two is also red.</p>
+        <h2>Advantages and Disadvantages of Inline styles</h2>
+        <h3>Advantages of Inline CSS:</h3>
+        <ul>
+            <li>
+                <p>Inline takes precedence over all other styles</p>
+            </li>
+            <li>
+                <p>
+                    You can quickly and easily insert CSS rules into an HTML page, which is useful 
+                    for testing or previewing changes and performing quick fixes on your website.
+                </p>
+            </li>
+            <li>
+                <p>There is no need to create an additional file.</p>
+            </li>
+            <li>
+                <p>To apply styling in JavaScript, use the <code>style</code> attribute.</p>
+            </li>
+        </ul>
+        <h3>Disadvantages of Inline CSS:</h3>
+        <ul>
+            <li>
+                <p>
+                    Adding CSS rules to each HTML element takes time and makes your HTML structure 
+                    unorganized. It's difficult to keep up, reuse, and scale.
+                </p>
+            </li>
+            <li>
+                <p>The size and download time of your page can be affected by styling multiple elements.</p>
+            </li>
+            <li>
+                <p>Inline styles cannot be used to style pseudo-elements and pseudo-classes</p>
+            </li>
+        </ul>
+        <p>
+            Extracted from:
+            <a href="https://www.freecodecamp.org/news/inline-style-in-html/" target="_blank">Freecodecamp inline style</a>
+        </p>
+    </body>
+</html>
