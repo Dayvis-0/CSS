@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Introduccion to the CSS cascade</title>
+        <link rel="stylesheet" href="5. Introduccion to the CSS cascade.css">
+    </head>
+    <body>
+        <h1>Introduccion to the CSS cascade</h1>
+        <!--La cascada es un algoritmo que define cómo los agentes de usuario combinan valores de propiedad
+        que se originan en diferentes fuentes.-->
+        <p>
+            The cascade is an algorithm that defines how user agents combine property values originating 
+            from different sources. The cascade defines the origin and layer that takes precedence when 
+            declarations in more than one origin, cascade layer, or @scope block set a value for a 
+            property on an element.
+        </p>
+        <h2>Origin types</h2>
+        <p>
+            The CSS cascade algorithm's job is to select CSS declarations in order to determine the correct 
+            values for CSS properties. CSS declarations come from different origin types: User-agent 
+            stylesheets, Author stylesheets, and User stylesheets.
+        </p>
+        <h3>User-agent stylesheets</h3>
+        <p>
+            User-agents, or browsers, have basic stylesheets that give default styles to any document. 
+            These stylesheets are named user-agent stylesheets. Most browsers use actual stylesheets 
+            for this purpose, while others simulate them in code. The end result is the same.
+        </p>
+        <p>
+            Although some constraints on user-agent stylesheets are set by the HTML specification, 
+            browsers have a lot of latitude: that means some differences exist between browsers.
+            To simplify the development process, Web developers may use a CSS reset stylesheet, such as 
+            normalize.css, which sets common properties values to a known state for all browsers before 
+            beginning to make alterations to suit their specific needs.
+        </p>
+        <h3>Authot stylesheets</h3>
+        <p>
+            Author stylesheets are the most common type of stylesheet; these are the styles written by 
+            web developers.  These styles can reset user-agent styles, as noted above, and define the 
+            styles for the design of a given web page or application.
+        </p>
+        <h3>User stylesheets</h3>
+        <p>
+            In most browsers, the user (or reader) of the website can choose to override styles using a 
+            custom user stylesheet designed to tailor the experience to the user's wishes.
+        </p>
+        <h3>Cascade layers</h3>
+        <p>
+            The cascade order is based on origin type. The cascade within each origin type is based on 
+            the declaration order of cascade layers within that type. For all origins - user-agent, 
+            author, or user - styles can be declared within or outside of named or anonymous layers.
+        </p>
+        <h2>Cascading order</h2>
+        <p>
+            The cascading algorithm determines how to find the value to apply for each property for 
+            each document element. The following steps apply to the cascading algorithm:
+        </p>
+        <ol>
+            <li>
+                <p>
+                    <strong>Relevance:</strong> It It first filters all the rules from the different 
+                    sources to keep only the rules that apply to a given element.
+                </p>
+            </li>
+            <li>
+                <p>
+                    <strong>Origin and importance</strong>:
+                    hen it sorts these rules according to their importance, that is, whether or not 
+                    they are followed by <code>!important</code>, and by their origin. Ignoring layers 
+                    for the moment, the cascade order is as follows:
+                </p>
+                <figure class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Precedence Order (low to high)</th>
+                                <th>Origin</th>
+                                <th>Importance</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>user-agent (browser)</td>
+                                <td>normal</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>user</td>
+                                <td>normal</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>author (developer)</td>
+                                <td>normal</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>CSS keyframe animations</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>author (developer)</td>
+                                <td><code>!important</code></td>
+                            </tr>
+                            <tr>
+                                <td>6</td>
+                                <td>user</td>
+                                <td><code>!important</code></td>
+                            </tr>
+                            <tr>
+                                <td>7</td>
+                                <td>user-agent (browser)</td>
+                                <td><code>!important</code></td>
+                            </tr>
+                            <tr>
+                                <td>8</td>
+                                <td>CSS transitions</td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </figure>
+            </li>
+            <li>
+                <p>
+                    <strong>Specificity</strong>: In case of equality with an origin, the specificity 
+                    of a rule is considered to choose one value or another.
+                </p>
+            </li>
+            <li>
+                <p>
+                    <strong>Scoping proximity</strong>: When two selectors in the origin layer with 
+                    precedence have the same specificity, the property value within scoped rules with 
+                    the smallest number of hops up the DOM hierarchy to the scope root wins. 
+                </p>
+            </li>
+            <li>
+                <p>
+                    <strong>Order of appearance</strong>: In the origin with precedence, if there are 
+                    competing values for a property that are in style block matching selectors of equal 
+                    specificity and scoping proximity, the last declaration in the style order is applied.
+                </p>
+            </li>
+        </ol>
+        <p>The cascade is in ascending order, meaning:</p>
+        <ul>
+            <li>
+                <p>
+                    Animations take precedence over normal values, whether declared in user, author, 
+                    or user-agent styles.
+                </p>
+            </li>
+            <li>
+                <p>
+                    Important values take precedence over animations, whether declared in user, 
+                    author, or user-agent styles.
+                </p>
+            </li>
+            <li>
+                <p>Transitions take precedence over important values.</p>
+            </li>
+        </ul>
+        <h2><a href="5. Introduccion to the CSS cascade.css" target="_blank">Basic example</a></h2>
+        <ul>
+            <li class="specific">1<sup>st</sup></li>
+            <li>2<sup>nd</sup></li>
+        </ul>
+        <h2>Complete cascade order</h2>
+        <figure class="table-container">
+            <table>
+                <thead>
+                    <tr><th>Precedence Order <br>(low to high)</th><th>Style Origin</th><th>Importance</th></tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td rowspan="3">1</td>
+                        <td>user-agent - first declared layer</td>
+                        <td rowspan="3">normal</td>
+                    </tr>
+                    <tr>
+                        <td>user-agent - last declared layer</td>
+                    </tr>
+                    <tr>
+                        <td>user-agent - unlayered styles</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="3">2</td><td>user - first declared layer</td><td rowspan="3">normal</td>
+                    </tr>
+                    <tr>
+                        <td>user - last declared layer</td>
+                    </tr>
+                    <tr>
+                        <td>user - unlayered styles</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="4">3</td><td>author - first declared layer</td><td rowspan="4">normal</td>
+                    </tr>
+                    <tr>
+                        <td>author - last declared layer</td>
+                    </tr>
+                    <tr>
+                        <td>author - unlayered styles</td>
+                    </tr>
+                    <tr>
+                        <td>inline <code>style</code></td>
+                    </tr>
+                    <tr>
+                        <td>4</td><td>animations</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td rowspan="4">5</td>
+                        <td>author - unlayered styles</td>
+                        <td rowspan="4"><code>!important</code></td>
+                    </tr>
+                    <tr>
+                        <td>author - last declared layer</td>
+                    </tr>
+                    <tr>
+                        <td>author - first declared layer</td>
+                    </tr>
+                    <tr>
+                        <td>inline <code>style</code></td>
+                    </tr>
+                    <tr>
+                        <td rowspan="3">6</td>
+                        <td>user - unlayered styles</td>
+                        <td rowspan="3"><code>!important</code></td>
+                    </tr>
+                    <tr>
+                        <td>user - last declared layer</td>
+                    </tr>
+                    <tr>
+                        <td>user - first declared layer</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="3">7</td>
+                        <td>user-agent - unlayered styles</td>
+                        <td rowspan="3"><code>!important</code></td>
+                    </tr>
+                    <tr>
+                        <td>user-agent - last declared layer</td>
+                    </tr>
+                    <tr>
+                        <td>user-agent - first declared layer</td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>transitions</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </figure>
+        <p>
+            Extracted from:
+            <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Cascade/Introduction#author_styles_inline_styles_layers_and_precedence">MDN Introduction to the CSS cascade</a>
+        </p>
+    </body>
+</html>

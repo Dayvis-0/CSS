@@ -1,0 +1,58 @@
+:root {
+    color-scheme: light dark;
+    padding: 100px;
+}
+
+table {
+    border-color: gray;
+    border-spacing: 2px;
+    border-collapse: collapse;
+}
+
+thead, tbody {
+    border-color: inherit;
+}
+
+tr {
+    border-color: inherit;
+}
+
+td, th {
+    border: 1px solid #51565d;
+    padding: 10px;
+}
+
+/*User agent CSS:
+li {
+    margin-left: 10px;
+}*/
+
+/*Author CSS 1:*/
+li {
+    margin-left: 0;
+}
+
+/*Author CSS 2:*/
+@media screen {
+    li {
+        margin-left: 3px;
+    }
+}
+
+@media print {
+    li {
+        margin-left: 1px;
+    }
+}
+
+@layer namedLayer {
+    li {
+        margin-left: 5px;
+    }
+}
+
+/*User CSS:
+.specific {
+    margin-left: 1em;
+}*/
+
