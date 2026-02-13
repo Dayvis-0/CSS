@@ -56,3 +56,39 @@ li {
     margin-left: 1em;
 }*/
 
+/* Keyframes cascade demo */
+.demo {
+    animation: infinite 5s alternate repeatedName;
+}
+
+@keyframes repeatedName {
+    from {
+        font-size: 1rem;
+    }
+    to {
+        font-size: 3rem;
+    }
+}
+
+@layer A {
+    @keyframes repeatedName {
+        from {
+            background-color: yellow;
+        }
+        to {
+            background-color: orange;
+        }
+    }
+}
+
+@layer B {
+    @keyframes repeatedName {
+        from {
+            color: white;
+        }
+        to {
+            color: black;
+        }
+    }
+}
+

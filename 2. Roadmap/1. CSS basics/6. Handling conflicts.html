@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Handling conflicts</title>
+        <link rel="stylesheet" href="6. Handling conflicts.css">
+    </head>
+    <body>
+        <h1>Handling conflicts</h1>
+        <h2>Conflicts rules</h2>
+        <p>
+            Stylesheets cascade. At a very simple level, this means that the origin and the order of 
+            CSS rules matter. When two rules both have equal specificity, the one that is defined last 
+            in the stylesheet is the one that will be used.
+        </p>
+        <h4>Example cascade</h4>
+        <h2>Specificity</h2>
+        <p>
+            Specificity is an algorithm that the browser uses to decide which property value is applied 
+            to an element.
+        </p>
+        <p>Specificity is basically a measure of how specific a selector's selection will be:</p>
+        <ul>
+            <li>
+                <p>
+                    A type (element) selector is less specific;  it will select all elements of that 
+                    type that appear on a page, so it has less weight. 
+                </p>
+            </li>
+            <li>
+                <p>
+                    A type (element) selector is less specific; it will select only the elements on a 
+                    page that have a specific class attribute value, so it has more weight.
+                </p>
+            </li>
+            <li>
+                <p>
+                    An ID selector is even more specific; it only selects a single element with a 
+                    specific id value. It therefore has even more weight.
+                </p>
+            </li>
+        </ul>
+        <h2>Inheritance</h2>
+        <p>
+            Inheritance also needs to be understood in this context — some CSS property values set 
+            on parent elements are inherited by their child elements, and some aren't.
+        </p>
+        <h2>Understanding inheritance</h2>
+        <ul class="main">
+            <li>Item One</li>
+            <li>
+                Item Two
+                <ul>
+                    <li>2.1</li>
+                    <li>2.2</li>
+                </ul>
+            </li>
+            <li>
+                Item Three
+                <ul class="special">
+                    <li>
+                        3.1
+                        <ul>
+                            <li>3.1.1</li>
+                            <li>3.1.2</li>
+                        </ul>
+                    </li>
+                    <li>3.2</li>
+                </ul>
+            </li>
+        </ul>
+        <p>
+            Properties like <code>width</code> (as mentioned earlier), <code>margin</code>, <code>padding</code>, 
+            and <code>border</code> are not inherited properties. If a border were to be inherited by 
+            the children in this list example, every single list and list item would gain a 
+            border — robably not an effect we would ever want!
+        </p>
+        <h3>Controlling inheritance</h3>
+        <p>
+            CSS provides five special universal property values for controlling inheritance. Every CSS 
+            property accepts these values.
+        </p>
+        <code>inherit</code>
+        <p>
+            Sets the property value applied to a selected element to be the same as that of its parent element.
+        </p>
+        <code>initial</code>
+        <p>
+            Sets the property value applied to a selected element to the initial value of that property.
+        </p>
+        <code>revert</code>
+        <p>
+            Resets the property value applied to a selected element to the browser's default styling 
+            rather than the defaults applied to that property. This value acts like unset in many cases.
+        </p>
+        <code>revert-layer</code>
+        <p>
+            Resets the property value applied to a selected element to the value established in a 
+            previous cascade layer.
+        </p>
+        <code>unset</code>
+        <p>
+            Resets the property to its natural value, which means that if the property is naturally 
+            inherited it acts like inherit, otherwise it acts like initial.
+        </p>
+    </body>
+</html>

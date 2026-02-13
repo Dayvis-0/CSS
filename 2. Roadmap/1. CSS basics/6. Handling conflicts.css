@@ -1,0 +1,24 @@
+:root {
+    color-scheme: light dark;
+    padding: 100px;
+}
+
+/*Cascade*/
+h4 {
+    color: red;
+}
+
+h4 {
+    color: blue;
+}
+
+.main {
+    color: white;
+    border: 2px solid #cccccc;
+    padding: 1em;
+}
+
+.special {
+    color: red;
+    font-weight: bold;
+}
