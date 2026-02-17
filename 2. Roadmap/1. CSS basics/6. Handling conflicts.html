@@ -105,5 +105,130 @@
             Resets the property to its natural value, which means that if the property is naturally 
             inherited it acts like inherit, otherwise it acts like initial.
         </p>
+        <h3>Playing with inheritance control properties </h3>
+        <ul>
+            <li>Default <a href="#">link</a> color</li>
+            <li class="my-class-1">Inherit the <a href="#">link</a> color</li>
+            <li class="my-class-2">Reset the <a href="#">link</a> color</li>
+            <li class="my-class-3">Unset the <a href="#">link</a> color</li>
+        </ul>
+        <h3>Resetting all property values</h3>
+        <p>
+            The CSS shorthand property <code>all</code> can be used to apply one of these inheritance 
+            values to (almost) all properties at once. Its value can be any one of the inheritance 
+            values (<code>inherit</code>, <code>initial</code>, <code>revert</code>, 
+            <code>revert-layer</code>, or <code>unset</code> ). 
+        </p>
+        <blockquote>
+            <p>This blockquote is styled</p>
+        </blockquote>
+        <blockquote class="fix-this">
+            <p>This blockquote is not styled</p>
+        </blockquote>
+        <h2>Understanding the cascade</h2>
+        <p>
+            There are three factors to consider, listed here in increasing order of importance. Later ones 
+            overrule earlier ones:
+        </p>
+        <ol>
+            <li><strong>Source order</strong></li>
+            <li><strong>Specificity</strong></li>
+            <li><strong>Importance</strong></li>
+        </ol>
+        <h3>Source order</h3>
+        <p>
+            If you have more than one rule, all of which have exactly the same weight, then the one that 
+            comes last in the CSS will win. You can think of this as: the rule that is nearer the element 
+            itself overwrites the earlier ones until the last one wins and gets to style the element.
+        </p>
+        <h3>Specificity</h3>
+        <p>
+            Specificity is the algorithm CSS uses to decide which rule wins when multiple selectors affect 
+            the same element. It's crucial because it determines which styles are actually applied.
+        </p>
+        <p>
+            Essentially a value in points is awarded to different types of selectors, and adding these 
+            up gives you the weight of that particular selector, which can then be assessed against 
+            ther potential matches.
+        </p>
+        <ul>
+            <li>
+                <p>
+                    <strong>IDs</strong>: Score one in this column (100 points) for each ID selector 
+                    contained inside the overall selector.
+                </p>
+            </li>
+            <li>
+                <p>
+                    <strong>Classes</strong>: Score one in this column (10 points) for each class 
+                    selector, attribute selector, or pseudo-class contained inside the overall selector.
+                </p>
+            </li>
+            <li>
+                <p>
+                    <strong>Elements</strong>: Score one in this column (1 point) for each element 
+                    selector or pseudo-element contained inside the overall selector.
+                </p>
+            </li>
+        </ul>
+        <h4>In-depth specificity example</h4>
+        <div class="container" id="outer">
+            <div class="container" id="inner">
+                <ul>
+                    <li class="nav"><a href="#">One</a></li>
+                    <li class="nav"><a href="#">Two</a></li>
+                </ul>
+            </div>
+        </div>
+        <h3>Inline styles</h3>
+        <p>
+            Inline styles, that is, the style declaration inside a <code>style</code> attribute, take 
+            precedence over all normal styles, no matter the specificity. Such declarations don't have 
+            electors, but their specificity can be construed as 1-0-0-0; always more than any other 
+            specificity weight no matter how many IDs are in the selectors.
+        </p>
+        <h3>!Important</h3>
+        <p>
+            There is a special piece of CSS that you can use to overrule all of the above calculations, even 
+            inline styles - the <code>!important</code> flag. However, you should be very careful when using 
+            it. This flag is used to make an individual property and value pair the most specific 
+            rule, thereby overriding the normal rules of the cascade, including normal inline styles.
+        </p>
+        <p>
+            One situation in which you may have to use the !important flag is when you are working on a 
+            CMS where you can't edit the core CSS modules, and you really want to override an inline 
+            style or an important declaration that can't be overridden in any other way. But 
+            really, don't use it if you can avoid it.
+        </p>
+        <h2>The effect of CSS location</h2>
+        <h3>Order of overriding declarations</h3>
+        <p>
+            Conflicting declarations will be applied in the following order, with later ones overriding 
+            earlier ones:
+        </p>
+        <ol>
+            <li>
+                <p>Declarations in user agent style sheets.</p>
+            </li>
+            <li>
+                <p>Normal declarations in user style sheets.</p>
+            </li>
+            <li>
+                <p>Normal declarations in author style sheets.</p>
+            </li>
+            <li>
+                <p>Important declarations in author style sheets.</p>
+            </li>
+            <li>
+                <p>Important declarations in user style sheets.</p>
+            </li>
+            <li>
+                <p>Important declarations in user agent style sheets.</p>
+            </li>
+        </ol>
+        <p>
+            Extracted from:
+            <a href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts">MDN Handling conflicts</a>
+        </p>
     </body>
 </html>
