@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Combinators and separatos</title>
+        <link rel="stylesheet" href="1.1. Combinator and separators.css">
+    </head>
+    <body>
+        <h1>Combinators and separatos</h1>
+        <hr>
+        <h2>(+) Next-sibling combinator</h2>
+        <!--El combinador de siguiente hermano (+) separa dos selectores y coincide con el segundo elemento
+        solo si sigue inmediatamente al primer elemento y ambos son hijos del mismo elemento padre.-->
+        <p>
+            The <strong>next-sibling combinator</strong> (<code>+</code>) separates two selectors and 
+            matches the second element only if it immediately follows the first element, and both are 
+            hildren of the same parent element.
+        </p>
+        <h3>Syntax</h3>
+        <p>
+            The white space around the + combinator is optional but recommended.<br>
+            <code>former_element + target_element { style properties }</code>
+        </p>
+        <h3>Examples</h3>
+        <h4>Basic example</h4>
+        <ul>
+            <li>One</li>
+            <li>Two!</li>
+            <li>Three</li>
+        </ul>
+        <h4>Selecting a previous sibling</h4>
+        <ul>
+            <li>One</li>
+            <li>Two</li>
+            <li>Three!</li>
+            <li>Four</li>
+        </ul>
+        <hr>
+        <h2>(>) Child combinator</h2>
+        <!--El combinador secundario (>) se coloca entre dos selectores CSS. Coincide solo con los elementos
+        coincidentes con el segundo selector que son hijos directos de los elementos cincidentes con el primero.-->
+        <p>
+            The <code>child combinator</code> (<code>></code>) is placed between two CSS selectors. It matches 
+            only those elements matched by the second selector that are the direct children of elements 
+            matched by the first.
+        </p>
+        <h3>Syntax</h3>
+        <p>
+            The white space around the > combinator is optional but recommended.<br>
+            <code>selector1 > selector2 { /* style properties */ }</code>
+        </p>
+        <h3>Examples</h3>
+        <div>
+            <span>
+                Span #1, in the div.
+                <span>Span #2, in the span that's in the div.</span>
+            </span>
+        </div>
+        <span>Span #3, not in the div at all.</span>
+        <h2>Subsequent-sibling combinator</h2>
+        <!--El combinador de hermanos subsiguientes (~, una tilde) separa dos selectores y coincide con
+        todas las instancias del segundo elemento (no necesariamente inmediatamente) y comparten el 
+        mismo elemento padre.-->
+        <p>
+            The <strong>subsequent-sibling combinator</strong> (<code>~</code>, a tilde) separates two 
+            selectors and matches all instances of the second element that follow the first element 
+            (not necessarily immediately) and share the same parent element.
+        </p>
+        <h3>Syntax</h3>
+        <p>
+            The white space around the ~ combinator is optional but recommended. 
+            <code>former_element ~ target_element { style properties }</code>
+        </p>
+        <h3>Examples</h3>
+        <h4>Using the combinator with simple selectors</h4>
+        <article>
+            <span>This is not red because it appears before any paragraph.</span>
+            <p>Here is a paragraph.</p>
+            <code>Here is some code.</code>
+            <span>
+                This span is red because it appears after the paragraph, even though there are other nodes
+                in between.
+            </span>
+            <p>Whatever it may be, keep smiling.</p>
+            <h1>Dream big</h1>
+            <span>
+                Doesn't matter how many or what kind of nodes are in between, all spans from the same parent
+                after a paragraph are red.
+            </span>
+        </article>
+        <span>This span is not red because it doesn't share a parent with a paragraph.</span>
+    </body>
+</html>

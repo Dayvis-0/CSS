@@ -1,0 +1,31 @@
+:root {
+    color-scheme: light dark;
+    padding: 100px;
+}
+
+/*Next-siblings combinator*/
+li:first-of-type + li {
+    color: red;
+    font-weight: bold;
+}
+
+li:has(+ li:last-of-type) {
+    color: red;
+    font-weight: bold;
+}
+
+/*Child combinator*/
+div > span {
+    background-color: yellow;
+}
+
+/*Subsequent-sibling combinator*/
+article p ~ span {
+    color: red;
+}
+
+/*General span styles (must be last)*/
+span {
+    color: #ffffff;
+}
+
