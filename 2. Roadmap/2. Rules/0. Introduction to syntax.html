@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Introduction to syntax</title>
+        <link rel="stylesheet" href="0. Introduction to syntax.css">
+    </head>
+    <body>
+        <h1>Introduction to syntax: declarations, rulesets, and statements</h1>
+        <p>
+            The basic goal of the Cascading Stylesheet (CSS) language is to allow a browser engine to 
+            paint elements of the page with specific features, like colors, positioning, or decorations.
+            The CSS syntax reflects this goal and its basic building blocks are:
+        </p>
+        <ul>
+            <li>
+                <p>The <strong>property</strong> which is an identifier.</p>
+            </li>
+            <li>
+                <p>The <strong>value</strong> which describe how the feature must be handled by the engine.</p>
+            </li>
+        </ul>
+        <h2>CSS declarations</h2>
+        <div class="box">
+            <img 
+                src="Images/CSS_declarations.png" 
+                alt="A css declaration is a property value pair, with a colon separating the two entities and a semi-colon closing the declaration."
+                width="442"
+                height="189"
+            >
+        </div>
+        <h2>CSS declaration blocks</h2>
+        <img 
+            src="Images/CSS_declarations_blocks.png" 
+            alt="Two braces delimit the start and end of a CSS block, with css content or no content between the braces."
+            width="312"
+            height="222"
+        >
+        <p>A CSS declaration block is visualized in the diagram below.</p>
+        <div class="box">
+            <img 
+                src="Images/declaration_block.png" 
+                alt="Within a CSS block, encompassed in braces, semicolons separate declarations, with the final semicolon being optional but recommended as good practice."
+                height="244"
+            >
+        </div>
+        <h2>CSS rulesets</h2>
+        <p>A CSS ruleset (or rule) is visualized in the diagram below.</p>
+        <div class="box">
+            <img 
+                src="Images/CSS_rulesets.png" 
+                alt="A group of comma-separated selectors precedes the brace-delimited declaration block, which contains multiple declarations ending in semicolons."
+                height="200"
+            >
+        </div>
+        <h2>CSS statements</h2>
+        <div class="box">
+            <img 
+                src="Images/CSS_statements.png" 
+                alt="A Venn diagram of statements noting all rulesets are nested statements, while some at-rules are nested statements but most aren't. Anything that is not an at-rule or nested is invalid."
+            >
+        </div>
+        <p>There are two kinds of statements:</p>
+        <ul>
+            <li>
+                <p>
+                    <strong>Rulesets</strong> (or rules) that, as seen, associate a collection of CSS declarations 
+                    to a condition described by a selector.
+                </p>
+            </li>
+            <li>
+                <p>
+                    <strong>At-rules</strong> At-rules that start with an at sign, @, followed by an 
+                    identifier and then continuing up to the end of the statement, that is up to the 
+                    next semicolon (;) outside of a block, or the end of the next block.
+                </p>
+            </li>
+        </ul>
+        <p>Any statement which isn't a ruleset or an at-rule is invalid and ignored.</p>
+        <p>
+            Extracted from:
+            <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Syntax/Introduction">MDN CSS syntax introduction</a>
+        </p>
+    </body>
+</html>

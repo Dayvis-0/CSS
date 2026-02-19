@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Subsequent-sibling combinator</title>
+        <link rel="stylesheet" href="1.3. Subsequent-sibling combinator.css">
+    </head>
+    <body>
+        <h2>(~) Subsequent-sibling combinator</h2>
+        <!--El combinador de hermanos subsiguientes (~, una tilde) separa dos selectores y coincide con
+        todas las instancias del segundo elemento (no necesariamente inmediatamente) y comparten el 
+        mismo elemento padre.-->
+        <p>
+            The <strong>subsequent-sibling combinator</strong> (<code>~</code>, a tilde) separates two 
+            selectors and matches all instances of the second element that follow the first element 
+            (not necessarily immediately) and share the same parent element.
+        </p>
+        <h3>Syntax</h3>
+        <p>
+            The white space around the ~ combinator is optional but recommended.<br>
+            <code>former_element ~ target_element { style properties }</code>
+        </p>
+        <h3>Examples</h3>
+        <h4>Using the combinator with simple selectors</h4>
+        <article>
+            <span>This is not red because it appears before any paragraph.</span>
+            <p>Here is a paragraph.</p>
+            <code>Here is some code.</code>
+            <span>
+                This span is red because it appears after the paragraph, even though there are other nodes
+                in between.
+            </span>
+            <p>Whatever it may be, keep smiling.</p>
+            <h1>Dream big</h1>
+            <span>
+                Doesn't matter how many or what kind of nodes are in between, all spans from the same parent
+                after a paragraph are red.
+            </span>
+        </article>
+        <span>This span is not red because it doesn't share a parent with a paragraph.</span>
+        <h4>Using the combinator with the complex selectors</h4>
+        <h1>Dream big</h1>
+        <span>And yet again this is a red span!</span>
+        <div class="foo">
+            <p>Here is another paragraph.</p>
+            <span>A blue span</span>
+            <div class="foo">
+                <span>A green span</span>
+            </div>
+        </div>
+        <p>
+            Extracted from;
+            <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/Subsequent-sibling_combinator">MDN subsequent sibling combinator</a>
+        </p>
+    </body>
+</html>

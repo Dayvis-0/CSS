@@ -1,0 +1,84 @@
+:root {
+    color-scheme: light dark;
+    padding: 100px;
+}
+
+/* 
+NAMESPACE DECLARATIONS
+Declare namespaces with their URLs. These URLs are standard identifiers,
+not actual links you visit.
+*/
+@namespace svg url("http://www.w3.org/2000/svg");
+/* Note: In HTML5, the default namespace is "no namespace", not XHTML */
+
+/* 
+UNIVERSAL SELECTORS (work in all contexts)
+*/
+
+/* All `<a>`s anywhere */
+a {
+    font-size: 1.4rem;
+}
+
+/* No namespace — elements without any namespace */
+|a {
+    text-decoration: wavy overline lime;
+    font-weight: bold;
+}
+
+/* All namespaces (including no namespace) — this ALWAYS works */
+*|a {
+    color: red;   
+    fill: red;
+    font-style: italic;
+}
+
+/* 
+EXAMPLE 1: HTML5 inline SVG (namespaces DON'T work)
+These selectors won't match because HTML5 inline elements
+don't have explicit namespaces.
+*/
+
+/* This WON'T match inline SVG in HTML5 */
+svg|a.html-link,
+svg|a {
+    /* This style won't apply to inline SVG without xmlns */
+    color: purple;
+}
+
+/* 
+EXAMPLE 2: SVG with explicit xmlns (namespaces DO work!)
+When the SVG element has xmlns="http://www.w3.org/2000/svg",
+this selector WILL match!
+*/
+
+/* This WILL match SVG with explicit xmlns attribute */
+svg|a {
+    color: green !important;
+    fill: green !important;
+    text-decoration: underline;
+}
+
+/*
+PRACTICAL WORKAROUNDS for HTML5
+In real HTML5 projects, you'll rarely use namespace selectors.
+Instead, use these practical approaches:
+*/
+
+/* Target HTML links specifically */
+.html-link {
+    text-decoration-line: line-through;
+    color: inherit;
+    font-style: normal;
+}
+
+/* Target inline SVG links by context */
+.svg-inline a {
+    fill: orange;
+    text-decoration: underline;
+}
+
+/* Alternative: use descendant selector for SVG */
+svg a text {
+    fill: inherit;
+}

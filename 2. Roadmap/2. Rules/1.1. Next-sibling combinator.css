@@ -1,0 +1,14 @@
+:root {
+    color-scheme: light dark;
+    padding: 100px;
+}
+
+li:first-of-type + li {
+    color: red;
+    font-weight: bold;
+}
+
+li:has(+ li:last-of-type) {
+    color: red;
+    font-weight: bold;
+}

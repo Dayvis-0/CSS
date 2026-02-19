@@ -1,0 +1,12 @@
+:root {
+    color-scheme: light dark;
+    padding: 100px;
+}
+
+li {
+    list-style-type: disc;
+}
+
+li li {
+    list-style-type: circle;
+}

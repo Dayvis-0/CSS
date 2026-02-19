@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Namespace separator</title>
+        <link rel="stylesheet" href="1.5. Namespace separator.css">
+    </head>
+    <body>
+        <h2>Namespace separator</h2>
+        <!--El separador de espacio de nombres (|) separa el selector del espacio de nombres, identificando
+        el espacio de nombres, o la falta de él, para un selector tipo.-->
+        <p>
+            The <strong>namespace separator</strong> (|) separates the selector from the namespace, 
+            identifying the namespace, or lack thereof, for a type selector.
+        </p>
+        <h3>Syntax</h3>
+        <p><code>namespace|element { style properties }</code></p>
+        <!--
+        =====================================================
+        EJEMPLO 1: En HTML5 estándar, los namespaces NO funcionan
+        como esperamos porque los elementos no tienen namespace
+        explícito asignado. Por eso los selectores con namespace
+        no matchean nada aquí.
+        =====================================================
+        -->
+        <h3>Example 1: HTML5 inline SVG (namespaces DON'T work as expected)</h3>
+        <p><em>In HTML5, elements don't have explicit XML namespaces, so namespace selectors fail.</em></p>
+        
+        <p>This paragraph <a href="#" class="html-link">has a link</a> (should have line-through, but won't with namespace selector).</p>
+        
+        <svg width="400" viewBox="0 0 400 20" class="svg-inline">
+            <a href="#">
+                <text x="0" y="15">Link created in SVG</text>
+            </a>
+        </svg>
+        <p class="note">⚠️ Notice: namespace selectors like <code>svgNamespace|a</code> won't work here!</p>   
+        <!--
+        =====================================================
+        EJEMPLO 2: SVG con xmlns EXPLÍCITO
+        Cuando el SVG tiene su namespace declarado, el selector
+        svg|a SÍ funciona y aplica los estilos correctamente.
+        =====================================================
+        -->
+        <h3>Example 2: SVG with explicit xmlns (namespaces DO work!)</h3>
+        <p><em>When SVG has explicit xmlns attribute, namespace selectors work correctly.</em></p>
+        
+        <svg width="400" viewBox="0 0 400 20" xmlns="http://www.w3.org/2000/svg" class="svg-namespaced">
+            <a href="#">
+                <text x="0" y="15">Link created in SVG with xmlns</text>
+            </a>
+        </svg>
+        
+        <p class="note">✅ This SVG has <code>xmlns="http://www.w3.org/2000/svg"</code> so <code>svg|a</code> works!</p>
+        
+        <hr>
+        
+        <h3>Key Takeaways</h3>
+        <ul>
+            <li><code>|element</code> — elements with NO namespace</li>
+            <li><code>*|element</code> — elements in ANY namespace (including none)</li>
+            <li><code>ns|element</code> — elements in a SPECIFIC namespace</li>
+            <li>In HTML5, inline SVG elements don't automatically get the SVG namespace</li>
+            <li>Add <code>xmlns="http://www.w3.org/2000/svg"</code> to SVG for namespace selectors to work</li>
+        </ul>
+        
+        <p>
+            Extracted from:
+            <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/Namespace_separator">MDN Namespace separator</a>
+        </p>
+    </body>
+</html>

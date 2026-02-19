@@ -1,0 +1,20 @@
+:root {
+    color-scheme: light dark;
+    padding: 100px;
+}
+
+article p ~ span {
+    color: red;
+}
+
+span {
+    color: #ffffff;
+}
+
+.foo p ~ span {
+    color: blue;
+}
+
+.foo p ~ .foo span {
+    color: green;
+}

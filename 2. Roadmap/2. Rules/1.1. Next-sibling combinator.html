@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Next-sibling combinator</title>
+        <link rel="stylesheet" href="1.1. Next-sibling combinator.css">
+    </head>
+    <body>
+        <h2>(+) Next-sibling combinator</h2>
+        <!--El combinador de siguiente hermano (+) separa dos selectores y coincide con el segundo elemento
+        solo si sigue inmediatamente al primer elemento y ambos son hijos del mismo elemento padre.-->
+        <p>
+            The <strong>next-sibling combinator</strong> (<code>+</code>) separates two selectors and 
+            matches the second element only if it immediately follows the first element, and both are 
+            children of the same parent element.
+        </p>
+        <h3>Syntax</h3>
+        <p>
+            The white space around the + combinator is optional but recommended.<br>
+            <code>former_element + target_element { style properties }</code>
+        </p>
+        <h3>Examples</h3>
+        <h4>Basic example</h4>
+        <ul>
+            <li>One</li>
+            <li>Two!</li>
+            <li>Three</li>
+        </ul>
+        <h4>Selecting a previous sibling</h4>
+        <ul>
+            <li>One</li>
+            <li>Two</li>
+            <li>Three!</li>
+            <li>Four</li>
+        </ul>
+        <p>
+            Extracted from;
+            <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/Next-sibling_combinator">MDN next sibling combinator</a>
+        </p>
+    </body>
+</html>

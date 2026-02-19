@@ -1,0 +1,10 @@
+:root {
+    color-scheme: light dark;
+    padding: 100px;
+}
+
+
+.box {
+    width: fit-content;
+    background-color: white;
+}

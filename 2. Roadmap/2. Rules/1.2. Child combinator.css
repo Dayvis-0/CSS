@@ -1,0 +1,8 @@
+:root {
+    color-scheme: light dark;
+    padding: 100px;
+}
+
+div > span {
+    background-color: yellow;
+}

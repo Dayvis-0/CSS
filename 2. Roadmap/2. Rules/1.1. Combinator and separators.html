@@ -37,6 +37,10 @@
             <li>Three!</li>
             <li>Four</li>
         </ul>
+        <p>
+            Extracted from;
+            <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/Next-sibling_combinator">MDN next sibling combinator</a>
+        </p>
         <hr>
         <h2>(>) Child combinator</h2>
         <!--El combinador secundario (>) se coloca entre dos selectores CSS. Coincide solo con los elementos
@@ -59,7 +63,12 @@
             </span>
         </div>
         <span>Span #3, not in the div at all.</span>
-        <h2>Subsequent-sibling combinator</h2>
+        <p>
+            Extracted from;
+            <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/Child_combinator">MDN child combinator</a>
+        </p>
+        <hr>
+        <h2>(~) Subsequent-sibling combinator</h2>
         <!--El combinador de hermanos subsiguientes (~, una tilde) separa dos selectores y coincide con
         todas las instancias del segundo elemento (no necesariamente inmediatamente) y comparten el 
         mismo elemento padre.-->
@@ -70,7 +79,7 @@
         </p>
         <h3>Syntax</h3>
         <p>
-            The white space around the ~ combinator is optional but recommended. 
+            The white space around the ~ combinator is optional but recommended.<br>
             <code>former_element ~ target_element { style properties }</code>
         </p>
         <h3>Examples</h3>
@@ -91,5 +100,75 @@
             </span>
         </article>
         <span>This span is not red because it doesn't share a parent with a paragraph.</span>
+        <h4>Using the combinator with the complex selectors</h4>
+        <h1>Dream big</h1>
+        <span>And yet again this is a red span!</span>
+        <div class="foo">
+            <p>Here is another paragraph.</p>
+            <span>A blue span</span>
+            <div class="foo">
+                <span>A green span</span>
+            </div>
+        </div>
+        <p>
+            Extracted from;
+            <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/Subsequent-sibling_combinator">MDN subsequent sibling combinator</a>
+        </p>
+        <hr>
+        <h2>(" ") Descendant combinator</h2>
+        <!--El combinador descendiente, generalmente representado por un solo carácter de espacio (" "), 
+        combina dos selectores de modo que los elementos que coinciden con el segundo selector se 
+        seleccionan si tienen un elemento ancestro (padre, padre del padre, padre del padre del 
+        padre, etc.) que coincide con el primer selector.--> 
+        <p>
+            The <strong>descendant combinator</strong> — typically represented by a single space (" ") 
+            character — combines two selectors such that elements matched by the second selector are 
+            selected if they have an ancestor (parent, parent's parent, parent's parent's parent, etc.) 
+            element matching the first selector. Selectors that utilize a descendant combinator are 
+            alled descendant selectors.
+        </p>
+        <h3>Syntax</h3>
+<pre><code>selector1 selector2 {
+    /* property declarations */
+}</code></pre>
+        <h3>Examples</h3>
+        <ul>
+            <li>
+                <div>Item 1</div>
+                <ul>
+                    <li>Subitem A</li>
+                    <li>Subitem B</li>
+                </ul>
+            </li>
+            <li>
+                <div>Item 2</div>
+                <ul>
+                    <li>Subitem A</li>
+                    <li>Subitem B</li>
+                </ul>
+            </li>
+        </ul>
+        <p>
+            Extracted from;
+            <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/Descendant_combinator">MDN descendant combinator</a>
+        </p>
+        <hr>
+        <h2>Namespace separator</h2>
+        <!--El separador de espacio de nombres (|) separa el selector del espacio de nombres, identificando
+        el espacio de nombres, o la falta de él, para un selector tipo.-->
+        <p>
+            The <strong>namespace separator</strong> (|) separates the selector from the namespace, 
+            identifying the namespace, or lack thereof, for a type selector.
+        </p>
+        <h3>Syntax</h3>
+        <p><code>namespace|element { style properties }</code></p>
+        <h3>Examples</h3>
+        <h4>Named namespace example</h4>
+        <p>This paragraph <a href="#">has a link</a>.</p>
+        <svg width="400" viewBox="0 0 400 20">
+            <a href="#">
+                <text x="0" y="15">Link created in SVG</text>
+            </a>
+        </svg>
     </body>
 </html>
