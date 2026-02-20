@@ -1,0 +1,30 @@
+:root {
+    color-scheme: light dark;
+    padding: 100px;
+}
+
+/*:hover*/
+.joinBtn {
+    width: 10em;
+    height: 5ex;
+    background-color: gold;
+    border: 2px solid firebrick;
+    border-radius: 10px;
+    font-weight: bold;
+    color: black;
+    cursor: pointer;
+}
+
+.joinBtn:hover {
+    background-color: bisque;
+}
+
+a {
+    background-color: powderblue;
+    color: black;
+    transition: background-color 0.5s;
+}
+
+a:hover {
+    background-color: gold;
+}

@@ -1,0 +1,14 @@
+:root {
+    color-scheme: light dark;
+    padding: 100px;
+}
+
+/*Example */
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Helvetice", "Arial";
+}
+
+/*Example 2*/
+#main, .content, article, h1 + p {
+    font-size: 1.1em;
+}

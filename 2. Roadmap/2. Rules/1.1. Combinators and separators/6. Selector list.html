@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Selector list</title>
+        <link rel="stylesheet" href="6. Selector list.css">
+    </head>
+    <body>
+        <h2>(,) Selector list</h2>
+        <!--La lista de selectores CSS (,) selecciona todos los nodos coincidentes. Una lista de selectores
+        es una lista de selectores separados por comas.-->
+        <p>
+            The CSS <strong>selector list</strong> (,) selects all the matching nodes. A selector list 
+            is a comma-separated list of selectors.
+        </p>
+        <h3>Syntax</h3>
+        <p>
+            The comma separates one or more selectors in a list.<br>
+            <code>element, element, element { style properties }</code>
+        </p>
+        <h3>Examples</h3>
+        <h4>Single line grouping</h4>
+        <h5>Example 1</h5>
+        <h6>Example 1</h6>
+        <h4>Multi line grouping</h4>
+        <div id="main">
+            <p>I'm #main</p>
+        </div>
+        <div class="content">
+            <p>I'm .content</p>
+        </div>
+        <article>
+            <p>I'm article</p>
+        </article>
+        <h1>I'm h1</h1>
+        <p>I'm the adjacent sibling p of h1 (h1 + p)</p>
+        <p>
+            When a selector list contains an invalid selector, the entire style block is ignored, except 
+            for the <code>:is()</code> and <code>:where()</code> pseudo-classes that accept forgiving 
+            selector lists.
+        </p>
+        <p>
+            Extracted from;
+            <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Selector_list">MDN selector list</a>
+        </p>
+    </body>
+</html>

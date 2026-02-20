@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>User interaction pseudo-classes</title>
+        <link rel="stylesheet" href="1. User interaction.css">
+    </head>
+    <body>
+        <h1>User interaction pseudo-classes</h1>
+        <h2><code>:hover</code></h2>
+        <!--La pseudo clase CSS :hover identifica un elemento cuando el usuario interactúa con el mediante
+        el un dispositivo señalador. Generalmente, se activa cuando el usuario mueve el cursor sobre un
+        elemento sin presionar el botón del ratón.-->
+        <p>Would you like to join our quest</p>
+        <button class="joinBtn">Confirm</button>
+        <p>
+            Styles defined by the <code>:hover</code> pseudo-class will be overridden by any subsequent 
+            link-related pseudo-class ( <code>:link</code>, <code>:visited</code>, or <code>:active</code>) 
+            that has at least equal specificity. To style links appropriately, put the <code>:hover</code> 
+            rule after the <code>:link</code> and <code>:visited</code> rules but before the 
+            <code>:active</code> one, as defined by the LVHA-order; <code>:link</code> — <code>:visited</code> 
+            — <code>:hover</code> — <code>:active</code>.
+        </p>
+        <h3>Syntax</h3>
+<pre>
+:hover {
+  /* ... */
+}
+</pre>
+        <h3>Examples</h3>
+        <h4>Basic example</h4>
+        <a href="#">Try hovering over this link. </a>
+        
+    </body>
+</html>
