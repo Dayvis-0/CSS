@@ -19,12 +19,76 @@
     background-color: bisque;
 }
 
-a {
+.basicExampleA {
     background-color: powderblue;
     color: black;
     transition: background-color 0.5s;
 }
 
-a:hover {
+.basicExampleA:hover {
     background-color: gold;
+}
+
+/*.active*/
+.joinBtnOne {
+    width: 10em;
+    height: 5ex;
+    background-image: linear-gradient(135deg, #f34079 40%, #fc894d);
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+}
+
+.joinBtnOne:active {
+    box-shadow: 2px 2px 5px #fc894d;
+}
+
+/*Example 1*/
+.activeLinksa:link {
+    color: white;
+}
+
+.activeLinksa:active {
+    color: red;
+}
+
+.activeLinksP:active {
+    color: #bbbbbb;
+}
+
+/*Example 2*/
+.formActive :active {
+    color: red;
+}
+
+.formActive button {
+    background-color: white;
+    color: black;
+}
+
+/*focus*/
+label {
+    display: block;
+    margin-top: 1em;
+}
+
+input:focus {
+    background-color: white;
+}
+
+select:focus {
+    background-color: black;
+}
+
+/*Example 1*/
+.red-input:focus {
+    background: yellow;
+    color: black;
+}
+
+.blue-input:focus {
+    background: yellow;
+    color: blue;
 }

@@ -26,12 +26,83 @@
         <h3>Syntax</h3>
 <pre>
 :hover {
-  /* ... */
+    /* ... */
 }
 </pre>
         <h3>Examples</h3>
         <h4>Basic example</h4>
-        <a href="#">Try hovering over this link. </a>
-        
+        <a class="basicExampleA" href="#">Try hovering over this link. </a>
+        <p>
+            Extracted from;
+            <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/:hover" target="_blank">MDN :hover</a>
+        </p>
+        <hr>
+        <h2>:active</h2>
+        <!--La pseudo clase CSS :active representa un elemento (como un botón) que el usuario activa.-->
+        <p>
+            The <strong><code>:active</code></strong> CSS pseudo-class represents an element (such as a 
+            button) that is being activated by the user. When using a mouse, "activation" typically 
+            starts when the user presses down the primary mouse button.
+        </p>
+        <p>Would you like to subscribe to our channel?</p>
+        <button class="joinBtnOne">Subscribe</button>
+        <p>
+            Styles defined by the <code>:active</code> pseudo-class will be overridden by any subsequent 
+            link-related pseudo-class (<code>:link</code>, <code>:hover</code>, or <code>:visited</code>) 
+            that has at least equal specificity.
+        </p>
+        <h3>Syntax</h3>
+<pre>
+:active {
+    /* ... */
+}
+</pre>
+        <h3>Examples</h3>
+        <h4>Active links</h4>
+        <p class="activeLinksP">
+            This paragraph contains a link:
+            <a class="activeLinksA" href="#">This link will turn red while you click on it.</a>
+            The paragraph will get a gray background while you click on it or the link.
+        </p>
+        <h4>Active form elements</h4>
+        <form class="formActive">
+            <label for="my-button">My button</label>
+            <button id="my-button" type="button">Try Clicking Me or My Label!</button>
+        </form>
+        <p>
+            Extracted from;
+            <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/:active" target="_blank">MDN :hover</a>
+        </p>
+        <hr>
+        <h2>:focus</h2>
+        <!--La pseudoclase CSS :focus representa un elemento (como una entrada de formulario) que ha 
+        recibido el foco. Generalmente se activa cuando el usuario hace click o pulsa sobre un elemento.-->
+        <p>
+            The <strong><code>:focus</code></strong> CSS pseudo-class represents an element (such as a 
+            form input) that has received focus. It is generally triggered when the user clicks or taps 
+            on an element or selects it with the keyboard's Tab key.
+        </p>
+        <form>
+            <p>Which flavor would you like to order?</p>
+            <label>Full name <input name="firstName" type="text"></label>
+            <label>
+                Flavor:
+                <select name="flavor" >
+                    <option>Cherry</option>
+                    <option>Green Tea</option>
+                    <option>Moose Tracks</option>
+                    <option>Mint Chip</option>
+                </select>
+            </label>
+        </form>
+        <h3>Syntax</h3>
+<pre>
+:focus {
+    /* ... */
+}
+</pre>
+        <h3>Examples</h3>
+        <div><input class="red-input" value="I'll be red when focused." /></div>
+        <div><input class="blue-input" value="I'll be blue when focused." /></div>
     </body>
 </html>
