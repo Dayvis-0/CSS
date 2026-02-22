@@ -74,11 +74,11 @@ label {
     margin-top: 1em;
 }
 
-input:focus {
+#input-focus:focus {
     background-color: white;
 }
 
-select:focus {
+#select-focus:focus {
     background-color: black;
 }
 
@@ -91,4 +91,78 @@ select:focus {
 .blue-input:focus {
     background: yellow;
     color: blue;
+}
+
+/*:focus-visible*/
+#input-visible:focus-visible {
+    outline: 2px solid crimson;
+    border-radius: 3px;
+}
+
+#select-visible:focus-visible {
+    border: 2px dashed crimson;
+    border-radius: 3px;
+    outline: none;
+}
+
+/*
+:focus vs :focus-visible 
+Base styles para ambos botones */
+.focus-demo-btn,
+.focus-visible-demo-btn {
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: #3b82f6;
+    color: white;
+    margin: 10px 0;
+}
+
+/* :focus - SIEMPRE muestra outline (click o Tab) */
+.focus-demo-btn:focus {
+    outline: 4px solid red;
+    outline-offset: 2px;
+}
+
+/* :focus-visible - SOLO muestra outline con Tab */
+.focus-visible-demo-btn:focus-visible {
+    outline: 4px solid limegreen;
+    outline-offset: 2px;
+}
+
+/*Example 1:*/
+input, button {
+    margin: 10px;
+}
+
+.focus-only:focus {
+    outline: 2px solid red;
+}
+
+.focus-visible-only:focus-visible {
+    outline: 4px dashed darkorange;
+}
+
+/*Example 2*/
+.button-fallback {
+    margin: 10px;
+    border: 2px solid red;
+    border-radius: 4px;
+}
+
+.button-fallback:focus-visible {
+    /* Draw the focus when :focus-visible is supported */
+    outline: 3ps solid deepskyblue;
+    outline-offset: 3px;
+}
+
+@supports not selector(:focus-visible) {
+    .button.with-fallback:focus {
+        /* Fallback for browsers without :focus-visible support */
+        outline: 3px solid deepskyblue;
+        outline-offset: 3px;
+    }
 }
