@@ -29,7 +29,9 @@
     background-color: gold;
 }
 
-/*.active*/
+/*----------------------------------------------------
+
+.active*/
 .joinBtnOne {
     width: 10em;
     height: 5ex;
@@ -68,7 +70,9 @@
     color: black;
 }
 
-/*focus*/
+/*----------------------------------------------------
+
+:focus*/
 label {
     display: block;
     margin-top: 1em;
@@ -93,7 +97,9 @@ label {
     color: blue;
 }
 
-/*:focus-visible*/
+/*----------------------------------------------------
+
+:focus-visible*/
 #input-visible:focus-visible {
     outline: 2px solid crimson;
     border-radius: 3px;
@@ -165,4 +171,26 @@ input, button {
         outline: 3px solid deepskyblue;
         outline-offset: 3px;
     }
+}
+
+/*----------------------------------------------------
+
+:focus-within*/
+.label-within:focus-within {
+    font-weight: bold;
+}
+
+#form-within {
+    border: 1px solid;
+    color: gray;
+    padding: 4px;
+}
+
+#form-within:focus-within {
+    background: #ffff88;
+    color: black;
+}
+
+.input-within {
+    margin: 4px;
 }

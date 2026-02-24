@@ -24,11 +24,13 @@
             — <code>:hover</code> — <code>:active</code>.
         </p>
         <h3>Syntax</h3>
+<code>
 <pre>
 :hover {
     /* ... */
 }
 </pre>
+</code>
         <h3>Examples</h3>
         <h4>Basic example</h4>
         <a class="basicExampleA" href="#">Try hovering over this link. </a>
@@ -52,11 +54,13 @@
             that has at least equal specificity.
         </p>
         <h3>Syntax</h3>
+<code>
 <pre>
 :active {
     /* ... */
 }
 </pre>
+</code>
         <h3>Examples</h3>
         <h4>Active links</h4>
         <p class="activeLinksP">
@@ -96,11 +100,13 @@
             </label>
         </form>
         <h3>Syntax</h3>
+<code>
 <pre>
 :focus {
     /* ... */
 }
 </pre>
+</code>
         <h3>Examples</h3>
         <div><input class="red-input" value="I'll be red when focused." /></div>
         <div><input class="blue-input" value="I'll be blue when focused." /></div>
@@ -131,11 +137,13 @@
             </label>
         </form>
         <h3>Syntax</h3>
+<code>
 <pre>
 :focus-visible {
     /* ... */
 }
 </pre>
+</code>
         <h3>:focus vs :focus-visible</h3>
         <p>
             <strong>Test the difference:</strong> Click with your mouse and then navigate with Tab (⇥) to see when the outline appears.
@@ -169,6 +177,45 @@
         </p>
         <hr>
         <h2>:focus-within</h2>
+        <!--La pseudoclase CSS :focus-within coincide con un elemento, si el elemento o alguno de sus 
+        descendientes están enfocados. En otras palabras, representa un elemento que coincide con la 
+        pseudoclase :focus o tiene un descendiente que coincide con :focus-->
+        <p>
+            The <strong><code>:focus-within</code></strong> CSS pseudo-class matches an element if the 
+            element or any of its descendants are focused. In other words, it represents an element that is 
+            itself matched by the <code>:focus</code> pseudo-class or has a descendant that is matched by 
+            <code>:focus</code>. (This includes descendants in shadow trees.)
+        </p>
+        <form>
+            <p>Which flavor would you like to order?</p>
+            <label class="label-within">Full Name: <input name="firstName" type="text"></label>
+            <label class="label-within">
+                Flavor:
+                <select name="flavor">
+                    <option>Cherry</option>
+                    <option>Green Tea</option>
+                    <option>Moose Tracks</option>
+                    <option>Mint Chip</option>
+                </select>
+            </label>
+        </form>
+        <h3>Syntax</h3>
+<code>
+<pre>
+:focus-within {
+    /* ... */
+}
+</pre>
+</code>
+        <h3>Examples</h3>
+        <p>Try typing into this form.</p>
+        <form id="form-within">
+            <label for="given_name" class="form-label-within">Given Name:</label>
+            <input class="input-within" id="given_name" type="text">
+            <br>
+            <label for="family_name" class="form-label-within">Family Name:</label>
+            <input class="input-within" id="family_name" type="text">
+        </form>
         <p>
             Extracted from;
             <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/:focus-within" target="_blank">MDN :focus-within</a>
