@@ -8,7 +8,17 @@
                 color-scheme: light dark;
             }
 
+            /*Example 1*/
+            span, div em {
+                padding: 5px;
+                border: 1px solid tomato;
+                display: inline-block;
+                margin-bottom: 3px;
+            }
 
+            .first span:nth-child(2n+1), .second span:nth-child(2n+1), .third span:nth-child(2n+1) {
+                background-color: tomato;
+            }
         </style>
     </head>
     <body>
