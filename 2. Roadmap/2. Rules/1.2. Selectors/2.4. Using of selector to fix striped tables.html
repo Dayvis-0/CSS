@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <style>
+            :root {
+                color-scheme: light dark;
+            }
+
+            body {
+                display: flex;
+                justify-content: space-around;
+            }
+
+            table {
+                border-collapse: collapse;
+                border: 1px solid #ffffff;
+                border-spacing: 2px;
+            }
+
+            td {
+                padding: 0.125rem 0.5rem;
+                border: 1px solid #ffffff;;
+            }
+
+            .broken > tbody > tr:nth-child(even) {
+                background-color: #bccbd3;;
+                color: #000000;
+            }
+            
+            .fixed > tbody > tr:nth-child(even of :not([hidden])) {
+                background-color: #bccbd3;;
+                color: #000000;
+            }
+        </style>
+    </head>
+    <body>
+        <table class="broken">
+            <thead>
+                <tr><th>Name</th><th>Age</th><th>Country</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>Mamitiana</td><td>23</td><td>Madagascar</td></tr>
+                <tr><td>Yuki</td><td>48</td><td>Japan</td></tr>
+                <tr hidden><td>Tlayolotl</td><td>36</td><td>Mexico</td></tr>
+                <tr><td>Adilah</td><td>27</td><td>Morocco</td></tr>
+                <tr><td>Vieno</td><td>55</td><td>Finland</td></tr>
+                <tr><td>Ricardo</td><td>66</td><td>Brazil</td></tr>
+            </tbody>
+        </table>
+        <table class="fixed">
+            <thead>                         
+                <tr><th>Name</th><th>Age</th><th>Country</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>Mamitiana</td><td>23</td><td>Madagascar</td></tr>
+                <tr><td>Yuki</td><td>48</td><td>Japan</td></tr>
+                <tr hidden><td>Tlayolotl</td><td>36</td><td>Mexico</td></tr>
+                <tr><td>Adilah</td><td>27</td><td>Morocco</td></tr>
+                <tr><td>Vieno</td><td>55</td><td>Finland</td></tr>
+                <tr><td>Ricardo</td><td>66</td><td>Brazil</td></tr>
+            </tbody>
+        </table>
+    </body>
+</html>

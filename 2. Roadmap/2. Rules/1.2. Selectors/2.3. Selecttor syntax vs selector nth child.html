@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <style>
+            :root {
+                color-scheme: light dark;
+            }
+
+            ul {
+                display: flex;
+                flex-wrap: wrap;
+                list-style: none;
+                font-size: 1.2rem;
+                padding-left: 0;
+            }
+
+            li {
+                margin: 0.125rem;
+                padding: 0.25rem;
+                border: 1px solid tomato;
+            }
+
+            .noted {
+               border-bottom: 5px solid tomato;
+            }
+
+            ul.one > li:nth-child(-n + 3 of .noted) {
+                background-color: tomato;
+                border-bottom-color: seagreen;
+            }
+
+            ul.two > li.noted:nth-child(-n + 3) {
+                background-color: tomato;
+                border-bottom-color: seagreen;
+            }
+        </style>
+    </head>
+    <body>
+        <ul class="one">
+            <li class="noted">Diego</li>
+            <li>Shilpa</li>
+            <li class="noted">Caterina</li>
+            <li>Jayla</li>
+            <li>Tyrone</li>
+            <li>Ricardo</li>
+            <li class="noted">Gila</li>
+            <li>Sienna</li>
+            <li>Titilayo</li>
+            <li class="noted">Lexi</li>
+        </ul>
+        <ul class="two">
+            <li class="noted">Diego</li>
+            <li>Shilpa</li>
+            <li class="noted">Caterina</li>
+            <li>Jayla</li>
+            <li>Tyrone</li>
+            <li>Ricardo</li>
+            <li class="noted">Gila</li>
+            <li>Sienna</li>
+            <li>Titilayo</li>
+            <li class="noted">Lexi</li>
+        </ul>
+    </body>
+</html>

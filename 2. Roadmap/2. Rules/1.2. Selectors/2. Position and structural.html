@@ -9,7 +9,7 @@
     </head>
     <body>
         <h1>Position and structural pseudo-classes</h1>
-        <h2>:first-child</h2>
+        <h2 id="first-child">:first-child</h2>
         <!--La pseudoclase CSS :first-child representa el primer elemento entre un grupo de elementos
         hermanos-->
         <p>
@@ -71,7 +71,7 @@
             <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/:first-child">MDN first child</a>
         </p>
         <hr>
-        <h2>:last-child</h2>
+        <h2 id="last-child">:last-child</h2>
         <!--La pseudoclase CSS :last-child representa el último elemento entre un grupo de elementos hermanos-->
         <p>Track &amp; field champions:</p>
         <ul>
@@ -128,7 +128,7 @@
             <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/:last-child">MDN last child</a>
         </p>
         <hr>
-        <h2>:nth-child()</h2>
+        <h2 id="nth-child">:nth-child()</h2>
         <!--La pseudoclase CSS :nth-child() hace coincidir elementos en función de los índices de los 
         elementos en la lista de elementos secundarios de sus padres.-->
         <p>
@@ -268,6 +268,75 @@
             </dd>
         </dl>
         <h4>Detailed example</h4>
-        <iframe src="2.1. Detailed example.html"></iframe>
+        <iframe class="iframe-1" src="2.1. Detailed example.html"></iframe>
+        <h4>Using 'of <code>&lt;selector&gt;</code></h4>
+        <iframe class="iframe-2" src="2.2. Using selector.html"></iframe>
+        <h4>of selector syntax vs selector nth-child</h4>
+        <iframe class="iframe-3" src="2.3. Selecttor syntax vs selector nth child.html"></iframe>
+        <h4>Using of selector to fix striped tables</h4>
+        <iframe class="iframe-4" src="2.4. Using of selector to fix striped tables.html"></iframe>
+        <h4>Styling a table column</h4>
+        <iframe class="iframe-4" src="2.5. Styling a table column.html"></iframe>
+        <p>
+            Extracted from;
+            <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/:nth-child">MDN nth child</a>
+        </p>
+        <hr>
+        <h2 id="nth-of-type">:nth-of-type</h2>
+        <!--La pseudoclase CSS :nth-of-type() hace coincidir elementos en función de su posición entre
+        hermanos del mismo tipo (nombre de etiqueta).-->
+        <p>
+            The <strong><code>&lt;:nth-of-type()&gt;</code></strong> CSS pseudo-class matches elements 
+            based on their position among siblings of the same type (tag name).
+        </p>
+        <dl class="dl-nth-of-type">
+            <dt class="dt-nth-of-type">Vegetables:</dt>
+            <dd class="dd-nth-of-type">1. Tomatoes</dd>
+            <dd class="dd-nth-of-type">2. Cucumbers</dd>
+            <dd class="dd-nth-of-type">3. Mushrooms</dd>
+
+            <dt class="dt-nth-of-type">Fruits:</dt>
+            <dd class="dd-nth-of-type">4. Apples</dd>
+            <dd class="dd-nth-of-type">5. Mangos</dd>
+            <dd class="dd-nth-of-type">6. Pears</dd>
+            <dd class="dd-nth-of-type">7. Oranges</dd>
+        </dl>
+        <h3>Syntax</h3>
+        <code>
+<pre>
+:nth-of-type(<An+B> | even | odd) {
+    /* ... */
+}
+</pre>
+        <h3>Examples</h3>
+        <h4>Basic example</h4>
+        <iframe class="iframe-5" src="2.6. Basic example.html"></iframe>
+        <p>
+            <strong>Note:</strong> There is no way to select the nth-of-class using this selector. The 
+            selector looks at the type only when creating the list of matches. You can however apply CSS 
+            to an element based on :nth-of-type location <strong>and</strong> a class, as shown in the 
+            example above.
+        </p>
+        <p>
+            Extracted from;
+            <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/:nth-of-type">MDN nth of type</a>
+        </p>
+        <hr>
+        <h2 id="only-child">:only-child</h2>
+        <!--La pseudoclase CSS :only-child representa un elemento sin hermanos.-->
+        <p>
+            The <strong><code>:only-child</code></strong> CSS pseudo-class represents an element without 
+            any siblings. This is the same as <code>:first-child:last-child</code> or 
+            <code>:nth-child(1):nth-last-child(1)</code>, but with a lower specificity.
+        </p>
+        <iframe class="iframe-6" src="2.7. Only child.html"></iframe>
+        <h3>Syntax</h3>
+        <code>
+<pre>
+:only-child {
+    /* ... */
+}
+</pre>
+</code>
     </body>
 </html>
