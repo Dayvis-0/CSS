@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <style>
+            :root {
+                color-scheme: light dark;
+            }
+
+            div:only-child {
+                color: #ff0000;
+            }
+
+            div {
+                display: inline-block;
+                margin: 6px;
+                outline: 1px solid;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <div>I am an only child.</div>
+        </div>
+        <div>
+            <div>I am the 1st sibling.</div>
+            <div>I am the 2nd sibling.</div>
+            <div>
+                I am the 3rd sibling,
+                <div>but this is an only child.</div>
+            </div>
+        </div>
+    </body>
+</html>
