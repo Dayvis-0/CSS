@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>:focus</title>
+        <link rel="stylesheet" href="focus.css">
+    </head>
+    <body>
+        <!--La pseudoclase CSS :focus representa un elemento (como una entrada de formulario) que ha 
+        recibido el foco. Generalmente se activa cuando el usuario hace click o pulsa sobre un elemento.-->
+        <h1>:focus</h1>
+        <p>
+            The <strong><code>:focus</code></strong> CSS pseudo-class represents an element (such as a 
+            form input) that has received focus. It is generally triggered when the user clicks or taps 
+            on an element or selects it with the keyboard's Tab key.
+        </p>
+        <form>
+            <p>Which flavor would you like to order?</p>
+            <label>Full name <input id="input-focus" name="firstName" type="text"></label>
+            <label>
+                Flavor:
+                <select id="select-focus" name="flavor" >
+                    <option>Cherry</option>
+                    <option>Green Tea</option>
+                    <option>Moose Tracks</option>
+                    <option>Mint Chip</option>
+                </select>
+            </label>
+        </form>
+        <h2>Syntax</h2>
+<pre>
+:focus {
+    /* ... */
+}
+</pre>
+        <h2>Examples</h2>
+        <div><input class="red-input" value="I'll be red when focused." /></div>
+        <div><input class="blue-input" value="I'll be blue when focused." /></div>
+        <p>
+            Extracted from;
+            <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/:focus" target="_blank">MDN :focus</a>
+        </p>
+    </body>
+</html>

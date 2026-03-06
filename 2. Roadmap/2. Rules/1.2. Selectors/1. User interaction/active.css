@@ -1,0 +1,40 @@
+:root {
+    color-scheme: light dark;
+    padding: 100px;
+}
+
+.joinBtnOne {
+    width: 10em;
+    height: 5ex;
+    background-image: linear-gradient(135deg, #f34079 40%, #fc894d);
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+}
+
+.joinBtnOne:active {
+    box-shadow: 2px 2px 5px #fc894d;
+}
+
+.activeLinksa:link {
+    color: white;
+}
+
+.activeLinksa:active {
+    color: red;
+}
+
+.activeLinksP:active {
+    color: #bbbbbb;
+}
+
+.formActive :active {
+    color: red;
+}
+
+.formActive button {
+    background-color: white;
+    color: black;
+}

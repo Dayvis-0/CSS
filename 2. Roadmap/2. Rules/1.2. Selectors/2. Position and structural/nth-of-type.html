@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>:nth-of-type</title>
+        <link rel="stylesheet" href="nth-of-type.css">
+    </head>
+    <body>
+        <h1 id="nth-of-type">:nth-of-type</h1>
+        <!--La pseudoclase CSS :nth-of-type() hace coincidir elementos en función de su posición entre
+        hermanos del mismo tipo (nombre de etiqueta).-->
+        <p>
+            The <strong><code>&lt;:nth-of-type()&gt;</code></strong> CSS pseudo-class matches elements 
+            based on their position among siblings of the same type (tag name).
+        </p>
+        <dl class="dl-nth-of-type">
+            <dt class="dt-nth-of-type">Vegetables:</dt>
+            <dd class="dd-nth-of-type">1. Tomatoes</dd>
+            <dd class="dd-nth-of-type">2. Cucumbers</dd>
+            <dd class="dd-nth-of-type">3. Mushrooms</dd>
+
+            <dt class="dt-nth-of-type">Fruits:</dt>
+            <dd class="dd-nth-of-type">4. Apples</dd>
+            <dd class="dd-nth-of-type">5. Mangos</dd>
+            <dd class="dd-nth-of-type">6. Pears</dd>
+            <dd class="dd-nth-of-type">7. Oranges</dd>
+        </dl>
+        <h2>Syntax</h2>
+<pre>
+:nth-of-type(<An+B> | even | odd) {
+    /* ... */
+}
+</pre>
+        <h2>Examples</h2>
+        <h3>Basic example</h3>
+        <iframe class="iframe-5" src="2.6. nth of type basic example.html"></iframe>
+        <p>
+            <strong>Note:</strong> There is no way to select the nth-of-class using this selector. The 
+            selector looks at the type only when creating the list of matches. You can however apply CSS 
+            to an element based on :nth-of-type location <strong>and</strong> a class, as shown in the 
+            example above.
+        </p>
+        <p>
+            Extracted from;
+            <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/:nth-of-type">MDN nth of type</a>
+        </p>
+    </body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>:active</title>
+        <link rel="stylesheet" href="active.css">
+    </head>
+    <body>
+        <!--La pseudo clase CSS :active representa un elemento (como un botón) que el usuario activa.-->
+        <h1>:active</h1>
+        <p>
+            The <strong><code>:active</code></strong> CSS pseudo-class represents an element (such as a 
+            button) that is being activated by the user. When using a mouse, "activation" typically 
+            starts when the user presses down the primary mouse button.
+        </p>
+        <p>Would you like to subscribe to our channel?</p>
+        <button class="joinBtnOne">Subscribe</button>
+        <p>
+            Styles defined by the <code>:active</code> pseudo-class will be overridden by any subsequent 
+            link-related pseudo-class (<code>:link</code>, <code>:hover</code>, or <code>:visited</code>) 
+            that has at least equal specificity.
+        </p>
+        <h2>Syntax</h2>
+<pre>
+:active {
+    /* ... */
+}
+</pre>
+        <h2>Examples</h2>
+        <h3>Active links</h3>
+        <p class="activeLinksP">
+            This paragraph contains a link:
+            <a class="activeLinksA" href="#">This link will turn red while you click on it.</a>
+            The paragraph will get a gray background while you click on it or the link.
+        </p>
+        <h3>Active form elements</h3>
+        <form class="formActive">
+            <label for="my-button">My button</label>
+            <button id="my-button" type="button">Try Clicking Me or My Label!</button>
+        </form>
+        <p>
+            Extracted from;
+            <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/:active" target="_blank">MDN :active</a>
+        </p>
+    </body>
+</html>

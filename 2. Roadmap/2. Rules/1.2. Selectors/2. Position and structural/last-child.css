@@ -1,0 +1,25 @@
+:root {
+    color-scheme: light dark;
+    padding: 100px;
+}
+
+.li-last-child:last-child {
+    border: 2px solid orange;
+    padding: 2px;
+}
+
+.p-last-ex1:last-child {
+    color: black;
+    background-color: white;
+    padding: 5px;
+}
+
+.ul-last-ex2 li {
+    color: skyblue;
+}
+
+.ul-last-ex2 li:last-child {
+    border: 1px solid red;
+    padding: 2px;
+    color: red;
+}

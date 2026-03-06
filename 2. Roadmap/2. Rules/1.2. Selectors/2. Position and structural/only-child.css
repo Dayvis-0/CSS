@@ -1,0 +1,16 @@
+:root {
+    color-scheme: light dark;
+    padding: 100px;
+}
+
+.iframe-6 {
+    height: 230px;
+}
+
+.iframe-7 {
+    height: 80px;
+}
+
+iframe {
+    width: 100%;
+}

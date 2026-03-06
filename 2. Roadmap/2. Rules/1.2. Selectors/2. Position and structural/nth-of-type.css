@@ -1,0 +1,24 @@
+:root {
+    color-scheme: light dark;
+    padding: 100px;
+}
+
+.dt-nth-of-type {
+    font-weight: bold;
+}
+
+.dd-nth-of-type {
+    margin: 3px;
+}
+
+.dd-nth-of-type:nth-of-type(even) {
+    border: 2px solid orange;
+}
+
+.iframe-5 {
+    height: 200px;
+}
+
+iframe {
+    width: 100%;
+}

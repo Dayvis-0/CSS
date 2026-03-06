@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>:hover</title>
+        <link rel="stylesheet" href="hover.css">
+    </head>
+    <body>
+        <!--La pseudo clase CSS :hover identifica un elemento cuando el usuario interactúa con el mediante
+        el un dispositivo señalador. Generalmente, se activa cuando el usuario mueve el cursor sobre un
+        elemento sin presionar el botón del ratón.-->
+        <h1><code>:hover</code></h1>
+        <p>Would you like to join our quest</p>
+        <button class="joinBtn">Confirm</button>
+        <p>
+            Styles defined by the <code>:hover</code> pseudo-class will be overridden by any subsequent 
+            link-related pseudo-class ( <code>:link</code>, <code>:visited</code>, or <code>:active</code>) 
+            that has at least equal specificity. To style links appropriately, put the <code>:hover</code> 
+            rule after the <code>:link</code> and <code>:visited</code> rules but before the 
+            <code>:active</code> one, as defined by the LVHA-order; <code>:link</code> — <code>:visited</code> 
+            — <code>:hover</code> — <code>:active</code>.
+        </p>
+        <h2>Syntax</h2>
+<pre>
+:hover {
+    /* ... */
+}
+</pre>
+        <h2>Examples</h2>
+        <h3>Basic example</h3>
+        <a class="basicExampleA" href="#">Try hovering over this link. </a>
+        <p>
+            Extracted from;
+            <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/:hover" target="_blank">MDN :hover</a>
+        </p>
+    </body>
+</html>

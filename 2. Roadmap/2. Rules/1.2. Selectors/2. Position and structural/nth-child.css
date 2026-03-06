@@ -1,0 +1,24 @@
+:root {
+    color-scheme: light dark;
+    padding: 100px;
+}
+
+iframe {
+    width: 100%;
+}
+
+.iframe-1 {
+    height: 470px;
+}
+
+.iframe-2 {
+    height: 70px;
+}
+
+.iframe-3 {
+    height: 70px;
+}
+
+.iframe-4 {
+    height: 160px;
+}

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>:focus-visible</title>
+        <link rel="stylesheet" href="focus-visible.css">
+    </head>
+    <body>
+        <!--La pseudoclase :focus-visible se aplica mientras un elemento coincida con la :focus y el agente
+        de usuario determine mediante heurística que el foco debe hacerse evidente en el elemento.-->
+        <h1>:focus-visible</h1>
+        <p>
+            The <strong><code>&lt;:focus-visible&gt;</code></strong> pseudo-class applies while an element 
+            matches the :focus pseudo-class and the UA (User Agent) determines via heuristics that the focus 
+            should be made evident on the element. (Many browsers show a "focus ring" by default in this case.)
+        </p>
+        <form>
+            <p>Which flavor would you like to order?</p>
+            <label>Full Name: <input id="input-visible" name="firstName" type="text"></label>
+            <label>
+                Flavor:
+                <select id="select-visible" name="flavor">
+                    <option>Cherry</option>
+                    <option>Green Tea</option>
+                    <option>Moose Tracks</option>
+                    <option>Mint Chip</option>
+                </select>
+            </label>
+        </form>
+        <h2>Syntax</h2>
+<pre>
+:focus-visible {
+    /* ... */
+}
+</pre>
+        <h2>:focus vs :focus-visible</h2>
+        <p>
+            <strong>Test the difference:</strong> Click with your mouse and then navigate with Tab (⇥) to see when the outline appears.
+        </p>
+        <h3>Example 1: Using <code>:focus</code></h3>
+        <p>This button ALWAYS displays the red outline, whether clicked or pressed with Tab:</p>
+        <button class="focus-demo-btn" type="button">
+            :focus (click or Tab = red outline)
+        </button>
+        <h3>Example 2: Using <code>:focus-visible</code></h3>
+        <p>This button ONLY shows the green outline when you navigate with Tab:</p>
+        <button class="focus-visible-demo-btn" type="button">
+            :focus-visible (Tab only = green outline)
+        </button>
+        <h2>Examples</h2>
+        <h3>Comparing :focus and :focus-visible</h3>
+        <input type="text" value="Default styles">
+        <button>Default styles</button>
+        <input class="focus-only" type="text" value=":focus">
+        <button class="focus-only">:focus</button>
+        <input class="focus-visible-only" type="text" value=":focus-visible">
+        <button class="focus-visible-only">:focus-visible</button><br>        
+        <h3>Providing a :focus fallback</h3>
+        <button class="button-fallback with-fallback" type="button">Button with fallback</button>
+        <button class="button-fallback without-fallback" type="button">
+            Button without fallback
+        </button>
+        <p>
+            Extracted from;
+            <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/:focus-visible" target="_blank">MDN :focus-visible</a>
+        </p>
+    </body>
+</html>

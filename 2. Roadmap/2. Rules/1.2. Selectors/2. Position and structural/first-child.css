@@ -1,0 +1,28 @@
+:root {
+    color-scheme: light dark;
+    padding: 100px;
+}
+
+.p-first-child {
+    font-weight: bold;
+}
+
+.li-first-child:first-child {
+    border: 2px solid orange;
+    padding: 2px;
+}
+
+.p-first-ex1:first-child {
+    color: black;
+    background-color: white;
+    padding: 5px;
+}
+
+.ul-first-ex2 li {
+    color: skyblue;
+}
+
+.ul-first-ex2 li:first-child {
+    color: red;
+    font-weight: bold;
+}

@@ -1,0 +1,68 @@
+:root {
+    color-scheme: light dark;
+    padding: 100px;
+}
+
+#input-visible:focus-visible {
+    outline: 2px solid crimson;
+    border-radius: 3px;
+}
+
+#select-visible:focus-visible {
+    border: 2px dashed crimson;
+    border-radius: 3px;
+    outline: none;
+}
+
+.focus-demo-btn,
+.focus-visible-demo-btn {
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: #3b82f6;
+    color: white;
+    margin: 10px 0;
+}
+
+.focus-demo-btn:focus {
+    outline: 4px solid red;
+    outline-offset: 2px;
+}
+
+.focus-visible-demo-btn:focus-visible {
+    outline: 4px solid limegreen;
+    outline-offset: 2px;
+}
+
+input, button {
+    margin: 10px;
+}
+
+.focus-only:focus {
+    outline: 2px solid red;
+}
+
+.focus-visible-only:focus-visible {
+    outline: 4px dashed darkorange;
+}
+
+.button-fallback {
+    margin: 10px;
+    border: 2px solid red;
+    border-radius: 4px;
+}
+
+.button-fallback:focus-visible {
+    outline: 3ps solid deepskyblue;
+    outline-offset: 3px;
+}
+
+@supports not selector(:focus-visible) {
+    .button.with-fallback:focus {
+        outline: 3px solid deepskyblue;
+        outline-offset: 3px;
+    }
+}

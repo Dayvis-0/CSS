@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>:last-child</title>
+        <link rel="stylesheet" href="last-child.css">
+    </head>
+    <body>
+        <h1 id="last-child">:last-child</h1>
+        <!--La pseudoclase CSS :last-child representa el último elemento entre un grupo de elementos hermanos-->
+        <p>Track &amp; field champions:</p>
+        <ul>
+            <li class="li-last-child">Adhemar da Silva</li>
+            <li class="li-last-child">Wang Junxia</li>
+            <li class="li-last-child">Wilma Rudolph</li>
+            <li class="li-last-child">Babe Didrikson-Zaharias</li>
+            <li class="li-last-child">Betty Cuthbert</li>
+            <li class="li-last-child">Fanny Blankers-Koen</li>
+            <li class="li-last-child">Florence Griffith-Joyner</li>
+            <li class="li-last-child">Irena Szewinska</li>
+            <li class="li-last-child">Jackie Joyner-Kersee</li>
+            <li class="li-last-child">Shirley Strickland</li>
+            <li class="li-last-child">Carl Lewis</li>
+            <li class="li-last-child">Emil Zatopek</li>
+            <li class="li-last-child">Haile Gebrselassie</li>
+            <li class="li-last-child">Jesse Owens</li>
+            <li class="li-last-child">Jim Thorpe</li>
+            <li class="li-last-child">Paavo Nurmi</li>
+            <li class="li-last-child">Sergei Bubka</li>
+            <li class="li-last-child">Usain Bolt</li>
+        </ul>
+        <h2>Syntax</h2>
+<pre>
+:last-child {
+    /* ... */
+}
+</pre>
+        <h2>Examples</h2>
+        <h3>Basic example</h3>
+        <div>
+            <p class="p-last-ex1">This text is selected!</p>
+            <p class="p-last-ex1">This text isn't selected.</p>
+        </div>
+        <div>
+            <p class="p-last-ex1">This text isn't selected.</p>
+            <h2>This text isn't selected: it's not a `p`.</h2>
+        </div>
+        <h3>Styling a list</h3>
+        <ul class="ul-last-ex2">
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>
+                Item 3
+                <ul class="ul-last-ex2">
+                    <li>Item 3.1</li>
+                    <li>Item 3.2</li>
+                    <li>Item 3.3</li>
+                </ul>
+            </li>
+        </ul>
+        <p>
+            Extracted from;
+            <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/:last-child">MDN last child</a>
+        </p>
+    </body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>:focus-within</title>
+        <link rel="stylesheet" href="focus-within.css">
+    </head>
+    <body>
+        <!--La pseudoclase CSS :focus-within coincide con un elemento, si el elemento o alguno de sus 
+        descendientes están enfocados. En otras palabras, representa un elemento que coincide con la 
+        pseudoclase :focus o tiene un descendiente que coincide con :focus-->
+        <h1>:focus-within</h1>
+        <p>
+            The <strong><code>:focus-within</code></strong> CSS pseudo-class matches an element if the 
+            element or any of its descendants are focused. In other words, it represents an element that is 
+            itself matched by the <code>:focus</code> pseudo-class or has a descendant that is matched by 
+            <code>:focus</code>. (This includes descendants in shadow trees.)
+        </p>
+        <form>
+            <p>Which flavor would you like to order?</p>
+            <label class="label-within">Full Name: <input name="firstName" type="text"></label>
+            <label class="label-within">
+                Flavor:
+                <select name="flavor">
+                    <option>Cherry</option>
+                    <option>Green Tea</option>
+                    <option>Moose Tracks</option>
+                    <option>Mint Chip</option>
+                </select>
+            </label>
+        </form>
+        <h2>Syntax</h2>
+<pre>
+:focus-within {
+    /* ... */
+}
+</pre>
+        <h2>Examples</h2>
+        <p>Try typing into this form.</p>
+        <form id="form-within">
+            <label for="given_name" class="form-label-within">Given Name:</label>
+            <input class="input-within" id="given_name" type="text">
+            <br>
+            <label for="family_name" class="form-label-within">Family Name:</label>
+            <input class="input-within" id="family_name" type="text">
+        </form>
+        <p>
+            Extracted from;
+            <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/:focus-within" target="_blank">MDN :focus-within</a>
+        </p>
+    </body>
+</html>

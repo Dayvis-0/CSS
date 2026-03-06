@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>:nth-child()</title>
+        <link rel="stylesheet" href="nth-child.css">
+    </head>
+    <body>
+        <h1 id="nth-child">:nth-child()</h1>
+        <!--La pseudoclase CSS :nth-child() hace coincidir elementos en función de los índices de los 
+        elementos en la lista de elementos secundarios de sus padres.-->
+        <p>
+            The <strong><code>:nth-child()</code></strong> CSS pseudo-class matches elements based on the 
+            indexes of the elements in the child list of their parents. In other words, the 
+            <code>:nth-child()</code> selector selects child elements according to their position among 
+            all the sibling elements within a parent element.
+        </p>
+        <h2>Syntax</h2>
+<pre>
+:nth-child([ &lt;An+B&gt; | even | odd ] [of &lt;complex-selector-list&gt;]?) {
+    /* ... */
+}
+</pre>
+        <h2>Parameters</h2>
+        <p>
+            <code>:nth-child()</code> takes a single argument that describes a pattern for matching element 
+            indices in a list of siblings. Element indices are 1-based.
+        </p>
+        <h3>Keyword values</h3>
+        <dl>
+            <dt><code>odd</code></dt>
+            <dd>
+                <p>
+                    Represents elements whose numeric position in a series of siblings is a odd: 1, 3, 5, etc.
+                </p>
+            </dd>
+            <dt><code>even</code></dt>
+            <dd>
+                <p>
+                    Represents elements whose numeric position in a series of siblings is a even: 2, 4, 6, etc. 
+                </p>
+            </dd>
+        </dl>
+        <h3>Funcional notation</h3>
+        <dl>
+            <dd><code>&lt;An+B&gt;</code></dd>
+            <dd>
+                <p>
+                    Represents elements whose numeric position in a series of siblings matches the pattern 
+                    An+B, for every positive integer or zero value of n, where:
+                </p>
+                <ul>
+                    <li><p><code>A</code> is an integer step size.</p></li>
+                    <li><p><code>B</code> is an integer offset</p></li>
+                    <li><p><code>n</code> is all nonnegative integers, starting form 0</p></li>
+                </ul>
+            </dd>
+        </dl>
+        <h3>The <code>of &lt;selector&gt;</code> syntax</h3>
+        <p>
+            By passing a selector argument, we can select the <strong>nth</strong> element that matches 
+            that selector. For example, the following selector matches the first three list items which 
+            have a <code>class="important"</code> set.
+        </p>
+<pre>
+:nth-child(-n + 3 of li.important) {
+}
+</pre>
+        <h2>Examples</h2>
+        <h3>Example selectors</h3>
+        <dl>
+            <dt><code>tr:nth-child(odd)</code> or <code>tr:nth-child(2n+1)</code></dt>
+            <dd><p>Represents the odd rows of an HTML table: 1, 3, 5, etc.</p></dd>
+
+            <dt><code>tr:nth-child(even)</code> or <code>tr:nth-child(2n)</code></dt>
+            <dd><p>Represents the even rows of an HTML table: 2, 4, 6, etc.</p></dd>
+
+            <dt><code>:nth-child(7)</code></dt>
+            <dd><p>Represents the seventh element.</p></dd>
+
+            <dt><code>:nth-child(5n)</code></dt>
+            <dd>
+                <p>Represents elements <strong>5</strong> [=5×1], <strong>10</strong> [=5×2], 
+                <strong>15</strong> [=5×3], <strong>etc.</strong></p>
+            </dd>
+
+            <dt><code>:nth-child(n+7)</code></dt>
+            <dd>
+                <p>Represents the seventh and all following elements: <strong>7</strong> [=0+7], 
+                <strong>8</strong> [=1+7], <strong>9</strong> [=2+7], <strong>etc.</strong></p>
+            </dd>
+
+            <dt><code>:nth-child(3n+4)</code></dt>
+            <dd>
+                <p>Represents elements <strong>4</strong> [=(3×0)+4], <strong>7</strong> [=(3×1)+4],
+                <strong>10</strong> [=(3×2)+4], <strong>13</strong> [=(3×3)+4], <strong>etc.</strong></p>
+            </dd>
+
+            <dt><code>:nth-child(-n+3)</code></dt>
+            <dd><p>Represents the first three elements. [=-0+3, -1+3, -2+3]</p></dd>
+
+            <dt><code>p:nth-child(n)</code></dt>
+            <dd>
+                <p>Represents every <code>&lt;p&gt;</code> element in a group of siblings. This selects the 
+                same elements as a simple <code>p</code> selector (although with a higher specificity).</p>
+            </dd>
+
+            <dt><code>p:nth-child(1)</code> or <code>p:nth-child(0n+1)</code></dt>
+            <dd>
+                <p>Represents every <code>&lt;p&gt;</code> that is the first element in a group of 
+                siblings. This is the same as the <code>:first-child</code> selector (and has the same specificity).</p>
+            </dd>
+
+            <dt><code>p:nth-child(n+8):nth-child(-n+15)</code></dt>
+            <dd><p>Represents the eighth through the fifteenth <code>&lt;p&gt;</code> elements of a group of siblings.</p></dd>
+        </dl>
+        <h3>Detailed example</h3>
+        <iframe class="iframe-1" src="2.1. nth child detailed example.html"></iframe>
+        <h3>Using 'of <code>&lt;selector&gt;</code></h3>
+        <iframe class="iframe-2" src="2.2. nth child using selector.html"></iframe>
+        <h3>of selector syntax vs selector nth-child</h3>
+        <iframe class="iframe-3" src="2.3. nth child selecttor syntax vs selector nth child.html"></iframe>
+        <h3>Using of selector to fix striped tables</h3>
+        <iframe class="iframe-4" src="2.4. nth child using of selector to fix striped tables.html"></iframe>
+        <h3>Styling a table column</h3>
+        <iframe class="iframe-4" src="2.5. nth child styling a table column.html"></iframe>
+        <p>
+            Extracted from;
+            <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/:nth-child">MDN nth child</a>
+        </p>
+    </body>
+</html>

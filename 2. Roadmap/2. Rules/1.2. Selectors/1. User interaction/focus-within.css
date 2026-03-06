@@ -1,0 +1,23 @@
+:root {
+    color-scheme: light dark;
+    padding: 100px;
+}
+
+.label-within:focus-within {
+    font-weight: bold;
+}
+
+#form-within {
+    border: 1px solid;
+    color: gray;
+    padding: 4px;
+}
+
+#form-within:focus-within {
+    background: #ffff88;
+    color: black;
+}
+
+.input-within {
+    margin: 4px;
+}

@@ -1,0 +1,27 @@
+:root {
+    color-scheme: light dark;
+    padding: 100px;
+}
+
+label {
+    display: block;
+    margin-top: 1em;
+}
+
+#input-focus:focus {
+    background-color: white;
+}
+
+#select-focus:focus {
+    background-color: black;
+}
+
+.red-input:focus {
+    background: yellow;
+    color: black;
+}
+
+.blue-input:focus {
+    background: yellow;
+    color: blue;
+}
