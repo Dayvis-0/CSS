@@ -1,0 +1,28 @@
+:root {
+    color-scheme: light dark;
+    padding: 100px;
+}
+
+code {
+    background-color: light-dark(#edeef0, #2d3034);
+    padding: .125em .25em;
+    border-radius: 0.25rem;
+}
+
+/*Try it*/
+
+label {
+    display: block;
+    margin-top: 1em;    
+}
+
+*:disabled {
+    background-color: dimgrey;
+    color: linen;
+    opacity: 1;
+}
+
+/*Example*/
+input[type="text"]:disabled {
+    background: #cccccc;
+}

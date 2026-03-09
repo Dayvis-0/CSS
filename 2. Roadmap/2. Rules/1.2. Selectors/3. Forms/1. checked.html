@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>:checked</title>
+        <link rel="stylesheet" href="1. checked.css">
+    </head>
+    <body>
+        <h1>:checked</h1>
+        <!--El selector de pseudoclase CSS :checked representa cualquier opción (<input type="radio">),
+        casilla de verificación (<input type="checkbox">) u opción (<option> en un elemento <select>)
+        que esté marcada o activada.-->
+        <p>
+            The <strong><code>:checked</code></strong> CSS pseudo-class selector represents any radio 
+            (<code>&lt;input type="radio"&gt;</code> ), checkbox (<code>&lt;input type="checkbox"&gt;</code> ), 
+            or option (<code>&lt;option&gt;</code> in a <code>&lt;select&gt;</code> element) that is 
+            checked or toggled to an on state.
+        </p>
+        <iframe id="iframe-1" src="1.1. checked.html"></iframe>
+        <h2>Syntax</h2>
+<pre>
+:checked {
+  /* ... */
+}
+</pre>
+        <h2>Examples</h2>
+        <h3>Basic example</h3>
+        <iframe id="iframe-2" src="1.2. basic example.html"></iframe>
+        <h3>Toggling elements with a hidden checkbox</h3>
+        <input type="checkbox" id="expand-toggle">
+        <table>
+            <thead>
+                <tr>
+                    <th>Column #1</th>
+                    <th>Column #2</th>
+                    <th>Column #3</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="expandable">
+                    <td>[more text]</td>
+                    <td>[more text]</td>
+                    <td>[more text]</td>
+                </tr>
+                <tr>
+                    <td>[cell text]</td>
+                    <td>[cell text]</td>
+                    <td>[cell text]</td>
+                </tr>
+                <tr>
+                    <td>[cell text]</td>
+                    <td>[cell text]</td>
+                    <td>[cell text]</td>
+                </tr>
+                <tr class="expandable">
+                    <td>[more text]</td>
+                    <td>[more text]</td>
+                    <td>[more text]</td>
+                </tr>
+                <tr class="expandable">
+                    <td>[more text]</td>
+                    <td>[more text]</td>
+                    <td>[more text]</td>
+                </tr>
+            </tbody>
+        </table>
+        <label for="expand-toggle" id="expand-btn">Toggle hidden rows</label>
+        <p>
+            Extraced from: 
+            <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/:checked">MDN checked</a>
+        </p>
+    </body>
+</html>

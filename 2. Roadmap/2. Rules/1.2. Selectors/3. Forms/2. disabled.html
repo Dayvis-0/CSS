@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>:disabled</title>
+        <link rel="stylesheet" href="2. disabled.css">
+    </head>
+    <body>
+        <h1>:disabled</h1>
+        <!-- La pseudoclase CSS :disabled representa cualquier elemento deshabilitado.-->
+        <p>
+        The <strong><code>:disabled</code></strong> CSS pseudo-class represents any disabled element. An element is disabled if it can't be activated (selected, clicked on, typed into, etc.) or accept focus. The element also has an enabled state, in which it can be activated or accept focus.
+        </p>
+        <form>
+            <label for="name">Name:</label>
+            <input id="name" name="name" type="text">
+            <label for="emp">Employed:</label>
+            <select name="emp" id="emp" disabled>
+                <option>No</option>
+                <option>Yes</option>
+            </select>
+            <label for="empDate">Employment Date:</label>
+            <input id="empDate" name="empDate" type="date" disabled>
+            <label for="resume">Resume:</label>
+            <input id="resume" name="resume" type="file">
+        </form>
+        <h2>Syntax</h2>
+<pre>
+:disabled {
+  /* ... */
+}
+</pre>
+        <h2>Examples</h2>
+        <form action="#">
+            <fieldset id="shipping">
+                <legend>Shipping address</legend>
+                <input type="text" placeholder="Name">
+                <input type="text" placeholder="Address">
+                <input type="text" placeholder="Zip Code">
+            </fieldset>
+            <br>
+            <fieldset id="billing">
+                <legend>Billing address</legend>
+                <label for="billing-checkbox">Same as shipping address:</label>
+                <input type="checkbox" id="billing-checkbox" checked>
+                <br>
+                <input type="text" placeholder="Name" disabled>
+                <input type="text" placeholder="Address" disabled>
+                <input type="text" placeholder="Zip Code" disabled>
+            </fieldset>
+        </form>
+        <p>
+            Extracted from:
+            <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/:disabled">MDN disabled</a>
+        </p>
+        <script>
+            const checkbox = document.querySelector("#billing-checkbox");
+            const billingItems = document.querySelectorAll('#billing input[type="text"]');
+
+            checkbox.addEventListener("change", () => {
+                billingItems.forEach((item) => {
+                    item.disabled = !item.disabled;
+                });
+            });
+        </script>
+    </body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <style>
+            :root {
+                color-scheme: light dark;
+            }
+
+            div, select {
+                margin: 8px;
+            }
+
+            /*Label fro checkedo inputs*/
+            input:checked + label {
+                color: #ff0000;
+            }
+
+            /* Radio element, when checked*/
+            input[type="radio"]:checked {
+                box-shadow: 0 0 0 3px hotpink;
+            }
+
+            /* Checkbox element, when checked*/
+            input[type="radio"]:checked {
+                box-shadow: 0 0 0 3px hotpink;
+            }
+
+            /* Option elements, when selected*/
+            option:checked {
+                box-shadow: 0 0 0 3px lime;
+                color: #ff0000;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <input type="radio" name="my-input" id="yes" value="yes">
+            <label for="yes">Yes</label>
+            <input type="radio" name="my-input" id="no" value="no">
+            <label for="no">No</label>
+        </div>
+        <div>
+            <input type="checkbox" name="my-checkbox" id="opt-in">
+            <label for="opt-in">Check me!</label>
+        </div>
+        <select name="my-select" id="fruit">
+            <option value="opt1">Apples</option>
+            <option value="opt2">Grapes</option>
+            <option value="opt3">Pears</option>
+        </select>
+    </body>
+</html>

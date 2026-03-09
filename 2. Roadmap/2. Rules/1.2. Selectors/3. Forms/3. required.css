@@ -1,0 +1,41 @@
+:root {
+    color-scheme: light dark;
+    padding: 100px;
+}
+
+code {
+    background-color: light-dark(#edeef0, #2d3034);
+    padding: .125em .25em;
+    border-radius: 0.25rem;
+}
+
+/*Try it*/
+label {
+    display: block;
+    padding: 1px;
+    margin-top: 1em;
+}
+
+.req {
+    color: #ff0000;
+}
+
+.label-req:required {
+    background: gold;
+    color: #000000;
+}
+
+/*Example*/
+.field {
+    margin: 1px;
+    padding: 1px;
+}
+
+input:required {
+    border-color: maroon;
+    border-width: 3px;
+}
+
+input:required:invalid {
+    border-color: #c00000;
+}

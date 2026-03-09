@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>:required</title>
+        <link rel="stylesheet" href="3. required.css">
+    </head>
+    <body>
+        <h1>:required</h1>
+        <!--La pseudoclase CSS :required representa cualquier elemento <input>, <select> o <textare> que
+        tenga el atributo required establecido en él.-->
+        <p>
+            The <strong><code>:required</code></strong> CSS pseudo-class represents any <code>&lt;input&gt;</code>, 
+            <code>&lt;select&gt;</code>, or <code>&lt;textarea&gt;</code> element that has the required 
+            attribute set on it.
+        </p>
+        <form>
+            <label for="name">Name: <span class="req">*</span></label>
+            <input id="name" name="name" type="text" class="label-req" required>
+            <label for="birth">Date of Birth:</label>
+            <input id="birth" name="birth" type="date">
+            <label for="origin">How 
+                color: green;did you find out about us? <span class="req">*</span></label>
+            <select name="origin" id="origin" class="label-req" required> 
+                <option>Google</option>
+                <option>Facebook</option>
+                <option>Advertisement</option>
+            </select>
+            <p><span class="req">*</span> - Required field</p>
+        </form>
+        <h2>Syntax</h2>
+<pre>
+:disabled {
+  /* ... */
+}
+</pre>
+        <h2>Examples</h2>
+        <h3>The required field has a red border</h3>
+        <form>
+            <div class="field">
+                <label for="url_input">Enter a URL:</label>
+                <input type="url" id="url_input">
+            </div>
+            <div class="field">
+                <label for="email_input">Enter an email address:</label>
+                <input type="email" id="email_input" required>
+            </div>
+        </form>
+        <p>
+            Extracted from:
+            <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/:required">MDN :required</a>
+        </p>
+    </body>
+</html>

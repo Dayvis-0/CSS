@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>:valid</title>
+        <style>
+            :root {
+                color-scheme: light dark;
+                padding: 100px;
+            }
+
+            code {
+                background-color: light-dark(#edeef0, #2d3034);
+                padding: .125em .25em;
+                border-radius: 0.25rem;
+            }
+
+            /*Try it*/
+            label {
+                display: block;
+                margin-top: 1em;
+            }
+
+            input:valid {
+                background-color: ivory;
+                color: #000000;
+                outline: 2px solid deepskyblue;
+                border-radius: 5px;
+                accent-color: gold;
+            }
+
+            iframe {
+                width: 400px;
+                height: 300px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>:valid</h1>
+        <!-- La pseudoclase CSS :valid representa cualquier elemento <input> u otro elemento <form> cuyo
+        contenido se valida correctamente.-->
+        <p>
+            The <strong><code>&lt;:valid&gt;</code></strong> CSS pseudo-class represents any <code>&lt;input&gt;</code> 
+            or other <code>&lt;form&gt;</code> element whose contents validate successfully. This allows 
+            to easily make valid fields adopt an appearance that helps the user confirm that their data 
+            is formatted properly.
+        </p>
+        <form>
+            <label for="email">Email Address:</label>
+            <input id="email" name="email" type="email" value="na@me@example.com">
+            <label for="secret">Secret Code: (lower case letters)</label>
+            <input id="secret" name="secret" type="text" value="test" pattern="[a-z]+">
+            <label for="age">Your age: (18+)</label>
+            <input id="age" name="age" type="number" value="5" min="18">
+            <label>
+                <input name="tos" type="checkbox" required checked> - Do you agree to ToS
+            </label>
+        </form>
+        <h2>Syntax</h2>
+<pre>
+:disabled {
+  /* ... */
+}
+</pre>
+        <h2>Examples</h2>
+        <h3>Indicating valid and invalid form fields</h3>
+        <iframe src="4.1. example.html"></iframe>
+        <p>
+            Extracted from:
+            <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/:valid">MDN valid</a>
+        </p>
+    </body>
+</html>

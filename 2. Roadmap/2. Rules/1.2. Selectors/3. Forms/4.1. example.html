@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <style>
+            :root {
+                color-scheme: light dark;
+            }
+
+            label {
+                display: block;
+                margin-top: 1em;
+            }
+
+            input + span {
+                position: relative;
+            }
+
+            input + span::before {
+                position: absolute;
+                right: -20px;
+                top: 5px;
+            }
+
+            input:valid {
+                border: 2px solid #ff0000;
+            }
+
+            input:invalid + span::before {
+                content: "✖";
+                color: red;
+            }
+
+            input:valid + span::before {
+                content: "✓";
+                color: green;
+            }
+        </style>
+    </head>
+    <body>
+        <form>
+            <fieldset>
+                <legend>Feedback form</legend>
+                <p>Required field are labelled with "required"</p>
+                <div>
+                    <label for="fname">First name:</label>
+                    <input id="fname" name="fname" type="text" required>
+                    <span></span>
+                </div>
+                <div>
+                    <label for="lname">Last name:</label>
+                    <input id="lname" name="lname" type="text" required>
+                    <span></span>
+                </div>
+                <div>
+                    <label for="email">
+                        Email address (include if you want a response):
+                    </label>
+                    <input id="email" name="email" type="email">
+                    <span></span>
+                </div>
+                <div><button>Submit</button></div>
+            </fieldset>
+        </form>
+    </body>
+</html>
