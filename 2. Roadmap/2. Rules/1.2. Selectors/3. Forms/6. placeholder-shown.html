@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>:placeholder-shown</title>
+        <link rel="stylesheet" href="6. placeholder-shown.css">
+    </head>
+    <body>
+        <h1>:placeholder-shown</h1>
+        <!--La pseudoclase CSS :placeholder-shown representa cualquier elemento <input> o <textarea> que
+        actualmente muestre texto de marcador de posición.-->
+        <p>
+            The <strong><code>:placeholder-shown</code></strong> CSS pseudo-class represents any 
+            <code>&lt;input&gt;</code> or <code>&lt;textarea&gt;</code> element that is currently 
+            displaying placeholder text.
+        </p>
+        <form>
+            <label for="name">Full Name:</label>
+            <input class="input-try" type="text" name="name" id="name">
+            <label for="email">Email:</label>
+            <input class="input-try" type="text" name="email" id="email" placeholder="name@example.com">
+            <label for="age">Your age:</label>
+            <input 
+                class="input-try" 
+                type="text" 
+                name="age" 
+                id="age" 
+                value="18"
+                placeholder="You must to">
+        </form>
+        <h2>Syntax</h2>
+<pre>
+:disabled {
+  /* ... */
+}
+</pre>
+        <h2>Examples</h2>
+        <h3>Basic example</h3>
+        <input class="input-basic" placeholder="Type something here°">
+        <h3>Overflowing text</h3>
+        <input id="input1" placeholder="Name, Rank, and Serial Number"><br><br>
+        <input id="input2" placeholder="Name, Rank, and Serial Number">
+        <h3>Customized input field</h3>
+        <form>
+            <p>
+                <label for="name">Enter Student Name: </label>
+                <input class="input-ex2" id="name" placeholder="Student Name">
+            </p>
+            <p>
+                <label for="branch">Enter Student Branch: </label>
+                <input class="input-ex2" id="branch" placeholder="Student Branch">
+            </p>
+            <p>
+                <label for="sid">Enter Student ID:</label>
+                <input 
+                    pattern="[0-9]{8}"
+                    title="8 digit ID"
+                    id="sid"
+                    class="student-id input-ex2"
+                    placeholder="8 digit id">
+            </p>
+            <input type="submit">
+        </form>
+        <p>
+            Extracted from:
+            <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/:placeholder-shown">MDN :placeholder-shown</a>
+        </p>
+    </body>
+</html>

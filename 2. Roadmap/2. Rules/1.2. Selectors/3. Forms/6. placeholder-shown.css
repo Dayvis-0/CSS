@@ -1,0 +1,51 @@
+:root {
+    color-scheme: light dark;
+    padding: 100px;
+}
+
+code {
+    background-color: light-dark(#edeef0, #2d3034);
+    padding: .125em .25em;
+    border-radius: 0.25rem;
+}
+
+/*Try it*/
+label {
+    display: block;
+    margin-top: 1em;
+}
+
+.input-try:placeholder-shown {
+    background-color: ivory;
+    border: 2px solid darkorange;
+    border-radius: 5px;
+}
+
+/*Example 1*/
+.input-basic {
+    border: 1px solid #000000;
+    padding: 3px;
+}
+
+.input-basic:placeholder-shown {
+    border-color: teal;
+    color: purple;
+    font-style: italic;
+}
+
+/*Example 2*/
+#input2:placeholder-shown {
+    text-overflow: ellipsis;
+}
+
+/*Example 3*/
+.input-ex2 {
+    background-color: #e8e8e8;
+    color: #000000;
+}
+
+input.student-id:placeholder-shown {
+    background-color: #ffff00;
+    color: #ff0000;
+    font-style: italic;
+}

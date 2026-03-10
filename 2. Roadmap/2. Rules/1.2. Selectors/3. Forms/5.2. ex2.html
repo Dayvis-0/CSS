@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <style>
+            :root {
+                color-scheme: light dark;
+            }
+
+            /*Hide the fielset after an invlaid fieldset*/
+            fieldset:invalid ~ fieldset {
+                display: none;
+            }
+
+            /*Dim and disable the button while the form is invalid*/
+            form:invalid button {
+                opacity: 0.3;
+                pointer-events: none;
+            }
+
+            input, textarea {
+                box-sizing: border-box;
+                width: 100%;
+                font-family: monospace;
+                padding: 0.25em 0.5em;
+            }
+
+            button {
+                width: 100%;
+                border: thin solid darkgrey;
+                font-size: 1.25em;
+                background-color: darkgrey;
+                color: #ffffff;
+            }
+        </style>
+    </head>
+    <body>
+        <form>
+            <fieldset>
+                <legend>Personal Information</legend>
+                <label for="form-name">Name:</label><br>
+                <input type="text" name="name" id="form-name" required>
+            </fieldset>
+            <fieldset>
+                <legend>Contact Informatio</legend>
+                <label for="form-email">Email Address:</label><br>
+                <input type="email" name="email" id="form-email" required>
+            </fieldset>
+            <fieldset>
+                <legend>Message</legend>
+                <label for="form-message">Message</label>
+                <textarea name="message" id="form-message" required></textarea>
+            </fieldset>
+            <button type="submit" name="send">Submit</button>
+        </form>
+    </body>
+</html>

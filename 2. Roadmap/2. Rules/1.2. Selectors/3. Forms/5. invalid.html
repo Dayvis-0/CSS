@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>:invalid</title>
+        <style>
+            :root {
+                color-scheme: light dark;
+                padding: 100px;
+            }
+
+            code {
+                background-color: light-dark(#edeef0, #2d3034);
+                padding: .125em .25em;
+                border-radius: 0.25rem;
+            }
+
+            /*Try it*/
+            label {
+                display: block;
+                margin-top: 1em;
+            }
+
+            .input-try:invalid {
+                background-color: ivory;
+                color: #000000;
+                border: none;
+                outline: 2px solid #ff0000;
+                border-radius: 5px;
+            }
+
+            #iframe-1 {
+                height: 120px;
+            }
+
+            #iframe-2 {
+                height: 300px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>:invalid</h1>
+        <!--La pseudoclase CSS :invalid representa cualquier elemento <form>, <fieldset>, <input> u otro
+        elemento <form> cuyo contenido no se puede validar.-->
+        <p>
+            The <strong><code>:invalid</code></strong> CSS pseudo-class represents any <code>&lt;form&gt;</code>, 
+            <code>&lt;fieldset&gt;</code>, <code>&lt;input&gt;</code> or other <code>&lt;form&gt;</code> 
+            element whose contents fail to validate.
+        </p>
+        <form>
+            <label for="email">Email Address:</label>
+            <input class="input-try" id="email" name="email" type="email" value="na@me@example.com">
+            <label for="secret">Secret Code: (lower case letters)</label>
+            <input class="input-try" id="secret" name="secret" type="text" value="test" pattern="[a-z]+">
+            <label for="age">Your age: (18+)</label>
+            <input class="input-try" id="age" name="age" type="number" value="5" min="18">
+            <label>
+                <input class="input-try" name="tos" type="checkbox" required checked> - Do you agree to ToS?
+            </label> 
+        </form>
+        <h2>Syntax</h2>
+<pre>
+:invalid {
+  /* ... */
+}
+</pre>
+        <h2>Examples</h2>
+        <h3>Coloring elements to show validation</h3>
+        <iframe id="iframe-1" src="5.1. ex1.html"></iframe>
+        <h3>Showing sections in stages</h3>
+        <iframe id="iframe-2" src="5.2. ex2.html"></iframe>
+        <p>
+            Extracted from:
+            <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/:invalid">MDN :invalid</a>
+        </p>
+    </body>
+</html>
