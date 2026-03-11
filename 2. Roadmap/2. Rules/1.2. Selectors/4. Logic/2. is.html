@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>:is()</title>
+        <style>
+            :root {
+                color-scheme: light dark;
+                padding: 100px;
+            }
+
+            ol {
+                list-style-type: upper-alpha;
+                color: skyblue;
+            }
+
+            :is(ol, ul menu:unsupported)
+            :is(ol, ul) {
+                color: #00ff00;
+            }
+
+            :is(ol, ul) :is(ol, ul) ol {
+                list-style-type: lower-greek;
+                color: chocolate;
+            }
+        </style>
+    </head>
+    <body>
+        <h2>:is()</h2>
+        <!--La función de pseudoclase CSS :is() toma una lista de selectores como argumento y selecciona
+        cualquier elemento que pueda ser seleccionado por uno de los selectores de dicha lista.-->
+        <p>
+            The <strong><code>:is()</code></strong> CSS pseudo-class function takes a selector list as 
+            its argument, and selects any element that can be selected by one of the selectors in that 
+            list. This is useful for writing large selectors in a more compact form.
+        </p>
+        <ol>
+            <li>Saturn</li>
+            <li>
+                <ul>
+                    <li>Mimas</li>
+                    <li>Enceladus</li>
+                    <li>
+                        <ol>
+                            <li>Voyager</li>
+                            <li>Cassini</li>
+                        </ol>
+                    </li>
+                    <li>Tethys</li>
+                </ul>
+            </li>
+            <li>Uranus</li>
+            <li>
+                <ol>
+                    <li>Titania</li>
+                    <li>Oberon</li>
+                </ol>
+            </li>
+        </ol>
+        <h2>Syntax</h2>
+<pre>
+:is(&lt;forgiving-selector-list&gt;) {
+  /* ... */
+}
+</pre>
+        <h3>Parameters</h3>
+        <p>
+            The <code>:is()</code> pseudo-class requires a selector list, a comma-separated list of one 
+            or more selectors as its argument.
+        </p>
+        <h3>Difference between <code>:is():is()|</code> and <code>:where():where()</code></h3>
+        <p>
+            The difference between the two is that <code>:is()</code> counts towards the specificity of 
+            the overall selector (it takes the specificity of its most specific argument), whereas 
+            <code>:where()</code> has a specificity value of 0.
+        </p>
+        <h3>Forgiving Selector Parsing</h3>
+        <p>
+            In CSS when using a selector list, if any of the selectors are invalid then the whole list is 
+            deemed invalid. When using <code>:is()</code> or <code>:where()</code> instead of the whole 
+            list of selectors being deemed invalid if one fails to parse, the incorrect or unsupported 
+            selector will be ignored and the others used. 
+        </p>
+<pre>
+:is(:valid, :unsupported) {
+    /* … */
+}
+</pre>
+        <p>
+            Will still parse correctly and match <code>:valid</code> even in browsers which don't support 
+            <code>:unsupported</code>, whereas:
+        </p>
+<pre>
+:valid,
+:unsupported {
+    /* … */
+}
+</pre>
+        <p>
+            Will be ignored in browsers which don't support <code>:unsupported</code> even if they support 
+            <code>:valid</code>.
+        </p>
+        <h2>Examples</h2>
+        <h3>Simplifying list selectors</h3>
+<pre>
+
+/* 3-deep (or more) unordered lists use a square */
+ol ol ul,
+ol ul ul,
+ol menu ul,
+ol dir ul,
+ol ol menu,
+ol ul menu,
+ol menu menu,
+ol dir menu,
+ol ol dir,
+ol ul dir,
+ol menu dir,
+ol dir dir,
+ul ol ul,
+ul ul ul,
+ul menu ul,
+ul dir ul,
+ul ol menu,
+ul ul menu,
+ul menu menu,
+ul dir menu,
+ul ol dir,
+ul ul dir,
+ul menu dir,
+ul dir dir,
+menu ol ul,
+menu ul ul,
+menu menu ul,
+menu dir ul,
+menu ol menu,
+menu ul menu,
+menu menu menu,
+menu dir menu,
+menu ol dir,
+menu ul dir,
+menu menu dir,
+menu dir dir,
+dir ol ul,
+dir ul ul,
+dir menu ul,
+dir dir ul,
+dir ol menu,
+dir ul menu,
+dir menu menu,
+dir dir menu,
+dir ol dir,
+dir ul dir,
+dir menu dir,
+dir dir dir {
+    list-style-type: square;
+}
+
+/* 3-deep (or more) unordered lists use a square */
+    :is(ol, ul, menu, dir) :is(ol, ul, menu, dir) :is(ul, menu, dir) {
+    list-style-type: square;
+}
+</pre>        
+        <h3>Simplifying section selectors</h3>
+<pre>
+/* Level 0 */
+h1 {
+    font-size: 30px;
+}
+
+/* Level 1 */
+section h1,
+article h1,
+aside h1,
+nav h1 {
+    font-size: 25px;
+}
+
+/* Level 2 */
+section section h1,
+section article h1,
+section aside h1,
+section nav h1,
+article section h1,
+article article h1,
+article aside h1,
+article nav h1,
+aside section h1,
+aside article h1,
+aside aside h1,
+aside nav h1,
+nav section h1,
+nav article h1,
+nav aside h1,
+nav nav h1 {
+    font-size: 20px;
+}
+
+/* Level 3 */
+/* don't even think about it! */
+
+/*
+
+using :is()
+
+*/
+
+/* Level 0 */
+h1 {
+    font-size: 30px;
+}
+/* Level 1 */
+:is(section, article, aside, nav) h1 {
+    font-size: 25px;
+}
+/* Level 2 */
+:is(section, article, aside, nav) :is(section, article, aside, nav) h1 {
+    font-size: 20px;
+}
+/* Level 3 */
+:is(section, article, aside, nav)
+    :is(section, article, aside, nav)
+    :is(section, article, aside, nav)
+    h1 {
+    font-size: 15px;
+}
+</pre>
+        <h3>:is() does not select pseudo-elements</h3>
+<pre>
+
+/*The :is() pseudo-class does not match pseudo-elements. So rather than this:*/
+
+some-element:is(::before, ::after) {
+    display: block;
+}
+
+:is(some-element::before, some-element::after) {
+    display: block;
+}
+
+/*instead do:*/
+
+some-element::before,
+some-element::after {
+    display: block;
+}
+</pre>
+        <p>
+            Extracted from:
+            <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/:is">MDN :is()</a>
+        </p>
+    </body> 
+</html>

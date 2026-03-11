@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <style>
+            :root {
+                color-scheme: light dark;
+            }
+
+            /* Invalid rule, does nothing */
+            p:not(.foo, :invalid-pseudo-class) {
+                color: #ff0000;
+                font-style: italic;
+            }
+
+            /* Select all <p> elements without the `foo` class */
+            p:not(:is(.foo, :invalid-pseudo-class)) {
+                color: #00ff00;
+                border-top: dotted thin currentColor;
+            }
+
+            /* Select all <div> elements without the `foo` or the `bar` class */
+            div:not(.foo, .bar) {
+                color: #ff0000;
+                font-style: italic;
+            }
+
+            /* Select all <div> elements without the `foo` or the `bar` class */
+            div:not(:is(.foo, .bar)) {
+                border-bottom: dotted thin currentColor;
+            }
+        </style>
+    </head>
+    <body>
+        <p class="foo">I am a paragraph with .foo</p>
+        <p class="bar">I am a paragraph with .bar</p>
+        <div>I am a div without a class</div>
+        <div class="foo">I am a div with .foo</div>
+        <div class="bar">I am a div with .bar</div>
+        <div class="foo bar">I am a div with .foo and .bar</div>
+    </body>
+</html>

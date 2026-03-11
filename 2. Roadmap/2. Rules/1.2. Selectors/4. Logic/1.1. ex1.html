@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <style>
+            :root {
+                color-scheme: light dark;
+            }
+
+            .fancy {
+                text-shadow: 2px 2px 3px #ff0000;
+            }
+
+            /* <p> elements that don't have a class `.fancy` */
+            p:not(.fancy) {
+                color: #00ff00;
+            }
+
+            /* Elements that are not <p> elements */
+            body :not(p) {
+                text-decoration: underline;
+            }
+
+            /* Elements that are not <div>s or `.fancy` */
+            body :not(div):not(.fancy) {
+                font-weight: bold;
+            }
+
+            /* Elements that are not <div>s or `.fancy` */
+            body :not(div, .fancy) {
+                text-decoration: overline underline;
+            }
+
+            /* Elements inside an <h2> that aren't a <span> with a class of `.foo` */
+            h2 :not(span.foo) {
+                color: #ff0000;
+            }
+        </style>
+    </head>
+    <body>
+        <p>I am a paragraph.</p>
+        <p class="fancy">I am so very fancy!</p>
+        <div>I am NOT a paragraph.</div>
+        <h2>
+            <span class="foo">foo inside h2</span>
+            <span class="bar">bar inside h2</span>
+        </h2>
+    </body>
+</html>
