@@ -5,7 +5,159 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>:where()</title>
+        <style>
+            :root {
+                color-scheme: light dark;
+                padding: 100px;
+            }
+
+            ol {
+                list-style-type: upper-alpha;
+                color: skyblue;
+            }
+
+            /* Not applied to ol, because of lower specificity */
+            :where(ol, ul, menu:unsupported)
+            :where(ol, ul) {
+                color: #ff0000;
+            }
+
+            :where(ol, ul) :where(ol, ul) ol {
+                list-style-type: lower-greek;
+                color: chocolate;
+            }
+
+            :is(section.is-styling, aside.is-styling, footer.is-styling) a {
+                color: #ff0000;
+            }
+
+            :where(section.where-styling, aside.where-styling, footer.where-styling) a  {
+                color: orange;
+            }
+
+            /*However, what if we later want to override the color of links in the footers using a 
+            compound selector made up of low-specificity type selectors?*/
+            footer a  {
+                color: #0000ff;
+            }
+        </style>
     </head>
     <body>
+        <h1>:where()</h1>
+        <!--La función pseudoclase CSS :where() toma como argumento una lista de selectores y selecciona
+        cualquier elemento que pueda ser seleccionado por uno de los selectores de esa lista.-->
+        <p>
+            The <strong><code>:where()</code></strong> CSS pseudo-class function takes a selector list as 
+            its argument, and selects any element that can be selected by one of the selectors in that list.
+        </p>
+        <p>
+            The difference between <code>:where()</code> and <code>:is()</code> is that <code>:where()</code> 
+            always has 0 specificity, whereas <code>:is()</code> takes on the specificity of the most 
+            specific selector in its arguments.
+        </p>
+        <ol>
+            <li>Saturn</li>
+            <li>
+                <ul>
+                    <li>Mimas</li>
+                    <li>Enceladus</li>
+                    <li>
+                        <ol>
+                            <li>Voyager</li>
+                            <li>Cassini</li>
+                        </ol>
+                    </li>
+                    <li>Tethys</li>
+                </ul>
+            </li>
+            <li>Uran:focus-within {
+    /* ... */
+}us</li>
+            <li>
+                <ol>
+                    <li>Titania</li>
+                    <li>Oberon</li>
+                </ol>
+            </li>
+        </ol>
+        <h2>Syntax</h2>
+<pre>
+:where(&lt;complex-selector-list&gt;) {
+    /* ... */
+}
+</pre>
+        <h3>Parameters</h3>
+        <p>
+            The <code>:where()</code> pseudo-class requires a selector list, a comma-separated list of 
+            one or more selectors, as its argument. The list must not contain a pseudo-element, but any 
+            other simple, compound, and complex selectors are allowed.
+        </p>
+        <h4>Forgiving Selector Parsing</h4>
+        <p>
+            When using <code>:is()</code> or <code>:where()</code> instead of the whole list of selectors 
+            being deemed invalid if one fails to parse, the incorrect or unsupported selector will be 
+            ignored and the others used.
+        </p>
+<pre>
+:where(:valid, :unsupported) {
+    /* … */
+}
+</pre>
+        <p>
+            Will still parse correctly and match <code>:valid</code> even in browsers which don't support 
+            <code>:unsupported</code>, whereas:
+        </p>
+<pre>
+:valid,
+:unsupported {
+    /* … */
+}
+</pre>  
+        <h2>Examples</h2>
+        <h3>Comparing :where() and :is()</h3>
+        <article>
+            <h2>:is()-styled links</h2>
+            <section>
+                <p>
+                    Here is my main content.This
+                    <a  target="_blank" href="https://mozilla.org">contains a link</a>
+                </p>
+            </section>
+            <aside class="is-styling">
+                <p>
+                    Here is my aside content. This
+                    <a  target="_blank" href="https://developer.mozilla.org">also contains a link</a>
+                </p>
+            </aside>
+            <foote class="is-styling">
+                <p>
+                    This is my footer content. This
+                    <a  target="_blank" href="https://github.com/mdn">a link</a>.
+                </p>
+            </foote>
+        </article>
+        <article>
+            <h2>:where()-styled links</h2>
+            <section class="where-styling">
+                <p>
+                    Here is my main content. this
+                    <a  target="_blank" href="https://mozilla.org">contains a link</a>
+                </p>
+            </section>
+            <aside class="where-styling">
+                <p>
+                    Here is my aside content. This
+                    <a  target="_blank" href="https://developer.mozilla.org">also contains a link</a>
+                </p>
+            </aside>
+            <footer class="where-styling">
+                Here is my footer contnet. This
+                <a  target="_blank" href="https://github.com/mdn">a link</a>.
+            </footer>
+        </article>
+        <p>
+            Extracted from:
+            <a  target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/:where">MDN :where</a>
+        </p>
     </body>
 </html>

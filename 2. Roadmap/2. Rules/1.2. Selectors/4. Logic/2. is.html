@@ -62,13 +62,14 @@
         <h2>Syntax</h2>
 <pre>
 :is(&lt;forgiving-selector-list&gt;) {
-  /* ... */
+    /* ... */
 }
 </pre>
         <h3>Parameters</h3>
         <p>
             The <code>:is()</code> pseudo-class requires a selector list, a comma-separated list of one 
-            or more selectors as its argument.
+            or more selectors as its argument. The list must not contain a pseudo-element, but any other 
+            simple, compound, and complex selectors are allowed.
         </p>
         <h3>Difference between <code>:is():is()|</code> and <code>:where():where()</code></h3>
         <p>

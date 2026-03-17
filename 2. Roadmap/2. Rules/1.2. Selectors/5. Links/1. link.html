@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>:link</title>
+        <style>
+            :root {
+                color-scheme: light dark;
+                padding: 100px;
+            }
+
+            .p-try {
+                font-weight: bold;
+            }
+
+            a:link {
+                color: forestgreen;
+                text-decoration-color: hotpink;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>:link</h1>
+        <!--La pseudoclase CSS :link representa un elemento que aún no ha sido visitado. Coincide con 
+        todos los elementos <a> o <area> no visitados que tienen un atributoio href.-->
+        <p>
+            The <code>:link</code> CSS pseudo-class represents an element that has not yet been visited. 
+            It matches every unvisited <code>&lt;a&gt;</code> or <code>&lt;area&gt;</code> element that 
+            has an href attribute.
+        </p>
+        <p class="p-try">Pages that you might have visited:</p>
+        <ul>
+            <li><a href="https://developer.mozilla.org">MDN Web Docs</a></li>
+            <li><a href="https://www.youtube.com">YouTube</a></li>
+        </ul>
+        <p class="p-try">Pages unlikely to be in your history:</p>
+        <ul>
+            <li><a href="https://developer.mozilla.org/missing-2">Random MDN page</a></li>
+            <li><a href="https://example.com/missing-2">Random Example page</a></li>
+        </ul>
+    </body>
+</html>

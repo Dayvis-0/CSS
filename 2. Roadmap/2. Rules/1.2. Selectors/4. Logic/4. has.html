@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>:has</title>
+        <style>
+            :root {
+                color-scheme: light dark;
+                padding: 100px;
+            }
+
+            .iframe-1 {
+                height: 75px;
+            }
+
+            .iframe-2 {
+                width: 700px;
+                height: 300px;
+            }
+
+            .iframe-3 {
+                width: 700px;
+                height: 310px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>:has()</h1>
+        <!--La pseudoclase CSS funcional :has() representa un elemento si alguno de los selectores relativos 
+        que se pasan como argumento coincide con al menos un elemento cuando se anclan a este elemento.-->
+        <p>
+            The functional <strong><code>:has()</code></strong> CSS pseudo-class represents an element 
+            if any of the relative selectors that are passed as an argument match at least one element 
+            when anchored against this element. This pseudo-class presents a way of selecting a parent 
+            element or a previous sibling element with respect to a reference element by taking a 
+            relative selector list as an argument.
+        </p>
+<pre>
+/* Selects an h1 heading with a paragraph element that immediately follows the 
+h1 and applies the style to h1 */
+
+h1:has(+ p) {
+    margin-bottom: 0;
+}
+</pre>
+        <h2>Syntax</h2>
+<pre>
+:has(<relative-selector-list>) {
+    /* ... */
+}
+</pre>
+        <p>
+            If the <code>:has()</code> pseudo-class itself is not supported in a browser, the entire 
+            selector block will fail unless <code>:has()</code> is in a forgiving selector list, such as 
+            in <code>:is()</code> and <code>:where().</code>
+        </p>
+        <p>The <code>:has()</code> pseudo-class cannot be nested within another <code>:has()</code>.</p>
+        <p>
+            Pseudo-elements are also not valid selectors within <code>:has()</code> and pseudo-elements 
+            are not valid anchors for <code>:has()</code>. 
+        </p>
+        <h2>Examples</h2>
+        <h3>Selecting a parent element</h3>
+        <p>
+            You may be looking for a "parent combinator", which allows you to go up the DOM tree and 
+            select the parent of a specific element. The <code>:has()</code> pseudo-class does that by 
+            using <code>parent:has(child)</code> (for any parent) or <code>parent:has(> child)</code> 
+            (for direct parent). 
+        </p>
+        <iframe class="iframe-1" src="4.1. ex1.html"></iframe>
+        <h3>With the sibling combinator</h3>
+        <iframe class="iframe-2" src="4.2. ex2.html"></iframe>
+        <h3>With the :is() pseudo-class</h3>
+        <iframe class="iframe-3" src="4.3. ex3.html"></iframe>
+        <h3>Logical operations</h3>
+        <p>
+            The <code>:has()</code> relational selector can be used to check if one of the multiple features 
+            is true or if all the features are true.
+        </p>
+        <p>
+            By using comma-separated values inside the <code>:has()</code> relational selector, you are 
+            checking to see if any of the parameters exist. <code>x:has(a, b)</code> will style <code>x</code> 
+            if descendant <code>a</code> OR <code>b</code> exists.
+        </p>
+        <p>
+            By chaining together multiple <code>:has()</code> relational selectors together, you are checking 
+            to see if all of the parameters exist. <code>x:has(a):has(b)</code> will style <code>x</code> 
+            if descendant <code>a</code> AND <code>b</code> exist.
+        </p>
+        <p>
+            Extracted from:
+            <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/:has">MDN :has()</a>
+        </p>
+    </body>
+</html>
