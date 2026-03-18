@@ -16,8 +16,9 @@
             }
 
             a:link {
-                color: forestgreen;
+                color: lime;
                 text-decoration-color: hotpink;
+                background-color: cadetblue;
             }
         </style>
     </head>
@@ -32,13 +33,31 @@
         </p>
         <p class="p-try">Pages that you might have visited:</p>
         <ul>
-            <li><a href="https://developer.mozilla.org">MDN Web Docs</a></li>
-            <li><a href="https://www.youtube.com">YouTube</a></li>
+            <li><a target="_blank" href="https://developer.mozilla.org">MDN Web Docs</a></li>
+            <li><a target="_blank" href="https://www.youtube.com">YouTube</a></li>
         </ul>
         <p class="p-try">Pages unlikely to be in your history:</p>
         <ul>
-            <li><a href="https://developer.mozilla.org/missing-2">Random MDN page</a></li>
-            <li><a href="https://example.com/missing-2">Random Example page</a></li>
+            <li><a target="_blank" href="https://developer.mozilla.org/missing-2">Random MDN page</a></li>
+            <li><a target="_blank" href="https://example.com/missing-2">Random Example page</a></li>
         </ul>
+        <p>
+            To style links appropriately, put the <code>:link</code> rule before all other link-related rules, as defined 
+            by the LVHA-order: <code>:link</code> — <code>:visited</code> — <code>:hover</code> — <code>:active</code>.
+        </p>
+        <h2>Syntax</h2>
+<pre>
+:link {
+    /* ... */
+}
+</pre>
+        <h2>Examples</h2>
+        <a href="#ordinary-target">This is an ordinary link</a>
+        <a href="">You've already visited this link</a>
+        <a>Placeholder link (won't get styled)</a>
+        <p>
+            Extracted from:
+            <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/:link">MDN :link()</a>
+        </p>
     </body>
 </html>

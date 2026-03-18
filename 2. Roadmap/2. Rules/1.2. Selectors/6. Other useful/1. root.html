@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>:root</title>
+        <style>
+            :root {
+                color-scheme: light dark;
+                padding: 100px;
+                --main-color: hotpink;
+                --pane-padding: 5px 42px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>:root</h1>
+        <!--La pseudoclase CSS : root coincide con el elemento raíz de un árbol que representa el documento.-->
+        <p>
+            The <code>:root</code> CSS pseudo-class matches the root element of a tree representing the 
+            document. In HTML, <code>:root</code> represents the <code>&lt;html&gt;</code> element and 
+            is identical to the selector <code>html</code>, except that its specificity (0-1-0) is higher 
+            than html's (0-0-1).
+        </p>
+<pre>
+/* Selects the root element of the document: &lt;html&gt; in the case of HTML */
+:root {
+    background: yellow;
+}
+</pre>
+        <h2>Syntax</h2>
+<pre>
+:root {
+    /* ... */
+}
+</pre>
+        <h2>Examples</h2>
+<pre>
+:root {
+    --main-color: hotpink;
+    --pane-padding: 5px 42px;
+}   
+</pre>
+        <p>
+            Extracted from:
+            <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/:root">MDN :root</a>
+        </p>
+    </body>
+</html>

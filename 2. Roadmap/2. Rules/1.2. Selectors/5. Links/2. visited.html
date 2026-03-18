@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>:visited</title>
+        <style>
+            :root {
+                color-scheme: light dark;
+                padding: 100px;
+            }
+
+            .p-try {
+                font-weight: bold;
+            }
+
+            .a-try:visited {
+                color: lime;
+                text-decoration-color: hotpink;
+            }
+
+            .a-ex {
+                /* Specify non-transparent defaults to certain properties, allowing them to be styled 
+                with the :visited state */
+                background-color: white;
+                border: 1px solid white;
+            }
+
+            .a-ex:visited {
+                background-color: yellow;
+                border-color: hotpink;
+                color: hotpink;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>:visited</h1>
+        <!--La pseudoclase CSS :visited se aplica una vez que el usuario ha visitado el enlace. Por motivos
+        de privacidad, los estilos que se puede modificar mediante este selector son muy limitados.-->
+        <p>
+            The <strong><code>:visited</code></strong> CSS pseudo-class applies once the link has been 
+            visited by the user. For privacy reasons, the styles that can be modified using this selector 
+            are very limited. The <code>:visited</code> pseudo-class applies only to <code>&lt;a&gt;</code> 
+            and <code>&lt;area&gt;</code> elements that have an href attribute.
+        </p>
+        <p class="p-try">Pages that you might have visited:</p>
+        <ul>
+            <li><a class="a-try" target="_blank" href="https://developer.mozilla.org">MDN Web Docs</a></li>
+            <li><a class="a-try" target="_blank" href="https://www.youtube.com">YouTube</a></li>
+        </ul>
+        <p class="p-try">Pages unlikely to be in your history:</p>
+        <ul>
+            <li><a class="a-try" target="_blank" href="https://developer.mozilla.org/missing-2">Random MDN page</a></li>
+            <li><a class="a-try" target="_blank" href="https://example.com/missing-2">Random Example page</a></li>
+        </ul>   
+        <p>
+            To style links appropriately, put the <code>:visited</code> rule after the <code>:link</code> 
+            rule but before the <code>:hover</code> and <code>:active</code> rules, as defined by the 
+            LVHA-order: <code>:link</code> — <code>:visited</code> — <code>:hover</code> — <code>:active</code>.
+        </p>
+        <h2>Syntax</h2>
+<pre>
+:visited {
+    /* ... */
+}
+</pre>
+        <h2>Examples</h2>
+        <a class="a-ex" target="_blank" href="#test-visited-link">Have you visited this link yet?</a><br />
+        <a class="a-ex" target="_blank" href="">You've already visited this link.</a>
+        <p>
+            Extracted from:
+            <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/:visited">MDN :visited</a>
+        </p>
+    </body>
+</html>
