@@ -18,6 +18,14 @@
             .iframe-2 {
                 height: 500px;
             }
+
+            .iframe-3 {
+                height: 300px;
+            }
+
+            .iframe-4 {
+                height: 400px;
+            }
         </style>
     </head>
     <body>
@@ -45,14 +53,26 @@
         <!--El selector de clase sensible a mayúsculas y minúsculas comienza con un (.). Seleccionará 
         todo el contenido del documento que tenga aplicada esa clase.-->
         <p>
-            The case-sensitive class selector starts with a dot (<code>.</code>) character. It will select everything 
-            in the document with that class applied to it. 
+            The case-sensitive class selector starts with a dot (<code>.</code>) character. It will select 
+            everything in the document with that class applied to it. 
         </p>
         <iframe class="iframe-2" src="0. Iframes/2. Class selectors.html"></iframe>
         <h3>ID Selectors</h3>
-        <!---->
+        <!--El selector de ID que distingue entre mayúsculas y minúsculas comienza con un # en lugar de 
+        un punto, pero se utiliza en la misma manera que un selector de clase.-->
         <p>
-            
+            The case-sensitive ID selector begins with a <code>#</code> rather than a dot character, but 
+            is used in the same way as a class selector. The difference is that an ID can be used only 
+            once per page, and elements can only have a single id value. 
         </p>
+        <iframe class="iframe-3" src="0. Iframes/3. ID selectors.html"></iframe>
+        <h3>Selector lists</h3>
+        <!--Si se desea aplicar el mismo CSS a varios elementos, puedes combinar selectores individuales
+        en una lista de selectores. La regla se aplicará entonces a todos los selectores individuales.-->
+        <p>
+            If you want to apply the same CSS to multiple items, you can combine individual selectors into 
+            a selector list. The rule is then applied to all the individual selectors. 
+        </p>
+        <iframe class="iframe-4" src="0. Iframes/4. Selector lists.html"></iframe>
     </body>
 </html>
