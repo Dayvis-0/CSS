@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>class</title>
+        <style>
+            :root {
+                color-scheme: light dark;
+                padding: 100px;
+            }
+
+            .red {
+                color: #ff3333;
+            }
+
+            .yellow-bg {
+                background: #ffffaa;
+            }
+
+            .fancy {
+                font-weight: bold;
+                text-shadow: 4px 4px 3px #7777ff;
+            }
+
+            .item\?one {
+                background-color: pink;
+                color: #000000;
+            }
+
+            .\00003123item {
+                background-color: yellow;
+                color: #000000;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>class</h1>
+        <!--El selector de clase CSS hace coincidir los elementos en función del contenido de su
+        atributo de clase.-->
+        <p>
+            The CSS <strong>class selector</strong> matches elemetns based on the contents of their
+            class attribute.
+        </p>
+
+        <h2>Syntax</h2>
+<pre><code>
+.class_name {
+    /* ... */
+}
+
+[class~="class_name"] {
+    /* ... */
+}
+</code></pre>
+
+        <h2>Examples</h2>
+        <p class="red">This paragraph has red text.</p>
+        <p class="red yellow-bg">
+            This paragraph has red text and a yellow background.
+        </p>
+        <p class="red fancy">This paragraph has red text and "fancy" styling</p>
+        <p>This is just a regular paragraph</p>
+
+        <p class="item?one">This paragraph has a pink background.</p>
+        <p class="123item">this paragraph has a yellow background.</p>
+
+        <h1>Invalid class selectors</h1>
+        <!--Los selectores de clase en las siguientes reglas no son identificadores CSS válidos y
+        serán ignorados.-->
+<pre><code>
+.item?one {
+  background-color: green;
+}
+
+.123item {
+  background-color: green;
+}
+</code></pre>
+
+        <p>
+            Extracted from:
+            <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/Class_selectors" target="_blank">MDN CSS class selectors</a>
+        </p>
+    </body>
+</html>

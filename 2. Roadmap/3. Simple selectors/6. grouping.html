@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Grouping selector</title>
+        <style>
+            :root {
+                color-scheme: light dark;
+                padding: 100px;
+            }
+
+            div, article {
+                background-color: #04af2f;
+                text-align: center;                
+                padding: 20px;
+                margin: 10px 0;
+                font-size: 19px;
+            }
+
+            #header, #footer {
+                background-color: #333;
+                padding: 15px;
+                border: 2px solid #555;
+            }
+
+            h4, .highlight, #important {
+                color: #e74c3c;
+                font-weight: bold;
+                border-left: 4px solid #e74c3c;
+                padding-left: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Grouping selector</h1>
+        <!--Los selectores de agrupación CSS permiten aplicar los mismos estilos a varios elementos
+        a la vez, separándolos con comas. -->
+        <p>
+            CSS grouping selectors allow you to apply the same styles to multiple elements at once by 
+            separating selectors with commas.
+        </p>
+        <h2>Syntax</h2>
+<pre><code>
+selector1, selector2, selector3 {
+    property: value;
+}
+</code></pre>
+
+        <h2>Examples</h2>
+
+        <h3>Grouping Element Selectors</h3>
+        <div>This is a div element</div>
+        <article>This is an article element</article>
+
+        <h3>Grouping ID Selectors</h3>
+        <div id="header">Website Header</div>
+        <p>Main content area</p>
+        <div id="footer">Website Footer</div>
+
+        <h3>Mixed Selector Types</h3>
+        <h4>Heading</h4>
+        <p class="highlight">Highlighted paragraph</p>
+        <div id="important">Important notice</div>
+
+        <p>
+            Extracted from:
+            <a href="https://www.tutorialspoint.com/article/grouping-selectors-in-css" target="_blank">Tutotial spoint grouping selectors in css</a>
+        </p>
+    </body>
+</html>

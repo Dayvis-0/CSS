@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ID selectors</title>
+        <style>
+            :root {
+                color-scheme: light dark;
+                padding: 100px;
+            }
+
+            #blue {
+                background-color: skyblue;
+                color: #000000;
+            }
+
+            #item\?one {
+                background-color: pink;
+                color: #000000;
+            }
+
+            #\00003123item {
+                background-color: yellow;
+                color: #000000;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>ID selectors</h1>
+        <!--El selector CSS ID hace coincidir un elemento con el valor de su atributo id. Para 
+        que el elemento sea seleccionado, su atributo id debe coincidir exactamente con el valor
+        especificado en el selector.-->
+        <p>
+            The CSS <strong>ID selector</strong> matches an element based on the value of the 
+            element's id attribute. In order for the element to be selected, its id attribute must 
+            match exactly the value given in the selector.
+        </p>
+
+        <h2>Syntax</h2>
+<pre><code>
+#id_value {
+    /* ...  */
+}
+
+[id="id_value"] {
+    /* ... */
+}
+</code></pre>
+
+        <h2>Examples</h2>
+        <h3>Valid ID selectors</h3>
+        <p id="blue">This paragraph has a blue background.</p>
+        <p>This is just a regular paragraph.</p>
+
+        <p id="item?one">This paragraph has a pink background</p>
+        <p id="123item">This paragraph has a yellow background</p>
+
+        <h3>Invalid ID selectors</h3>
+<pre><code>
+#item?one {
+  background-color: green;
+}
+
+#123item {
+  background-color: green;
+}
+</code></pre>
+
+        <p>
+            Extracted from:
+            <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/ID_selectors" target="_blank">MDN CSS ID selectors</a>
+        </p>
+    </body>
+</html>
