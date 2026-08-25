@@ -40,6 +40,19 @@
             footer a  {
                 color: #0000ff;
             }
+
+            pre {
+                background-color: #2d3034;
+                margin: 0px;
+                padding: 16px;
+                width: fit-content;
+                max-width: 100%;
+            }
+
+            pre code {
+                display: block;
+                overflow-x: auto;
+            }
         </style>
     </head>
     <body>
@@ -81,11 +94,11 @@
             </li>
         </ol>
         <h2>Syntax</h2>
-<pre>
+<pre><code>
 :where(&lt;complex-selector-list&gt;) {
     /* ... */
 }
-</pre>
+</code></pre>
         <h3>Parameters</h3>
         <p>
             The <code>:where()</code> pseudo-class requires a selector list, a comma-separated list of 
@@ -98,21 +111,21 @@
             being deemed invalid if one fails to parse, the incorrect or unsupported selector will be 
             ignored and the others used.
         </p>
-<pre>
+<pre><code>
 :where(:valid, :unsupported) {
     /* … */
 }
-</pre>
+</code></pre>
         <p>
             Will still parse correctly and match <code>:valid</code> even in browsers which don't support 
             <code>:unsupported</code>, whereas:
         </p>
-<pre>
+<pre><code>
 :valid,
 :unsupported {
     /* … */
 }
-</pre>  
+</code></pre>  
         <h2>Examples</h2>
         <h3>Comparing :where() and :is()</h3>
         <article>

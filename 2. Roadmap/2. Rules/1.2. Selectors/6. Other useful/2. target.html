@@ -28,6 +28,19 @@
             p:target i {
                 color: #ff0000;
             }
+
+            pre {
+                background-color: #2d3034;
+                margin: 0px;
+                padding: 16px;
+                width: fit-content;
+                max-width: 100%;
+            }
+
+            pre code {
+                display: block;
+                overflow-x: auto;
+            }
         </style>
     </head>
     <body>
@@ -37,18 +50,18 @@
             The <code>:target</code> CSS pseudo-class selects the target element of the document. When the 
             document is loaded, the target element is derived using the document's URL fragment identifier.
         </p>
-<pre>
+<pre><code>
 /* Selects document's target element */
 :target {
     border: 2px solid black;
 }
-</pre>
+</code></pre>
         <h2>Syntax</h2>
-<pre>
+<pre><code>
 :target {
     /* ... */
 }
-</pre>
+</code></pre>
         <h2>Examples</h2>
         <h3>A table of contents</h3>
         <h3>Table of Contents</h3>

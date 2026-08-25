@@ -20,6 +20,19 @@
                 text-decoration-color: hotpink;
                 background-color: cadetblue;
             }
+
+            pre {
+                background-color: #2d3034;
+                margin: 0px;
+                padding: 16px;
+                width: fit-content;
+                max-width: 100%;
+            }
+
+            pre code {
+                display: block;
+                overflow-x: auto;
+            }
         </style>
     </head>
     <body>
@@ -46,11 +59,11 @@
             by the LVHA-order: <code>:link</code> — <code>:visited</code> — <code>:hover</code> — <code>:active</code>.
         </p>
         <h2>Syntax</h2>
-<pre>
+<pre><code>
 :link {
     /* ... */
 }
-</pre>
+</code></pre>
         <h2>Examples</h2>
         <a href="#ordinary-target">This is an ordinary link</a>
         <a href="">You've already visited this link</a>

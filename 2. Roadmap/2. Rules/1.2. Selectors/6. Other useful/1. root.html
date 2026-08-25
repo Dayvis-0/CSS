@@ -12,6 +12,19 @@
                 --main-color: hotpink;
                 --pane-padding: 5px 42px;
             }
+
+            pre {
+                background-color: #2d3034;
+                margin: 0px;
+                padding: 16px;
+                width: fit-content;
+                max-width: 100%;
+            }
+
+            pre code {
+                display: block;
+                overflow-x: auto;
+            }
         </style>
     </head>
     <body>
@@ -23,25 +36,25 @@
             is identical to the selector <code>html</code>, except that its specificity (0-1-0) is higher 
             than html's (0-0-1).
         </p>
-<pre>
+<pre><code>
 /* Selects the root element of the document: &lt;html&gt; in the case of HTML */
 :root {
     background: yellow;
 }
-</pre>
+</code></pre>
         <h2>Syntax</h2>
-<pre>
+<pre><code>
 :root {
     /* ... */
 }
-</pre>
+</code></pre>
         <h2>Examples</h2>
-<pre>
+<pre><code>
 :root {
     --main-color: hotpink;
     --pane-padding: 5px 42px;
 }   
-</pre>
+</code></pre>
         <p>
             Extracted from:
             <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/:root">MDN :root</a>

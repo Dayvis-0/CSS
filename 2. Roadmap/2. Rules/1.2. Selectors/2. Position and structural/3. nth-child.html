@@ -5,7 +5,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>:nth-child()</title>
-        <link rel="stylesheet" href="nth-child.css">
+        <link rel="stylesheet" href="3. nth-child.css">
     </head>
     <body>
         <h1 id="nth-child">:nth-child()</h1>
@@ -18,11 +18,11 @@
             all the sibling elements within a parent element.
         </p>
         <h2>Syntax</h2>
-<pre>
+<pre><code>
 :nth-child([ &lt;An+B&gt; | even | odd ] [of &lt;complex-selector-list&gt;]?) {
     /* ... */
 }
-</pre>
+</code></pre>
         <h2>Parameters</h2>
         <p>
             <code>:nth-child()</code> takes a single argument that describes a pattern for matching element 
@@ -64,10 +64,10 @@
             that selector. For example, the following selector matches the first three list items which 
             have a <code>class="important"</code> set.
         </p>
-<pre>
+<pre><code>
 :nth-child(-n + 3 of li.important) {
 }
-</pre>
+</code></pre>
         <h2>Examples</h2>
         <h3>Example selectors</h3>
         <dl>

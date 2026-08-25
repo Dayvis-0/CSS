@@ -10,3 +10,16 @@ li {
 li li {
     list-style-type: circle;
 }
+
+pre {
+    background-color: #2d3034;
+    margin: 0px;
+    padding: 16px;
+    width: fit-content;
+    max-width: 100%;
+}
+
+pre code {
+    display: block;
+    overflow-x: auto;
+}

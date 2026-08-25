@@ -24,6 +24,19 @@
                 width: 700px;
                 height: 310px;
             }
+
+            pre {
+                background-color: #2d3034;
+                margin: 0px;
+                padding: 16px;
+                width: fit-content;
+                max-width: 100%;
+            }
+
+            pre code {
+                display: block;
+                overflow-x: auto;
+            }
         </style>
     </head>
     <body>
@@ -37,20 +50,20 @@
             element or a previous sibling element with respect to a reference element by taking a 
             relative selector list as an argument.
         </p>
-<pre>
+<pre><code>
 /* Selects an h1 heading with a paragraph element that immediately follows the 
 h1 and applies the style to h1 */
 
 h1:has(+ p) {
     margin-bottom: 0;
 }
-</pre>
+</code></pre>
         <h2>Syntax</h2>
-<pre>
+<pre><code>
 :has(<relative-selector-list>) {
     /* ... */
 }
-</pre>
+</code></pre>
         <p>
             If the <code>:has()</code> pseudo-class itself is not supported in a browser, the entire 
             selector block will fail unless <code>:has()</code> is in a forgiving selector list, such as 

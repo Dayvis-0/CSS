@@ -32,6 +32,19 @@
                 border-color: hotpink;
                 color: hotpink;
             }
+
+            pre {
+                background-color: #2d3034;
+                margin: 0px;
+                padding: 16px;
+                width: fit-content;
+                max-width: 100%;
+            }
+
+            pre code {
+                display: block;
+                overflow-x: auto;
+            }
         </style>
     </head>
     <body>
@@ -60,11 +73,11 @@
             LVHA-order: <code>:link</code> — <code>:visited</code> — <code>:hover</code> — <code>:active</code>.
         </p>
         <h2>Syntax</h2>
-<pre>
+<pre><code>
 :visited {
     /* ... */
 }
-</pre>
+</code></pre>
         <h2>Examples</h2>
         <a class="a-ex" target="_blank" href="#test-visited-link">Have you visited this link yet?</a><br />
         <a class="a-ex" target="_blank" href="">You've already visited this link.</a>

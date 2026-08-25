@@ -31,6 +31,19 @@
             .iframe-2 { 
                 height: 180px;
             }
+
+            pre {
+                background-color: #2d3034;
+                margin: 0px;
+                padding: 16px;
+                width: fit-content;
+                max-width: 100%;
+            }
+
+            pre code {
+                display: block;
+                overflow-x: auto;
+            }
         </style>
     </head>
     <body>
@@ -51,11 +64,11 @@
             mission concepts to survive the <b>Venus</b> extreme temperatures and atmospheric pressure.
         </p>
         <h2>Syntax</h2>
-<pre>
+<pre><code>
 :not(&lt;complex-selector-list&gt;) {
   /* ... */
 }
-</pre>
+</code></pre>
         <h3>Parameters</h3>
         <p>
             The <code>:not()</code> pseudo-class requires a selector list, a comma-separated list of one 

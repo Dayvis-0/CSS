@@ -25,6 +25,19 @@
                 list-style-type: lower-greek;
                 color: chocolate;
             }
+
+            pre {
+                background-color: #2d3034;
+                margin: 0px;
+                padding: 16px;
+                width: fit-content;
+                max-width: 100%;
+            }
+
+            pre code {
+                display: block;
+                overflow-x: auto;
+            }
         </style>
     </head>
     <body>
@@ -60,11 +73,11 @@
             </li>
         </ol>
         <h2>Syntax</h2>
-<pre>
+<pre><code>
 :is(&lt;forgiving-selector-list&gt;) {
     /* ... */
 }
-</pre>
+</code></pre>
         <h3>Parameters</h3>
         <p>
             The <code>:is()</code> pseudo-class requires a selector list, a comma-separated list of one 
@@ -84,28 +97,28 @@
             list of selectors being deemed invalid if one fails to parse, the incorrect or unsupported 
             selector will be ignored and the others used. 
         </p>
-<pre>
+<pre><code>
 :is(:valid, :unsupported) {
     /* … */
 }
-</pre>
+</code></pre>
         <p>
             Will still parse correctly and match <code>:valid</code> even in browsers which don't support 
             <code>:unsupported</code>, whereas:
         </p>
-<pre>
+<pre><code>
 :valid,
 :unsupported {
     /* … */
 }
-</pre>
+</code></pre>
         <p>
             Will be ignored in browsers which don't support <code>:unsupported</code> even if they support 
             <code>:valid</code>.
         </p>
         <h2>Examples</h2>
         <h3>Simplifying list selectors</h3>
-<pre>
+<pre><code>
 
 /* 3-deep (or more) unordered lists use a square */
 ol ol ul,
@@ -163,9 +176,9 @@ dir dir dir {
     :is(ol, ul, menu, dir) :is(ol, ul, menu, dir) :is(ul, menu, dir) {
     list-style-type: square;
 }
-</pre>        
+</code></pre>        
         <h3>Simplifying section selectors</h3>
-<pre>
+<pre><code>
 /* Level 0 */
 h1 {
     font-size: 30px;
@@ -227,9 +240,9 @@ h1 {
     h1 {
     font-size: 15px;
 }
-</pre>
+</code></pre>
         <h3>:is() does not select pseudo-elements</h3>
-<pre>
+<pre><code>
 
 /*The :is() pseudo-class does not match pseudo-elements. So rather than this:*/
 
@@ -247,7 +260,7 @@ some-element::before,
 some-element::after {
     display: block;
 }
-</pre>
+</code></pre>
         <p>
             Extracted from:
             <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/:is">MDN :is()</a>
