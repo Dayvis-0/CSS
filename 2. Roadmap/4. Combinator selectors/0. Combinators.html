@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Combinators</title>
+        <style>
+            :root {
+                color-scheme: light dark;
+                padding: 100px;
+            }
+            
+            pre {
+                background-color: #2d3034;
+                margin: 0px;
+                padding: 16px;
+                width: fit-content;
+                max-width: 100%;
+            }
+             
+            code {
+                display: block;
+                overflow-x: auto;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Combinators</h1>
+        <!--Los combinadores se utilizan para combinar otros selectores de forma que nos 
+        permitan seleccionar elementos en función de su ubicación en el DOM en relación con 
+        otros elementos.-->
+        <p>
+            Combinators are used to combine other selectors in a way that allows us to select
+            elements based on their location in the DOM relative to other elements.
+        </p>
+
+        <h2>Decendant combinator</h2>
+        <!--El combinador descendiente representado por un solo carácter de espacio () combina 
+        dos selectores de tal manera que los elementos que coinciden con el segundo selector 
+        se seleccionan si tienen un elemento antecesor que coincida con el primer selector-->
+        <p>
+            The <strong>descendant combinator</strong> represented by a single space ( ) 
+            character combines two selectors such that elements matched by the second selector
+            are selected if they have an ancestor element matching the first selector.
+        </p>
+<pre><code>
+body article p {
+
+}
+</code></pre>
+
+    </body>
+</html>
